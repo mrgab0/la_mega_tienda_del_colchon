@@ -1,0 +1,127 @@
+{
+  "Index": {
+    "title": "La Mega Tienda del Colchón",
+    "description": "El descanso que mereces al mejor precio en Barinas. Colchones ortopédicos, matrimoniales, queen, king, somieres, almohadas y combos descanso.",
+    "exploreButton": "Ver Catálogo de Colchones",
+    "premiumSelection": "Modelos Destacados",
+    "ourFlowers": "Nuestros Colchones",
+    "viewCatalog": "Ver catálogo completo",
+    "noProducts": "No hay productos disponibles por el momento."
+  },
+  "Nav": {
+    "home": "Inicio",
+    "catalog": "Colchones",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cart": "Carrito"
+  },
+  "nav": {
+    "home": "Inicio",
+    "catalog": "Colchones",
+    "tracking": "📦 Rastreo",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cart": "Carrito"
+  },
+  "common": {
+    "addToCart": "Añadir al Carrito",
+    "added": "¡Añadido!"
+  },
+  "Catalog": {
+    "headerBadge": "🛏️ Catálogo Completo de Colchones & Descanso",
+    "headerTitle": "Encuentra el Colchón Ideal para Tu Descanso",
+    "headerDesc": "Variedad de colchones ortopédicos, con resortes pocket o espuma de alta densidad. Añade almohadas ergonómicas, protectores y somieres para renovar tu habitación.",
+    "allTab": "🌐 Todos",
+    "flowersTab": "🛏️ Colchones",
+    "addonsTab": "✨ Almohadas & Accesorios",
+    "searchPlaceholder": "Buscar individual, matrimonial, queen, king, ortopédico...",
+    "sortBy": "Ordenar por:",
+    "featured": "Más Vendidos 🌟",
+    "priceLowHigh": "Precio: Menor a Mayor ($)",
+    "priceHighLow": "Precio: Mayor a Menor ($)",
+    "allCategories": "Todas las medidas y categorías",
+    "showingItems": "Mostrando",
+    "itemsInCatalog": "modelos disponibles",
+    "clearFilters": "Limpiar Filtros",
+    "noResultsTitle": "No encontramos resultados con esa búsqueda",
+    "noResultsDesc": "Prueba buscando por medida (Individual, Matrimonial, Queen, King) o seleccionando \"Todos\".",
+    "viewAllBtn": "Ver Todo el Catálogo",
+    "addonBadge": "Accesorio",
+    "addToCart": "Añadir al Carrito",
+    "added": "¡Añadido!"
+  },
+  "ProductDetail": {
+    "includesTitle": "¿Qué incluye este producto?",
+    "addonsTitle": "Complementa tu Descanso (Almohadas / Protectores)",
+    "descriptionTitle": "Especificaciones y Confort",
+    "addToCart": "Añadir al Carrito",
+    "addedToCart": "¡Añadido al Carrito! ✓",
+    "flowerCount": "Medida",
+    "bouquetType": "Firmeza",
+    "inStock": "Disponible para entrega inmediata en Barinas",
+    "backToCatalog": "Volver al Catálogo",
+    "customMessage": "Notas o instrucciones de entrega",
+    "selectOptions": "Seleccionar especificaciones"
+  },
+  "Cart": {
+    "title": "Tu Carrito de Compra",
+    "emptyTitle": "Tu carrito está vacío",
+    "emptyDesc": "Explora nuestra colección de colchones, somieres y almohadas para transformar tus noches.",
+    "exploreBtn": "Explorar Catálogo",
+    "subtotal": "Subtotal",
+    "checkoutBtn": "Proceder al Pago",
+    "addonsLabel": "Complementos seleccionados"
+  },
+  "Checkout": {
+    "title": "Finalizar Pedido",
+    "subtitle": "Ingresa la dirección de entrega en Barinas o para envío nacional y elige tu método de pago.",
+    "deliveryInfo": "Datos de Entrega y Despacho",
+    "recipientName": "Nombre y Apellido",
+    "recipientPhone": "Teléfono de Contacto (WhatsApp)",
+    "address": "Dirección Completa (Barinas / Ciudad)",
+    "deliveryDate": "Fecha Estimada de Entrega",
+    "cardMessage": "Punto de Referencia / Instrucciones",
+    "paymentMethod": "Método de Pago",
+    "orderSummary": "Resumen de tu Compra",
+    "subtotal": "Subtotal",
+    "shipping": "Flete / Entrega",
+    "freeShipping": "GRATIS",
+    "couponCode": "Código de Descuento",
+    "applyCoupon": "Aplicar",
+    "discount": "Descuento",
+    "placeOrder": "Confirmar y Realizar Pedido",
+    "manualVerificationNote": "Al confirmar tu pedido, te contactaremos por WhatsApp al +58 414 1584360 para coordinar el despacho o retiro en tienda."
+  },
+  "Reviews": {
+    "badge": "Clientes Satisfechos",
+    "title": "La opinión de quienes descansan mejor en Barinas ⭐⭐⭐⭐⭐",
+    "score": "4.9 / 5.0",
+    "countText": "+350 Opiniones Verificadas",
+    "verifiedPurchase": "Compra Verificada",
+    "rev1": "Compré el colchón ortopédico Queen y el cambio en mi espalda fue inmediato. La atención en la tienda de la Av. Sucre fue impecable.",
+    "rev1Name": "Carlos Mendoza",
+    "rev1Location": "Barinas, Alto Barinas",
+    "rev1Date": "Hace 3 días",
+    "rev2": "Excelente flete y entrega puntual en mi casa. El colchón vino súper protegido y la calidad es insuperable. 100% recomendados.",
+    "rev2Name": "Valeria Gómez",
+    "rev2Location": "Barinas Centro",
+    "rev2Date": "Hace 1 semana",
+    "rev3": "Muy buenos precios y facilidades de pago. Además nos encanta escuchar la música de Radio Colchón para dormir relajados.",
+    "rev3Name": "Roberto Peña",
+    "rev3Location": "Barinas, Los Pozones",
+    "rev3Date": "Hace 2 semanas"
+  },
+  "Footer": {
+    "address1": "Avenida Sucre",
+    "address2": "Barinas, Venezuela",
+    "boutique": "La Mega Tienda del Colchón",
+    "copyright": "© 2026 La Mega Tienda del Colchón. Todos los derechos reservados.",
+    "accept": "Métodos de Pago:",
+    "cards": "Pago Móvil • Transferencia • Zelle • Efectivo USD"
+  },
+  "WhatsApp": {
+    "message": "¡Hola! Estoy interesado en cotizar un colchón en La Mega Tienda del Colchón.",
+    "vip": "Asesoría de Descanso",
+    "consultation": "Cotizar por WhatsApp"
+  }
+}

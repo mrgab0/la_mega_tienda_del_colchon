@@ -1,0 +1,127 @@
+{
+  "Index": {
+    "title": "La Mega Tienda del Colchón",
+    "description": "The best sleep and comfort store in Barinas. Orthopedic, Queen, King, Full mattresses, bed frames, pillows and sleep combos.",
+    "exploreButton": "Explore Mattresses",
+    "premiumSelection": "Featured Mattresses",
+    "ourFlowers": "Our Mattresses",
+    "viewCatalog": "View full catalog",
+    "noProducts": "No products available at the moment."
+  },
+  "Nav": {
+    "home": "Home",
+    "catalog": "Mattresses",
+    "about": "About Us",
+    "contact": "Contact",
+    "cart": "Cart"
+  },
+  "nav": {
+    "home": "Home",
+    "catalog": "Mattresses",
+    "tracking": "📦 Tracking",
+    "about": "About Us",
+    "contact": "Contact",
+    "cart": "Cart"
+  },
+  "common": {
+    "addToCart": "Add to Cart",
+    "added": "Added!"
+  },
+  "Catalog": {
+    "headerBadge": "🛏️ Complete Mattress & Sleep Catalog",
+    "headerTitle": "Find the Perfect Mattress for Your Sleep",
+    "headerDesc": "A wide variety of orthopedic, pocket spring, and high-density memory foam mattresses. Add ergonomic pillows, protectors, and foundations.",
+    "allTab": "🌐 All Items",
+    "flowersTab": "🛏️ Mattresses",
+    "addonsTab": "✨ Pillows & Accessories",
+    "searchPlaceholder": "Search twin, full, queen, king, orthopedic...",
+    "sortBy": "Sort by:",
+    "featured": "Best Sellers 🌟",
+    "priceLowHigh": "Price: Low to High ($)",
+    "priceHighLow": "Price: High to Low ($)",
+    "allCategories": "All Sizes & Categories",
+    "showingItems": "Showing",
+    "itemsInCatalog": "items available",
+    "clearFilters": "Clear Filters",
+    "noResultsTitle": "No results found for that search",
+    "noResultsDesc": "Try searching by size (Twin, Full, Queen, King) or selecting \"All\".",
+    "viewAllBtn": "View Entire Catalog",
+    "addonBadge": "Accessory",
+    "addToCart": "Add to Cart",
+    "added": "Added!"
+  },
+  "ProductDetail": {
+    "includesTitle": "What is included?",
+    "addonsTitle": "Complete Your Bedding (Pillows / Protectors)",
+    "descriptionTitle": "Specifications & Comfort",
+    "addToCart": "Add to Cart",
+    "addedToCart": "Added to Cart! ✓",
+    "flowerCount": "Size",
+    "bouquetType": "Firmness",
+    "inStock": "In Stock & available for immediate delivery in Barinas",
+    "backToCatalog": "Back to Catalog",
+    "customMessage": "Delivery notes or instructions",
+    "selectOptions": "Select specifications"
+  },
+  "Cart": {
+    "title": "Your Shopping Cart",
+    "emptyTitle": "Your cart is empty",
+    "emptyDesc": "Explore our collection of premium mattresses and pillows to transform your sleep.",
+    "exploreBtn": "Explore Catalog",
+    "subtotal": "Subtotal",
+    "checkoutBtn": "Proceed to Checkout",
+    "addonsLabel": "Selected accessories"
+  },
+  "Checkout": {
+    "title": "Complete Your Order",
+    "subtitle": "Enter your delivery address in Barinas or for nationwide shipping, and select your payment method.",
+    "deliveryInfo": "Delivery & Shipping Details",
+    "recipientName": "Full Name",
+    "recipientPhone": "Contact Phone (WhatsApp)",
+    "address": "Full Delivery Address (Barinas / City)",
+    "deliveryDate": "Estimated Delivery Date",
+    "cardMessage": "Landmark / Special Instructions",
+    "paymentMethod": "Payment Method",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Delivery Fee",
+    "freeShipping": "FREE",
+    "couponCode": "Coupon Code",
+    "applyCoupon": "Apply",
+    "discount": "Discount",
+    "placeOrder": "Confirm & Place Order",
+    "manualVerificationNote": "Upon confirming your order, we will reach out via WhatsApp at +58 414 1584360 to coordinate delivery or store pickup."
+  },
+  "Reviews": {
+    "badge": "Satisfied Customers",
+    "title": "What Our Barinas Customers Say ⭐⭐⭐⭐⭐",
+    "score": "4.9 / 5.0",
+    "countText": "+350 Verified Reviews",
+    "verifiedPurchase": "Verified Purchase",
+    "rev1": "I bought the Queen Orthopedic mattress and my back pain vanished immediately. The store service on Av. Sucre was top notch.",
+    "rev1Name": "Carlos Mendoza",
+    "rev1Location": "Barinas, Alto Barinas",
+    "rev1Date": "3 days ago",
+    "rev2": "Super prompt delivery right to my bedroom. The mattress was packed securely and quality is top tier. 100% recommended.",
+    "rev2Name": "Valeria Gomez",
+    "rev2Location": "Barinas Downtown",
+    "rev2Date": "1 week ago",
+    "rev3": "Great prices and payment methods. Also we love playing Radio Colchón to sleep relaxed.",
+    "rev3Name": "Roberto Pena",
+    "rev3Location": "Barinas, Los Pozones",
+    "rev3Date": "2 weeks ago"
+  },
+  "Footer": {
+    "address1": "Avenida Sucre",
+    "address2": "Barinas, Venezuela",
+    "boutique": "La Mega Tienda del Colchón",
+    "copyright": "© 2026 La Mega Tienda del Colchón. All rights reserved.",
+    "accept": "Payment Methods:",
+    "cards": "Pago Movil • Bank Transfer • Zelle • Cash USD"
+  },
+  "WhatsApp": {
+    "message": "Hi! I'd like to get a quote for a mattress at La Mega Tienda del Colchón.",
+    "vip": "Sleep Advisory",
+    "consultation": "Quote on WhatsApp"
+  }
+}
