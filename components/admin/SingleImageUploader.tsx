@@ -110,7 +110,7 @@ export function SingleImageUploader({
         <button
           type="button"
           onClick={() => setShowManualInput(!showManualInput)}
-          className="text-xs text-[#FF97A4] font-bold hover:underline flex items-center gap-1"
+          className="text-xs text-[#A507FA] font-bold hover:underline flex items-center gap-1"
         >
           <LinkIcon size={12} />
           {showManualInput ? "Ocultar URL manual" : "Agregar URL manual"}
@@ -124,12 +124,12 @@ export function SingleImageUploader({
             value={manualUrl}
             onChange={(e) => setManualUrl(e.target.value)}
             placeholder="https://ejemplo.com/banner.jpg"
-            className="flex-1 p-2 text-xs border rounded focus:outline-none focus:ring-1 focus:ring-[#FF97A4]"
+            className="flex-1 p-2 text-xs border rounded focus:outline-none focus:ring-1 focus:ring-[#A507FA]"
           />
           <button
             type="button"
             onClick={handleAddManualUrl}
-            className="bg-[#1A1C1C] text-white px-3 py-1 text-xs font-bold rounded hover:bg-black transition-colors"
+            className="bg-[#12021E] text-white px-3 py-1 text-xs font-bold rounded hover:bg-[#A507FA] transition-colors"
           >
             Añadir
           </button>
@@ -178,17 +178,17 @@ export function SingleImageUploader({
             className={`border-2 border-dashed rounded-xl p-5 text-center cursor-pointer transition-all duration-200 flex flex-col items-center justify-center gap-1.5 ${
               uploading
                 ? "bg-gray-100 border-gray-300 opacity-60 cursor-not-allowed"
-                : "border-[#FF97A4]/50 bg-white hover:bg-[#FF97A4]/5 hover:border-[#FF97A4]"
+                : "border-[#A507FA]/50 bg-white hover:bg-[#FAF2FF]/30 hover:border-[#A507FA]"
             }`}
           >
             {uploading ? (
               <>
-                <Loader2 className="animate-spin text-[#FF97A4]" size={24} />
+                <Loader2 className="animate-spin text-[#A507FA]" size={24} />
                 <p className="text-xs font-bold text-gray-600">Subiendo a ImageKit...</p>
               </>
             ) : (
               <>
-                <div className="p-2 bg-[#FF97A4]/10 rounded-full text-[#FF97A4]">
+                <div className="p-2 bg-[#FAF2FF] rounded-full text-[#A507FA]">
                   <Upload size={20} />
                 </div>
                 <p className="text-xs font-bold text-gray-700">Subir {label} a ImageKit</p>

@@ -71,8 +71,8 @@ export function ProductNameSkuInputs({
           name="name"
           value={name}
           onChange={handleNameChange}
-          placeholder="Ej: Box Roses Purple and White"
-          className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4] font-medium dark:bg-gray-900 dark:text-white"
+          placeholder="Ej: Colchón Ortopédico Matrimonial"
+          className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA] font-medium dark:bg-gray-900 dark:text-white"
           required
         />
       </div>
@@ -88,7 +88,7 @@ export function ProductNameSkuInputs({
             type="button"
             onClick={handleRegenerateSku}
             title="Auto-generar SKU desde el nombre del producto"
-            className="text-[11px] text-pink-600 dark:text-pink-400 font-bold hover:underline flex items-center gap-1 bg-pink-50 dark:bg-pink-950/50 px-2 py-0.5 rounded-md border border-pink-200 dark:border-pink-900/60 active:scale-95 transition-all"
+            className="text-[11px] text-[#A507FA] dark:text-purple-400 font-bold hover:underline flex items-center gap-1 bg-[#FAF2FF] dark:bg-[#1A032A] px-2 py-0.5 rounded-md border border-purple-200 dark:border-purple-900/60 active:scale-95 transition-all"
           >
             {copiedNotification ? (
               <>
@@ -109,9 +109,9 @@ export function ProductNameSkuInputs({
             name="sku"
             value={sku}
             onChange={handleSkuChange}
-            placeholder="Ej: bx-rs-prlp-wt"
-            className={`p-3 border rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-[#FF97A4] font-mono text-sm dark:bg-gray-900 dark:text-white ${
-              !isManuallyEdited && sku ? "border-pink-300 bg-pink-50/20" : ""
+            placeholder="Ej: cl-ort-mat"
+            className={`p-3 border rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-[#A507FA] font-mono text-sm dark:bg-gray-900 dark:text-white ${
+              !isManuallyEdited && sku ? "border-purple-300 bg-purple-50/20" : ""
             }`}
             required
           />
@@ -120,7 +120,7 @@ export function ProductNameSkuInputs({
         {/* Indicativo del estado del SKU */}
         <div className="text-[10px] text-gray-400 font-medium px-1 flex items-center justify-between">
           {!isManuallyEdited && sku ? (
-            <span className="text-pink-600 dark:text-pink-400 flex items-center gap-1">
+            <span className="text-[#A507FA] dark:text-purple-400 flex items-center gap-1">
               ✨ Mapeado automáticamente desde el nombre
             </span>
           ) : isManuallyEdited ? (
@@ -128,7 +128,7 @@ export function ProductNameSkuInputs({
               ✏️ SKU personalizado manualmente
             </span>
           ) : (
-            <span>Formato: bx-rs-prlp-wt</span>
+            <span>Formato: cl-ort-mat</span>
           )}
         </div>
       </div>

@@ -93,7 +93,7 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F9F9] flex flex-col">
+    <div className="min-h-screen bg-[#FAF2FF] dark:bg-[#0D0115] flex flex-col">
       <ShopHeader />
 
       <main className="flex-1 py-10 md:py-16">
@@ -101,25 +101,25 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
           
           {/* Cabecera Principal del Catálogo */}
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-[#FF97A4] text-xs font-extrabold uppercase tracking-[0.25em] bg-pink-50 px-4 py-1.5 rounded-full border border-pink-100 inline-block">
+            <span className="text-[#A507FA] text-xs font-extrabold uppercase tracking-[0.25em] bg-purple-50 dark:bg-purple-950/60 px-4 py-1.5 rounded-full border border-purple-200 dark:border-purple-800 inline-block">
               {t('headerBadge')}
             </span>
-            <h1 className="text-4xl md:text-5xl font-serif font-black text-[#1A1C1C] tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-serif font-black text-[#12021E] dark:text-white tracking-tight">
               {t('headerTitle')}
             </h1>
-            <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base font-medium leading-relaxed">
               {t('headerDesc')}
             </p>
           </div>
 
           {/* TAB SWITCHER: Todos | Arreglos | Adicionales */}
-          <div className="flex justify-center gap-2 max-w-md mx-auto p-1.5 bg-gray-200/70 rounded-full">
+          <div className="flex justify-center gap-2 max-w-md mx-auto p-1.5 bg-purple-100/70 dark:bg-purple-950/50 rounded-full">
             <button
               onClick={() => { setActiveTab("all"); setSelectedCategory("all"); }}
               className={`flex-1 py-2.5 px-4 rounded-full text-xs font-extrabold transition-all text-center ${
                 activeTab === "all"
-                  ? "bg-white text-[#1A1C1C] shadow-md"
-                  : "text-gray-600 hover:text-gray-900"
+                  ? "bg-[#A507FA] text-white shadow-md"
+                  : "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
               }`}
             >
               {t('allTab')} ({combinedItems.length})
@@ -128,8 +128,8 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
               onClick={() => { setActiveTab("products"); setSelectedCategory("all"); }}
               className={`flex-1 py-2.5 px-4 rounded-full text-xs font-extrabold transition-all text-center ${
                 activeTab === "products"
-                  ? "bg-[#FF97A4] text-white shadow-md"
-                  : "text-gray-600 hover:text-gray-900"
+                  ? "bg-[#A507FA] text-white shadow-md"
+                  : "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
               }`}
             >
               {t('flowersTab')} ({initialProducts.length})
@@ -138,8 +138,8 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
               onClick={() => { setActiveTab("addons"); setSelectedCategory("all"); }}
               className={`flex-1 py-2.5 px-4 rounded-full text-xs font-extrabold transition-all text-center ${
                 activeTab === "addons"
-                  ? "bg-purple-600 text-white shadow-md"
-                  : "text-gray-600 hover:text-gray-900"
+                  ? "bg-[#A507FA] text-white shadow-md"
+                  : "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
               }`}
             >
               {t('addonsTab')} ({initialAddons.length})
@@ -147,7 +147,7 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
           </div>
 
           {/* PANEL DE BÚSQUEDA Y FILTROS */}
-          <div className="bg-white p-5 md:p-6 rounded-3xl border border-gray-100 shadow-sm space-y-5">
+          <div className="bg-white dark:bg-[#12021E] p-5 md:p-6 rounded-3xl border border-purple-100 dark:border-purple-950/80 shadow-sm space-y-5">
             <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
               
               {/* Campo de Búsqueda Sencillo */}
@@ -158,7 +158,7 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder={t('searchPlaceholder')}
-                  className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#FF97A4] transition-all bg-gray-50/50"
+                  className="w-full pl-11 pr-4 py-3 border border-purple-100 dark:border-purple-900/60 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#A507FA] transition-all bg-purple-50/30 dark:bg-purple-950/30 dark:text-white"
                 />
                 {searchTerm && (
                   <button
@@ -172,13 +172,13 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
 
               {/* Ordenamiento por Precio */}
               <div className="flex items-center gap-3 w-full md:w-auto justify-end">
-                <span className="text-xs font-bold text-gray-500 flex items-center gap-1.5">
-                  <ArrowUpDown size={14} className="text-[#FF97A4]" /> {t('sortBy')}
+                <span className="text-xs font-bold text-gray-500 dark:text-gray-300 flex items-center gap-1.5">
+                  <ArrowUpDown size={14} className="text-[#A507FA]" /> {t('sortBy')}
                 </span>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
-                  className="p-3 border border-gray-200 rounded-2xl bg-white text-xs font-bold text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                  className="p-3 border border-purple-100 dark:border-purple-900/60 rounded-2xl bg-white dark:bg-[#1A032A] text-xs font-bold text-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                 >
                   <option value="featured">{t('featured')}</option>
                   <option value="price-asc">{t('priceLowHigh')}</option>
@@ -188,13 +188,13 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
             </div>
 
             {/* Pastillas de Categorías (Pills) */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-2 border-t border-gray-100 scrollbar-none">
+            <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-2 border-t border-purple-100 dark:border-purple-900/50 scrollbar-none">
               <button
                 onClick={() => setSelectedCategory("all")}
                 className={`px-4 py-2 rounded-full text-xs font-bold transition-all whitespace-nowrap ${
                   selectedCategory === "all"
-                    ? "bg-[#FF97A4] text-white shadow-md"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    ? "bg-[#A507FA] text-white shadow-md"
+                    : "bg-purple-50 dark:bg-purple-950/60 text-slate-700 dark:text-gray-300 hover:bg-purple-100"
                 }`}
               >
                 {t('allCategories')}
@@ -210,8 +210,8 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
                     onClick={() => setSelectedCategory(cat)}
                     className={`px-4 py-2 rounded-full text-xs font-bold transition-all whitespace-nowrap ${
                       isSelected
-                        ? "bg-[#FF97A4] text-white shadow-md"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                        ? "bg-[#A507FA] text-white shadow-md"
+                        : "bg-purple-50 dark:bg-purple-950/60 text-slate-700 dark:text-gray-300 hover:bg-purple-100"
                     }`}
                   >
                     {cat} ({count})
@@ -224,8 +224,8 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
           {/* RESULTADOS DEL CATÁLOGO */}
           <div>
             <div className="flex justify-between items-center mb-6">
-              <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">
-                {t('showingItems')} <strong className="text-[#1A1C1C]">{filteredItems.length}</strong> {t('itemsInCatalog')}
+              <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                {t('showingItems')} <strong className="text-[#12021E] dark:text-white">{filteredItems.length}</strong> {t('itemsInCatalog')}
               </span>
               {(searchTerm || selectedCategory !== "all" || activeTab !== "all") && (
                 <button
@@ -234,7 +234,7 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
                     setSelectedCategory("all");
                     setActiveTab("all");
                   }}
-                  className="text-xs font-bold text-[#FF97A4] hover:underline flex items-center gap-1"
+                  className="text-xs font-bold text-[#A507FA] hover:underline flex items-center gap-1"
                 >
                   <RefreshCw size={12} /> {t('clearFilters')}
                 </button>
@@ -254,7 +254,7 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
                         price={item.price}
                         category={item.category}
                         badge={item.badge}
-                        image={item.images[0] || "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=800"}
+                        image={item.images[0] || "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=800"}
                       />
                     );
                   }
@@ -265,25 +265,25 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
                   return (
                     <div
                       key={item._id}
-                      className="bg-white rounded-3xl p-5 border border-purple-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group relative overflow-hidden"
+                      className="bg-white dark:bg-[#12021E] rounded-3xl p-5 border border-purple-100 dark:border-purple-900/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group relative overflow-hidden"
                     >
                       <div className="space-y-3">
-                        <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-purple-50">
+                        <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-purple-50 dark:bg-purple-950/40">
                           <img
                             src={item.images[0]}
                             alt={item.name}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />
-                          <span className="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-md">
+                          <span className="absolute top-3 left-3 bg-[#A507FA] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-md">
                             <Sparkles size={11} /> {t('addonBadge')}
                           </span>
                         </div>
 
                         <div>
-                          <span className="text-[11px] font-bold text-purple-600 uppercase tracking-wider block">
+                          <span className="text-[11px] font-bold text-[#A507FA] uppercase tracking-wider block">
                             {item.category || t('addonBadge')}
                           </span>
-                          <h3 className="font-bold text-lg text-[#1A1C1C] line-clamp-1 group-hover:text-purple-600 transition-colors">
+                          <h3 className="font-bold text-lg text-[#12021E] dark:text-white line-clamp-1 group-hover:text-[#A507FA] transition-colors">
                             {item.name}
                           </h3>
                           {item.description && (
@@ -294,10 +294,10 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
                         </div>
                       </div>
 
-                      <div className="pt-4 mt-3 border-t border-gray-100 flex items-center justify-between">
+                      <div className="pt-4 mt-3 border-t border-purple-100 dark:border-purple-900/40 flex items-center justify-between">
                         <div>
                           <span className="text-[10px] text-gray-400 font-bold block uppercase">Precio</span>
-                          <span className="text-xl font-black text-[#1A1C1C]">
+                          <span className="text-xl font-black text-[#A507FA] dark:text-[#D48FFF]">
                             ${item.price.toFixed(2)} <span className="text-xs font-bold text-gray-500">USD</span>
                           </span>
                         </div>
@@ -307,7 +307,7 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
                           className={`px-4 py-2.5 rounded-full font-bold text-xs transition-all flex items-center gap-1.5 shadow-sm ${
                             isAdded
                               ? "bg-green-600 text-white"
-                              : "bg-purple-600 hover:bg-purple-700 text-white"
+                              : "bg-[#A507FA] hover:bg-[#8B00D9] text-white"
                           }`}
                         >
                           {isAdded ? (
@@ -326,9 +326,9 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
                 })}
               </div>
             ) : (
-              <div className="bg-white p-12 rounded-3xl border border-gray-100 text-center space-y-4 max-w-lg mx-auto shadow-sm">
-                <Flower2 size={48} className="mx-auto text-pink-200" />
-                <h3 className="text-xl font-bold text-[#1A1C1C]">{t('noResultsTitle')}</h3>
+              <div className="bg-white dark:bg-[#12021E] p-12 rounded-3xl border border-purple-100 dark:border-purple-900/60 text-center space-y-4 max-w-lg mx-auto shadow-sm">
+                <Sparkles size={48} className="mx-auto text-purple-300" />
+                <h3 className="text-xl font-bold text-[#12021E] dark:text-white">{t('noResultsTitle')}</h3>
                 <p className="text-xs text-gray-400">
                   {t('noResultsDesc')}
                 </p>
@@ -338,7 +338,7 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
                     setSelectedCategory("all");
                     setActiveTab("all");
                   }}
-                  className="bg-[#FF97A4] text-white px-6 py-2.5 rounded-full font-bold text-xs hover:bg-[#B0004A] transition-colors"
+                  className="bg-[#A507FA] text-white px-6 py-2.5 rounded-full font-bold text-xs hover:bg-[#8B00D9] transition-colors"
                 >
                   {t('viewAllBtn')}
                 </button>

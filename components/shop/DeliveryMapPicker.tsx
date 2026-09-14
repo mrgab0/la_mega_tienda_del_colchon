@@ -230,14 +230,14 @@ export function DeliveryMapPicker({
     <div className="space-y-4 bg-gray-50/70 dark:bg-gray-900/50 p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b pb-3 border-gray-200 dark:border-gray-800">
         <label className="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 flex items-center gap-1.5">
-          <MapPin size={16} className="text-[#FF97A4]" /> Dirección y Ubicación en Mapa para Entrega
+          <MapPin size={16} className="text-[#A507FA]" /> Dirección y Ubicación en Mapa para Entrega
         </label>
         
         <button
           type="button"
           onClick={handleUseCurrentGPS}
           disabled={searching}
-          className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5"
+          className="text-xs font-bold text-[#A507FA] dark:text-purple-400 hover:underline flex items-center gap-1.5"
         >
           <Navigation size={13} />
           {searching ? "Detectando GPS..." : "Usar Mi Ubicación Actual (GPS)"}
@@ -256,14 +256,14 @@ export function DeliveryMapPicker({
             }}
             onBlur={() => geocodeAddress()}
             placeholder="Ej: Avenida Los Andes, Alto Barinas Norte, Barinas"
-            className="w-full p-3.5 pr-24 border rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:text-white"
+            className="w-full p-3.5 pr-24 border rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#A507FA] dark:bg-gray-900 dark:text-white"
             required
           />
           <button
             type="button"
             onClick={() => geocodeAddress()}
             disabled={searching}
-            className="absolute right-2 top-2 bottom-2 px-3 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition-colors flex items-center gap-1"
+            className="absolute right-2 top-2 bottom-2 px-3 bg-[#A507FA] text-white rounded-xl text-xs font-bold hover:bg-[#8B00D9] transition-colors flex items-center gap-1"
           >
             <Search size={14} />
             {searching ? "Buscando..." : "Ubicar GPS"}
@@ -303,8 +303,8 @@ export function DeliveryMapPicker({
 
           {/* Badge flotante de millas sobre el mapa */}
           <div className="absolute top-3 right-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md px-3 py-1.5 rounded-full border shadow-md flex items-center gap-1.5 text-xs font-black">
-            <Compass size={14} className="text-[#FF97A4]" />
-            <span>{distanceMiles > 0 ? `📍 ${distanceMiles} Millas desde Boutique` : "📍 Escribe la dirección para calcular millas"}</span>
+            <Compass size={14} className="text-[#A507FA]" />
+            <span>{distanceMiles > 0 ? `📍 ${distanceMiles} Millas desde Tienda` : "📍 Escribe la dirección para calcular millas"}</span>
           </div>
         </div>
 

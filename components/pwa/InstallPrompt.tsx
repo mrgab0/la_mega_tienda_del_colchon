@@ -122,8 +122,8 @@ export function InstallPrompt() {
         </div>
 
         {isIOS ? (
-          <div className="p-3 bg-pink-50 dark:bg-pink-950/40 rounded-2xl text-[11px] text-pink-950 dark:text-pink-200 flex items-center gap-2 border border-pink-200 dark:border-pink-900/50 font-medium">
-            <Share size={16} className="text-[#be185d] flex-shrink-0" />
+          <div className="p-3 bg-[#FAF2FF] dark:bg-[#1A032A] rounded-2xl text-[11px] text-purple-950 dark:text-purple-200 flex items-center gap-2 border border-purple-200 dark:border-purple-900/50 font-medium">
+            <Share size={16} className="text-[#A507FA] flex-shrink-0" />
             <span>
               Para iPhone/iPad (Safari): Toca <strong>Compartir</strong> <Share size={12} className="inline mx-0.5" /> y selecciona <strong>"Agregar al inicio"</strong>.
             </span>
@@ -131,7 +131,7 @@ export function InstallPrompt() {
         ) : (
           <button
             onClick={handleInstallClick}
-            className="w-full bg-gradient-to-r from-[#FF97A4] to-[#be185d] hover:from-[#be185d] hover:to-[#831843] text-white py-3 px-4 rounded-2xl font-bold text-xs shadow-lg shadow-pink-500/25 transition-all flex items-center justify-center gap-2"
+            className="w-full bg-gradient-to-r from-[#A507FA] to-[#7A00BD] hover:from-[#7A00BD] hover:to-[#550085] text-white py-3 px-4 rounded-2xl font-bold text-xs shadow-lg shadow-[#A507FA]/25 transition-all flex items-center justify-center gap-2"
           >
             <Download size={16} />
             <span>Instalar App en 1 Tap (Gratis)</span>

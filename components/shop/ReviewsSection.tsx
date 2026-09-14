@@ -74,7 +74,7 @@ export function ReviewsSection({
         
         {/* Encabezado Principal de Reseñas */}
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-pink-50 dark:bg-pink-950/60 text-[#FF97A4] border border-pink-200 dark:border-pink-900/50 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-sm">
+          <div className="inline-flex items-center gap-2 bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] border border-[#A507FA]/30 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-sm">
             <ShieldCheck size={14} className="text-emerald-500" />
             <span>{t("badge")}</span>
           </div>
@@ -114,7 +114,7 @@ export function ReviewsSection({
               key={rev.id}
               className="bg-[#F9F9F9] dark:bg-gray-900/70 p-6 rounded-3xl border border-gray-200/80 dark:border-gray-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4 relative"
             >
-              <Quote size={32} className="absolute right-5 top-5 text-pink-200 dark:text-pink-950/40 pointer-events-none" />
+              <Quote size={32} className="absolute right-5 top-5 text-purple-200 dark:text-[#A507FA]/20 pointer-events-none" />
 
               <div className="space-y-3">
                 <div className="flex items-center gap-1 text-amber-400">

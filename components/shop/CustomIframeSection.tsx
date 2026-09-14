@@ -17,7 +17,7 @@ export function CustomIframeSection({
     <section className="py-12 bg-white dark:bg-[#12131A] border-y border-gray-100 dark:border-gray-800">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center gap-2 mb-6 border-b pb-3 border-gray-100 dark:border-gray-800">
-          <Globe size={20} className="text-[#FF97A4]" />
+          <Globe size={20} className="text-[#A507FA]" />
           <h2 className="text-xl font-serif font-black text-[#1A1C1C] dark:text-white">
             {title}
           </h2>

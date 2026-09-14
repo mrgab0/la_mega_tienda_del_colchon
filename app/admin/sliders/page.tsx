@@ -39,7 +39,7 @@ export default function SlidersPage() {
         </div>
         <Link
           href="/admin/sliders/crear"
-          className="bg-[#FF97A4] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#B0004A] transition-colors shadow-md flex items-center gap-2"
+          className="bg-[#A507FA] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#8B00D9] transition-colors shadow-md flex items-center gap-2"
         >
           <Plus size={18} /> Crear Nueva Promoción
         </Link>
@@ -54,7 +54,7 @@ export default function SlidersPage() {
           <p className="text-gray-500 font-medium">No hay promociones o sliders creados aún.</p>
           <Link
             href="/admin/sliders/crear"
-            className="inline-block bg-[#FF97A4] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-[#B0004A] transition-colors"
+            className="inline-block bg-[#A507FA] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-[#8B00D9] transition-colors"
           >
             Crear tu primer Banner
           </Link>
@@ -104,7 +104,7 @@ export default function SlidersPage() {
 
                   <div className="flex flex-wrap items-center gap-3 text-xs text-gray-400 pt-1">
                     {slider.ctaText && (
-                      <span className="flex items-center gap-1 text-[#FF97A4] font-bold">
+                      <span className="flex items-center gap-1 text-[#A507FA] font-bold">
                         <Tag size={12} /> Botón: "{slider.ctaText}"
                       </span>
                     )}

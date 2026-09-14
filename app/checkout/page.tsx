@@ -283,7 +283,7 @@ export default function CheckoutPage() {
                     <button
                       type="button"
                       onClick={() => setIsBioModalOpen(true)}
-                      className="bg-pink-50 hover:bg-pink-100 text-[#FF97A4] border border-pink-200 px-3 py-1 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5"
+                      className="bg-[#FAF2FF] hover:bg-purple-100 text-[#A507FA] border border-[#A507FA]/30 px-3 py-1 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5"
                     >
                       <Fingerprint size={14} />
                       <span>Ingresar con Huella 👆</span>
@@ -296,7 +296,7 @@ export default function CheckoutPage() {
                       value={name} 
                       onChange={(e) => setName(e.target.value)} 
                       placeholder="Nombre y Apellido Completo *" 
-                      className="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4] font-medium" 
+                      className="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA] font-medium" 
                       required 
                     />
                     <input 
@@ -305,7 +305,7 @@ export default function CheckoutPage() {
                       value={email} 
                       onChange={(e) => setEmail(e.target.value)} 
                       placeholder="Correo Electrónico del Cliente *" 
-                      className="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4] font-medium" 
+                      className="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA] font-medium" 
                       required 
                     />
                     <input 
@@ -313,7 +313,7 @@ export default function CheckoutPage() {
                       value={phone} 
                       onChange={(e) => setPhone(e.target.value)} 
                       placeholder="Teléfono / WhatsApp de Contacto *" 
-                      className="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4] font-medium" 
+                      className="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA] font-medium" 
                       required 
                     />
                     <DeliveryMapPicker
@@ -326,25 +326,25 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
-                {/* 1.5 Mensaje para la Tarjeta de Dedicatoria Incluida */}
-                <div className="space-y-3 bg-pink-50/60 p-4 rounded-2xl border border-pink-100/80">
+                {/* 1.5 Mensaje o Nota de Entrega Incluida */}
+                <div className="space-y-3 bg-[#FAF2FF] p-4 rounded-2xl border border-[#A507FA]/20">
                   <div className="flex justify-between items-center">
-                    <h2 className="text-xs font-bold uppercase tracking-wider text-[#FF97A4] flex items-center gap-1.5">
-                      <Heart size={14} className="text-[#FF97A4] fill-[#FF97A4]" /> Tarjeta de Dedicatoria Impresa (Gratis Incluida)
+                    <h2 className="text-xs font-bold uppercase tracking-wider text-[#A507FA] flex items-center gap-1.5">
+                      <Heart size={14} className="text-[#A507FA] fill-[#A507FA]" /> Nota o Instrucciones de Entrega (Opcional)
                     </h2>
-                    <span className="bg-[#FF97A4] text-white text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase">
+                    <span className="bg-[#A507FA] text-white text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase">
                       Incluido 🎁
                     </span>
                   </div>
                   <p className="text-xs text-gray-500 font-medium leading-relaxed">
-                    Escribe a continuación el mensaje especial que deseas que imprimamos en la tarjeta de regalo de tu arreglo floral:
+                    Escribe a continuación cualquier detalle o instrucción especial para la entrega de tus colchones:
                   </p>
                   <textarea
                     name="cardMessage"
                     value={cardMessage}
                     onChange={(e) => setCardMessage(e.target.value)}
-                    placeholder="Ej: ¡Feliz Cumpleaños María! Deseo que este día esté lleno de amor y alegría. Con todo mi cariño, Carlos. ❤️"
-                    className="w-full p-3.5 border border-pink-200 rounded-xl text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#FF97A4] h-24 bg-white text-gray-800"
+                    placeholder="Ej: Entregar en horario de la tarde, llamar antes de salir al número..."
+                    className="w-full p-3.5 border border-purple-200 rounded-xl text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#A507FA] h-24 bg-white text-gray-800"
                   />
                 </div>
 
@@ -354,7 +354,7 @@ export default function CheckoutPage() {
                     <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500">
                       2. Opción y Horario de Entrega
                     </h2>
-                    <span className="text-xs font-bold text-[#FF97A4]">{deliveryOptionsList.length} opciones disponibles</span>
+                    <span className="text-xs font-bold text-[#A507FA]">{deliveryOptionsList.length} opciones disponibles</span>
                   </div>
 
                   <div className="grid grid-cols-1 gap-2.5 max-h-[380px] overflow-y-auto pr-1">
@@ -369,19 +369,19 @@ export default function CheckoutPage() {
                           onClick={() => setSelectedDelivery(option)}
                           className={`relative flex items-center justify-between p-4 border-2 rounded-2xl cursor-pointer transition-all ${
                             isSelected
-                              ? "border-[#FF97A4] bg-[#FF97A4]/5 shadow-sm"
+                              ? "border-[#A507FA] bg-[#A507FA]/5 shadow-sm"
                               : "border-gray-100 hover:border-gray-200 bg-white"
                           }`}
                         >
                           <div className="flex items-center gap-3.5">
-                            <div className={`p-2.5 rounded-xl ${isSelected ? "bg-[#FF97A4] text-white" : "bg-gray-100 text-gray-500"}`}>
+                            <div className={`p-2.5 rounded-xl ${isSelected ? "bg-[#A507FA] text-white" : "bg-gray-100 text-gray-500"}`}>
                               <IconComponent size={20} />
                             </div>
                             <div>
                               <div className="flex items-center gap-2">
                                 <span className="font-bold text-sm text-[#1A1C1C]">{option.title}</span>
                                 {option.badge && (
-                                  <span className="bg-[#FF97A4]/15 text-[#FF97A4] text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase">
+                                  <span className="bg-[#A507FA]/15 text-[#A507FA] text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase">
                                     {option.badge}
                                   </span>
                                 )}
@@ -392,7 +392,7 @@ export default function CheckoutPage() {
                                   ⏱️ <strong className="text-gray-800">{option.estimatedTimeLabel}</strong>
                                 </span>
                                 {isMounted && option.id !== "pickup" && option.pricePerMile > 0 && (
-                                  <span suppressHydrationWarning className="text-purple-700 font-bold bg-purple-50 px-2 py-0.5 rounded-md border border-purple-100">
+                                  <span suppressHydrationWarning className="text-[#A507FA] font-bold bg-purple-50 px-2 py-0.5 rounded-md border border-purple-100">
                                     📍 {deliveryLocation?.distanceMiles || 0} mi × ${option.pricePerMile.toFixed(2)}/mi
                                   </span>
                                 )}
@@ -401,11 +401,11 @@ export default function CheckoutPage() {
                           </div>
 
                           <div className="text-right flex-shrink-0 ml-3">
-                            <span suppressHydrationWarning className={`text-sm font-extrabold block ${optionPrice > 0 ? "text-[#FF97A4]" : "text-green-600"}`}>
+                            <span suppressHydrationWarning className={`text-sm font-extrabold block ${optionPrice > 0 ? "text-[#A507FA]" : "text-green-600"}`}>
                               {optionPrice > 0 ? `+$${optionPrice.toFixed(2)} USD` : "Gratis"}
                             </span>
                             {isSelected && (
-                              <CheckCircle2 size={18} className="text-[#FF97A4] ml-auto mt-1" />
+                              <CheckCircle2 size={18} className="text-[#A507FA] ml-auto mt-1" />
                             )}
                           </div>
                         </label>
@@ -425,7 +425,7 @@ export default function CheckoutPage() {
                       <label 
                         key={method.id} 
                         className={`relative flex flex-col items-center p-3.5 border-2 rounded-2xl cursor-pointer transition-all ${
-                          selectedPayment === method.id ? 'border-[#FF97A4] bg-[#FF97A4]/5 shadow-sm' : 'border-gray-100 hover:border-gray-200'
+                          selectedPayment === method.id ? 'border-[#A507FA] bg-[#A507FA]/5 shadow-sm' : 'border-gray-100 hover:border-gray-200'
                         }`}
                       >
                         <input 
@@ -469,7 +469,7 @@ export default function CheckoutPage() {
                                 <button
                                   type="button"
                                   onClick={() => handleCopyText(detailToCopy)}
-                                  className="bg-white border text-gray-700 hover:text-[#FF97A4] hover:border-[#FF97A4] px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
+                                  className="bg-white border text-gray-700 hover:text-[#A507FA] hover:border-[#A507FA] px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
                                 >
                                   <Copy size={13} />
                                   <span>{copiedText === detailToCopy ? "¡Copiado! ✓" : "Copiar Datos"}</span>
@@ -492,7 +492,7 @@ export default function CheckoutPage() {
                                   href={cfg.linkUrl}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-2 bg-[#1A1C1C] text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-[#FF97A4] transition-colors shadow-sm"
+                                  className="inline-flex items-center gap-2 bg-[#1A1C1C] text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-[#A507FA] transition-colors shadow-sm"
                                 >
                                   <span>Pagar vía {cfg.title}</span>
                                   <ExternalLink size={14} />
@@ -527,7 +527,7 @@ export default function CheckoutPage() {
                   <input 
                     name="paymentRef" 
                     placeholder={selectedPayment === 'efectivo' ? "No requerido para pago en efectivo" : "Número o Código de Referencia de Pago *"} 
-                    className="w-full p-3.5 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FF97A4] font-medium" 
+                    className="w-full p-3.5 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#A507FA] font-medium" 
                     disabled={selectedPayment === 'efectivo'}
                     required={selectedPayment !== 'efectivo'}
                   />
@@ -536,7 +536,7 @@ export default function CheckoutPage() {
                 <button 
                   type="submit" 
                   disabled={loading || cartItems.length === 0} 
-                  className="w-full bg-[#FF97A4] text-white py-4 rounded-full font-bold hover:bg-[#B0004A] transition-all shadow-lg shadow-[#FF97A4]/20 disabled:bg-gray-300 text-base"
+                  className="w-full bg-[#A507FA] text-white py-4 rounded-full font-bold hover:bg-[#8B00D9] transition-all shadow-lg shadow-[#A507FA]/20 disabled:bg-gray-300 text-base"
                 >
                   {loading ? "Procesando Orden..." : `Confirmar Pedido - $${finalTotal.toFixed(2)} USD`}
                 </button>
@@ -562,21 +562,21 @@ export default function CheckoutPage() {
                           <div className="mt-1 space-y-1 border-t border-gray-100 pt-1">
                             {item.addons.map((add: any, idx: number) => (
                               <div key={idx} className="text-[10px]">
-                                <span className="block text-[#FF97A4] font-bold">
+                                <span className="block text-[#A507FA] font-bold">
                                   ✨ {add.name || add.value} {add.price ? `(+$${add.price.toFixed(2)})` : ''}
                                 </span>
                                 {add.customText ? (
-                                  <div className="bg-pink-50 p-1.5 rounded-md text-gray-800 font-medium my-0.5 border border-pink-100 flex items-start gap-1">
-                                    <MessageSquare size={11} className="text-[#FF97A4] flex-shrink-0 mt-0.5" />
+                                  <div className="bg-purple-50 p-1.5 rounded-md text-gray-800 font-medium my-0.5 border border-purple-100 flex items-start gap-1">
+                                    <MessageSquare size={11} className="text-[#A507FA] flex-shrink-0 mt-0.5" />
                                     <span><em>"{add.customText}"</em></span>
                                   </div>
                                 ) : (
                                   updateAddonCustomText && (
                                     <input
                                       type="text"
-                                      placeholder="Añadir dedicatoria para este adicional..."
+                                      placeholder="Añadir detalle para este adicional..."
                                       onChange={(e) => updateAddonCustomText(item.id, add.addonId, e.target.value)}
-                                      className="mt-0.5 p-1 text-[9px] border rounded w-full focus:outline-none focus:ring-1 focus:ring-[#FF97A4]"
+                                      className="mt-0.5 p-1 text-[9px] border rounded w-full focus:outline-none focus:ring-1 focus:ring-[#A507FA]"
                                     />
                                   )
                                 )}
@@ -594,7 +594,7 @@ export default function CheckoutPage() {
               {/* CAJA DE CUPÓN DE DESCUENTO */}
               <div className="pt-4 border-t border-gray-100 space-y-3">
                 <label className="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-1.5">
-                  <Ticket size={14} className="text-[#FF97A4]" /> ¿Tienes un Cupón de Descuento?
+                  <Ticket size={14} className="text-[#A507FA]" /> ¿Tienes un Cupón de Descuento?
                 </label>
 
                 {couponSuccess && (
@@ -617,12 +617,12 @@ export default function CheckoutPage() {
                     value={couponInput}
                     onChange={(e) => setCouponInput(e.target.value)}
                     placeholder="Ej: INAUGURACION, BIENVENIDA"
-                    className="flex-1 p-2.5 border rounded-xl text-xs uppercase font-bold focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                    className="flex-1 p-2.5 border rounded-xl text-xs uppercase font-bold focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                   />
                   <button
                     type="button"
                     onClick={handleApplyCoupon}
-                    className="bg-[#1A1C1C] text-white px-4 py-2.5 rounded-xl text-xs font-bold hover:bg-[#FF97A4] transition-colors"
+                    className="bg-[#1A1C1C] text-white px-4 py-2.5 rounded-xl text-xs font-bold hover:bg-[#A507FA] transition-colors"
                   >
                     Aplicar
                   </button>
@@ -632,7 +632,7 @@ export default function CheckoutPage() {
               {/* DESGLOSE TRANSPARENTE DE TOTALES */}
               <div className="space-y-2.5 pt-4 border-t border-gray-100 text-sm">
                 <div className="flex justify-between text-gray-600 font-medium">
-                  <span>Subtotal Arreglos & Adicionales</span>
+                  <span>Subtotal Productos & Adicionales</span>
                   <span className="font-bold text-gray-800">${subtotal.toFixed(2)}</span>
                 </div>
 
@@ -654,14 +654,14 @@ export default function CheckoutPage() {
 
                 <div className="flex justify-between text-gray-600 font-medium">
                   <span>Entrega {selectedDelivery ? `(${selectedDelivery.title})` : "(Por seleccionar)"}</span>
-                  <span className={`font-bold ${deliveryFee > 0 ? "text-[#FF97A4]" : "text-gray-800"}`}>
+                  <span className={`font-bold ${deliveryFee > 0 ? "text-[#A507FA]" : "text-gray-800"}`}>
                     {selectedDelivery ? (deliveryFee > 0 ? `+$${deliveryFee.toFixed(2)}` : "Gratis") : "$0.00"}
                   </span>
                 </div>
 
                 <div className="border-t pt-3 flex justify-between font-extrabold text-xl text-[#1A1C1C]">
                   <span>Total Final</span>
-                  <span className="text-[#FF97A4]">${finalTotal.toFixed(2)} USD</span>
+                  <span className="text-[#A507FA]">${finalTotal.toFixed(2)} USD</span>
                 </div>
               </div>
             </div>

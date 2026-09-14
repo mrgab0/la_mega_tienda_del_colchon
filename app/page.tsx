@@ -87,19 +87,19 @@ export default async function Home() {
       <StickyNav siteConfig={siteConfig} />
 
       {/* Hero Section - La Mega Tienda del Colchón */}
-      <section className="relative z-20 pt-8 pb-14 flex flex-col items-center justify-center bg-gradient-to-b from-blue-950/20 via-slate-900/10 to-transparent dark:from-blue-950/40 dark:via-slate-950/30 dark:to-transparent border-b border-blue-500/20 transition-colors duration-300">
+      <section className="relative z-20 pt-8 pb-14 flex flex-col items-center justify-center bg-gradient-to-b from-[#12021E]/15 via-[#FAF2FF]/30 to-transparent dark:from-[#12021E]/60 dark:via-[#0D0115]/40 dark:to-transparent border-b border-[#A507FA]/20 transition-colors duration-300">
         <div className="container mx-auto px-6 text-center z-20 flex flex-col items-center">
           
           {/* Badge Icon */}
           <div className="mb-4 relative group">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-700 to-slate-900 flex items-center justify-center text-4xl sm:text-5xl shadow-2xl border-2 border-amber-400/80 transform hover:scale-105 transition-transform duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#12021E] flex items-center justify-center text-4xl sm:text-5xl shadow-2xl border-2 border-[#A507FA] transform hover:scale-105 transition-transform duration-300">
               🛏️
             </div>
           </div>
 
           {/* Kicker Tag */}
-          <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-950/80 text-blue-900 dark:text-blue-300 border border-blue-400/40 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] mb-4 shadow-sm">
-            <Sparkles size={13} className="text-amber-500" />
+          <div className="inline-flex items-center gap-2 bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] border border-[#A507FA]/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] mb-4 shadow-sm">
+            <Sparkles size={13} className="text-[#A507FA]" />
             <span>Especialistas en Descanso • Barinas VE</span>
           </div>
 
@@ -110,15 +110,15 @@ export default async function Home() {
 
           {/* Eslogan e Información de Ubicación / Servicios */}
           <div className="text-sm sm:text-base md:text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto mb-8 font-medium leading-relaxed space-y-2">
-            <p className="text-blue-700 dark:text-blue-300 text-lg sm:text-xl font-semibold">
+            <p className="text-[#A507FA] text-lg sm:text-xl font-semibold">
               {siteConfig?.heroSlogan || "El descanso de tus sueños al mejor precio."}
             </p>
             <div className="flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-semibold pt-1">
-              <span className="flex items-center gap-1"><MapPin size={15} className="text-blue-600 dark:text-blue-400" /> Avenida Sucre, Barinas</span>
+              <span className="flex items-center gap-1"><MapPin size={15} className="text-[#A507FA]" /> Avenida Sucre, Barinas</span>
               <span>•</span>
-              <span className="flex items-center gap-1"><Truck size={15} className="text-blue-600 dark:text-blue-400" /> Despacho a Domicilio</span>
+              <span className="flex items-center gap-1"><Truck size={15} className="text-[#A507FA]" /> Despacho a Domicilio</span>
               <span>•</span>
-              <span className="flex items-center gap-1"><ShieldCheck size={15} className="text-amber-500" /> Garantía de Fábrica</span>
+              <span className="flex items-center gap-1"><ShieldCheck size={15} className="text-[#A507FA]" /> Garantía de Fábrica</span>
             </div>
           </div>
 
@@ -128,15 +128,15 @@ export default async function Home() {
               href="https://wa.me/584141584360"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-xl shadow-blue-900/30 border border-amber-400/60 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto bg-[#A507FA] hover:bg-[#8B00D9] text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-xl shadow-[#A507FA]/30 border border-[#A507FA]/60 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
             >
-              <PhoneCall size={16} className="text-amber-400 group-hover:rotate-12 transition-transform" />
+              <PhoneCall size={16} className="text-white group-hover:rotate-12 transition-transform" />
               <span>WhatsApp: 0414-1584360</span>
             </a>
 
             <a 
               href="/productos" 
-              className="w-full sm:w-auto bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-50 dark:hover:bg-slate-800 transition-all border border-slate-300 dark:border-slate-800 shadow-md hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto bg-white dark:bg-[#12021E] text-slate-900 dark:text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-[#FAF2FF] dark:hover:bg-[#1A032A] hover:border-[#A507FA] transition-all border border-slate-300 dark:border-gray-800 shadow-md hover:scale-105 active:scale-95"
             >
               {siteConfig?.heroButtonText || "Ver Catálogo de Colchones"}
             </a>
@@ -152,9 +152,9 @@ export default async function Home() {
 
       {/* Radio Colchón Feature Banner */}
       <section className="container mx-auto px-4 sm:px-6 pt-12 z-20 relative">
-        <div className="bg-gradient-to-r from-blue-900 via-slate-900 to-indigo-950 rounded-2xl p-6 sm:p-8 text-white border border-blue-500/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-gradient-to-r from-[#12021E] via-[#2A0845] to-[#12021E] rounded-2xl p-6 sm:p-8 text-white border border-[#A507FA]/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4 text-left">
-            <div className="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-400 shrink-0">
+            <div className="w-14 h-14 rounded-2xl bg-[#A507FA]/20 border border-[#A507FA]/40 flex items-center justify-center text-[#A507FA] shrink-0">
               <Radio className="w-7 h-7 animate-pulse" />
             </div>
             <div>
@@ -162,7 +162,7 @@ export default async function Home() {
                 <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-ping"></span> Transmisión en Vivo
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-white">Radio Colchón 📻</h3>
-              <p className="text-xs sm:text-sm text-slate-300 font-medium">
+              <p className="text-xs sm:text-sm text-purple-200 font-medium">
                 Música relajante, frecuencias binaurales y sonidos para un descanso profundo y reparador.
               </p>
             </div>
@@ -171,7 +171,7 @@ export default async function Home() {
             href="https://radiocolchon.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-lg hover:scale-105 active:scale-95 flex items-center gap-2"
+            className="shrink-0 bg-[#A507FA] hover:bg-[#8B00D9] text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-lg hover:scale-105 active:scale-95 flex items-center gap-2"
           >
             <span>Sintonizar radiocolchon.com</span>
             <span>↗</span>
@@ -189,16 +189,16 @@ export default async function Home() {
 
       {/* Product Grid con Columnas Dinámicas */}
       <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 z-20 relative">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 pb-4 border-b border-blue-500/20 gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 pb-4 border-b border-[#A507FA]/20 gap-4">
           <div>
-            <span className="text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-[0.2em] block mb-1">
+            <span className="text-[#A507FA] text-xs font-bold uppercase tracking-[0.2em] block mb-1">
               Catálogo de Descanso
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
               Colchones y Somieres
             </h2>
           </div>
-          <a href="/productos" className="text-blue-600 dark:text-blue-400 font-bold text-sm border-b-2 border-amber-400 pb-1 hover:text-blue-800 transition-all">
+          <a href="/productos" className="text-[#A507FA] font-bold text-sm border-b-2 border-[#A507FA] pb-1 hover:text-[#8B00D9] transition-all">
             Ver catálogo completo ↗
           </a>
         </div>

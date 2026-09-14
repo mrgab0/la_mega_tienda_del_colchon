@@ -14,17 +14,17 @@ export function SocialFeedSection({
   if (!embedHtml || !embedHtml.trim()) return null;
 
   return (
-    <section className="py-14 bg-gradient-to-b from-transparent via-pink-50/40 to-transparent dark:via-pink-950/20 border-t border-gray-100 dark:border-gray-800">
+    <section className="py-14 bg-gradient-to-b from-transparent via-purple-50/30 to-transparent dark:via-purple-950/20 border-t border-gray-100 dark:border-gray-800">
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="text-center space-y-2 mb-8">
-          <div className="inline-flex items-center gap-2 bg-pink-100 dark:bg-pink-950/60 text-[#FF97A4] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-sm">
+          <div className="inline-flex items-center gap-2 bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-sm border border-[#A507FA]/20">
             <Sparkles size={14} /> Feeds & Tendencias en Vivo
           </div>
           <h2 className="text-2xl sm:text-3xl font-serif font-black text-[#1A1C1C] dark:text-white tracking-tight">
             {title}
           </h2>
           <p className="text-xs text-gray-500 dark:text-gray-400">
-            Descubre nuestros últimos diseños florales y momentos especiales capturados en redes sociales.
+            Descubre nuestras últimas entregas, promociones y novedades en nuestras redes sociales oficiales.
           </p>
         </div>
 

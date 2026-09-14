@@ -135,7 +135,7 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
 
       const emailContent = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; background: #ffffff;">
-          <div style="background-color: #1E40AF; padding: 20px 25px; text-align: center;">
+          <div style="background-color: #A507FA; padding: 20px 25px; text-align: center;">
             <table role="presentation" style="margin: 0 auto; border-collapse: collapse;">
               <tr>
                 <td style="vertical-align: middle; padding-right: 14px;">
@@ -150,13 +150,13 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
           </div>
           
           <div style="padding: 25px;">
-            <h2 style="color: #0F172A;">¡Comprobante de Pedido / Receipt! 🛏️</h2>
+            <h2 style="color: #12021E;">¡Comprobante de Pedido / Receipt! 🛏️</h2>
 
             ${isConsolidatedWithin2Hours && originalOrder ? `
-              <div style="margin-bottom: 20px; padding: 14px; background-color: #f3e8ff; border-left: 4px solid #9333ea; border-radius: 8px;">
-                <strong style="color: #6b21a8; font-size: 13px;">📦 Nota de Envío Agrupado / Consolidado (< 2 horas):</strong><br>
+              <div style="margin-bottom: 20px; padding: 14px; background-color: #f3e8ff; border-left: 4px solid #A507FA; border-radius: 8px;">
+                <strong style="color: #7A00BD; font-size: 13px;">📦 Nota de Envío Agrupado / Consolidado (< 2 horas):</strong><br>
                 <span style="font-size: 12px; color: #4c1d95; display: block; margin-top: 4px;">
-                  Esta compra fue realizada <strong>${minutesElapsed} min</strong> después de tu pedido previo (<strong>#${originalOrder.orderId}</strong>). Como tu primer pedido aún está en diseño en boutique, nuestros repartidores agruparán ambos paquetes en la misma ruta de entrega a tu ubicación.
+                  Esta compra fue realizada <strong>${minutesElapsed} min</strong> después de tu pedido previo (<strong>#${originalOrder.orderId}</strong>). Nuestros repartidores agruparán ambos paquetes en la misma ruta de entrega a tu ubicación.
                 </span>
               </div>
             ` : ''}
@@ -164,15 +164,15 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
             <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
               <p style="margin: 5px 0;"><strong>ID Pedido:</strong> ${savedOrder.orderId}</p>
               <p style="margin: 5px 0;"><strong>Cliente:</strong> ${savedOrder.customerName}</p>
-              <p style="margin: 5px 0;"><strong>Correo Electrónico:</strong> <a href="mailto:${savedOrder.customerEmail || ''}" style="color: #FF97A4; font-weight: bold;">${savedOrder.customerEmail || 'No especificado'}</a></p>
+              <p style="margin: 5px 0;"><strong>Correo Electrónico:</strong> <a href="mailto:${savedOrder.customerEmail || ''}" style="color: #A507FA; font-weight: bold;">${savedOrder.customerEmail || 'No especificado'}</a></p>
               <p style="margin: 5px 0;"><strong>Teléfono / WhatsApp:</strong> ${savedOrder.customerPhone}</p>
               <p style="margin: 5px 0;"><strong>Opción de Entrega:</strong> ${savedOrder.deliveryMethod || orderData.deliveryMethod || "Envío a Domicilio"}</p>
               <p style="margin: 5px 0;"><strong>Dirección de Entrega:</strong> ${savedOrder.address}</p>
-              ${savedOrder.distanceMiles ? `<p style="margin: 5px 0; color: #6b21a8; font-weight: bold;"><strong>📍 Distancia Calculada desde Boutique:</strong> ${savedOrder.distanceMiles} Millas</p>` : ''}
+              ${savedOrder.distanceMiles ? `<p style="margin: 5px 0; color: #A507FA; font-weight: bold;"><strong>📍 Distancia Calculada desde Tienda:</strong> ${savedOrder.distanceMiles} Millas</p>` : ''}
               
               ${savedOrder.cardMessage ? `
-                <div style="margin-top: 12px; padding: 12px; background-color: #fff0f3; border-left: 4px solid #ff97a4; border-radius: 6px;">
-                  <strong style="color: #b0004a; font-size: 13px;">💌 Tarjeta de Dedicatoria Impresa Incluida:</strong><br>
+                <div style="margin-top: 12px; padding: 12px; background-color: #FAF2FF; border-left: 4px solid #A507FA; border-radius: 6px;">
+                  <strong style="color: #7A00BD; font-size: 13px;">📝 Nota o Dedicatoria Incluida:</strong><br>
                   <em style="color: #333333; font-size: 13px; display: block; margin-top: 4px;">"${savedOrder.cardMessage}"</em>
                 </div>
               ` : ''}
@@ -181,14 +181,14 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
                 <div style="margin-top: 10px;">
                   <a href="${savedOrder.googleMapsUrl}" 
                      target="_blank"
-                     style="background-color: #4285F4; color: white; padding: 10px 18px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 12px; display: inline-block;">
+                     style="background-color: #A507FA; color: white; padding: 10px 18px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 12px; display: inline-block;">
                      🗺️ Abrir Ubicación en Google Maps (Navegación GPS)
                   </a>
                 </div>
               ` : ''}
             </div>
 
-            <h3 style="color: #1A1C1C; border-bottom: 2px solid #FF97A4; padding-bottom: 5px;">Detalle de Productos & Adicionales de esta Compra:</h3>
+            <h3 style="color: #1A1C1C; border-bottom: 2px solid #A507FA; padding-bottom: 5px;">Detalle de Productos & Adicionales de esta Compra:</h3>
             <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px;">
               ${savedOrder.items.map((item: any) => `
                 <tr>
@@ -196,12 +196,12 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
                     <strong>${item.name}</strong><br>
                     <small>Cantidad: ${item.quantity}</small>
                     ${item.addons && item.addons.length > 0 ? `
-                      <div style="margin-top: 6px; padding: 8px; background: #fff0f3; border-left: 3px solid #ff97a4; border-radius: 4px;">
-                        <strong style="color: #b0004a; font-size: 11px;">Adicionales Seleccionados:</strong><br>
+                      <div style="margin-top: 6px; padding: 8px; background: #FAF2FF; border-left: 3px solid #A507FA; border-radius: 4px;">
+                        <strong style="color: #7A00BD; font-size: 11px;">Adicionales Seleccionados:</strong><br>
                         ${item.addons.map((a: any) => `
                           <div style="font-size: 11px; margin-top: 3px; color: #333;">
                             ✨ <strong>${a.name || a.value}</strong> ${a.price ? `(+$${a.price.toFixed(2)})` : ''}
-                            ${a.customText ? `<div style="color: #d81b60; font-style: italic; font-weight: bold; margin-left: 10px;">💬 Texto / Dedicatoria: "${a.customText}"</div>` : ''}
+                            ${a.customText ? `<div style="color: #A507FA; font-style: italic; font-weight: bold; margin-left: 10px;">💬 Detalle: "${a.customText}"</div>` : ''}
                           </div>
                         `).join('')}
                       </div>
@@ -215,7 +215,7 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
             {/* Desglose Fiscal e Impuestos Transparente */}
             <div style="background-color: #fafafa; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 13px;">
               <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-                <span>Subtotal Arreglos & Adicionales:</span>
+                <span>Subtotal Productos & Adicionales:</span>
                 <strong>$${itemsSubtotal.toFixed(2)} USD</strong>
               </div>
               ${savedOrder.couponCode ? `
@@ -224,21 +224,21 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
                   <strong>-$${discountAmount.toFixed(2)} USD</strong>
                 </div>
               ` : ''}
-              <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: #6b21a8;">
-                <span>🏛️ Impuestos de Ley / Sales Tax (8.25%):</span>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: #A507FA;">
+                <span>🏛️ Impuestos de Ley (8.25%):</span>
                 <strong>+$${taxAmount.toFixed(2)} USD</strong>
               </div>
               <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
                 <span>Costo de Envío:</span>
-                <strong style="color: #FF97A4;">${deliveryFee > 0 ? `+$${deliveryFee.toFixed(2)} USD` : "Gratis / Incluido"}</strong>
+                <strong style="color: #A507FA;">${deliveryFee > 0 ? `+$${deliveryFee.toFixed(2)} USD` : "Gratis / Incluido"}</strong>
               </div>
               <div style="border-top: 1px solid #ddd; padding-top: 8px; margin-top: 8px; display: flex; justify-content: space-between; font-size: 16px;">
                 <strong>TOTAL FINAL PAGADO EN ESTA ORDEN:</strong>
-                <strong style="color: #FF97A4;">$${orderTotal.toFixed(2)} USD</strong>
+                <strong style="color: #A507FA;">$${orderTotal.toFixed(2)} USD</strong>
               </div>
             </div>
 
-            <div style="padding: 15px; background: #fdf2f7; border-radius: 8px; margin-bottom: 20px;">
+            <div style="padding: 15px; background: #FAF2FF; border-radius: 8px; margin-bottom: 20px;">
               <p style="margin: 5px 0;"><strong>Método de Pago:</strong> ${savedOrder.paymentMethod}</p>
               <p style="margin: 5px 0;"><strong>Referencia de Transacción:</strong> ${savedOrder.paymentRef}</p>
             </div>
@@ -252,7 +252,7 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
             </div>
           </div>
           
-          <div style="background-color: #0F172A; color: white; padding: 15px; text-align: center; font-size: 12px;">
+          <div style="background-color: #12021E; color: white; padding: 15px; text-align: center; font-size: 12px;">
             <p style="margin: 0;">La Mega Tienda del Colchón • Especialistas en Descanso</p>
           </div>
         </div>

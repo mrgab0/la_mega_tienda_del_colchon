@@ -13,11 +13,11 @@ export const ShoppingCartComponent = () => {
 
   return (
     <>
-      {/* Botón activador - Magenta Style */}
+      {/* Botón activador - Electric Purple Style */}
       <button 
         onClick={() => setIsOpen(true)}
         aria-label="Ver Carrito de Compras"
-        className="fixed bottom-28 sm:bottom-32 right-5 sm:right-6 z-40 p-3.5 sm:p-4 bg-[#FF97A4] hover:bg-[#ff7b8c] text-white rounded-full shadow-[0px_8px_25px_rgba(216,27,96,0.35)] border-2 border-white/90 dark:border-gray-800 hover:scale-105 transition-all duration-300 active:scale-95 group"
+        className="fixed bottom-28 sm:bottom-32 right-5 sm:right-6 z-40 p-3.5 sm:p-4 bg-[#A507FA] hover:bg-[#8B00D9] text-white rounded-full shadow-[0px_8px_25px_rgba(165,7,250,0.35)] border-2 border-white/90 dark:border-gray-800 hover:scale-105 transition-all duration-300 active:scale-95 group"
       >
         <ShoppingCart size={22} className="group-hover:scale-110 transition-transform" />
         {cartItems.length > 0 && (
@@ -69,7 +69,7 @@ export const ShoppingCartComponent = () => {
                                 ✨ {add.name || add.value} {add.price ? `(+$${add.price.toFixed(2)})` : ''}
                               </span>
                               {add.customText && (
-                                <span className="text-[#FF97A4] italic block pl-2 font-semibold">
+                                <span className="text-[#A507FA] italic block pl-2 font-semibold">
                                   💬 "{add.customText}"
                                 </span>
                               )}
@@ -78,7 +78,7 @@ export const ShoppingCartComponent = () => {
                         </div>
                       )}
 
-                      <p className="text-[#FF97A4] font-extrabold mt-1.5">${item.price.toFixed(2)}</p>
+                      <p className="text-[#A507FA] font-extrabold mt-1.5">${item.price.toFixed(2)}</p>
                     </div>
                     <div className="flex items-center gap-3 bg-gray-50 dark:bg-gray-900 p-1.5 rounded-lg border border-gray-100 dark:border-gray-800">
                       <button 
@@ -108,7 +108,7 @@ export const ShoppingCartComponent = () => {
               <Link 
                 href="/checkout" 
                 onClick={() => setIsOpen(false)}
-                className={`w-full bg-[#FF97A4] text-white py-5 rounded-xl font-bold hover:bg-[#B0004A] transition-all duration-300 shadow-lg shadow-[#FF97A4]/20 flex justify-center items-center gap-2 group ${cartItems.length === 0 ? 'pointer-events-none bg-gray-200 text-gray-400' : ''}`}
+                className={`w-full bg-[#A507FA] text-white py-5 rounded-xl font-bold hover:bg-[#8B00D9] transition-all duration-300 shadow-lg shadow-[#A507FA]/20 flex justify-center items-center gap-2 group ${cartItems.length === 0 ? 'pointer-events-none bg-gray-200 text-gray-400' : ''}`}
               >
                 Tramitar Pedido
                 <span className="transform group-hover:translate-x-1 transition-transform">→</span>

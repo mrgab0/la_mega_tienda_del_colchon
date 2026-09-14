@@ -19,8 +19,8 @@ export function FeaturedProductsSlider({ products }: FeaturedProductsSliderProps
   const tabs = [
     { id: "TODOS", label: "Todos", filter: () => true },
     { id: "POPULARES", label: "Más Vendidos 🔥", filter: (p: any) => p.badge || p.isFeatured },
-    { id: "ROSAS", label: "Rosas de Lujo", filter: (p: any) => p.category?.toLowerCase().includes("rosa") || p.name?.toLowerCase().includes("rosa") },
-    { id: "BOUQUETS", label: "Bouquets & Cajas", filter: (p: any) => p.category?.toLowerCase().includes("bouquet") || p.category?.toLowerCase().includes("caja") },
+    { id: "ORTOPEDICOS", label: "Ortopédicos", filter: (p: any) => p.category?.toLowerCase().includes("ortop") || p.name?.toLowerCase().includes("ortop") },
+    { id: "KING_QUEEN", label: "King & Queen", filter: (p: any) => p.category?.toLowerCase().includes("king") || p.category?.toLowerCase().includes("queen") || p.name?.toLowerCase().includes("king") || p.name?.toLowerCase().includes("queen") },
   ];
 
   const optimizeImageUrl = (url: string) => {
@@ -97,15 +97,15 @@ export function FeaturedProductsSlider({ products }: FeaturedProductsSliderProps
       <div className="container mx-auto px-4 sm:px-6">
         
         {/* Encabezado con Título y Controles */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 pb-4 border-b border-[#D4AF37]/20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 pb-4 border-b border-[#A507FA]/20">
           <div>
             <div className="flex items-center gap-2 mb-1 justify-center md:justify-start">
-              <Sparkles size={14} className="text-[#D4AF37]" />
-              <span className="text-[#8B0024] dark:text-[#FF97A4] text-xs font-black uppercase tracking-[0.2em]">
+              <Sparkles size={14} className="text-[#A507FA]" />
+              <span className="text-[#A507FA] text-xs font-black uppercase tracking-[0.2em]">
                 Selección de Temporada
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-serif font-black text-[#2B0002] dark:text-white tracking-tight text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl font-serif font-black text-[#1A1C1C] dark:text-white tracking-tight text-center md:text-left">
               Nuestros Productos Destacados
             </h2>
           </div>
@@ -118,7 +118,7 @@ export function FeaturedProductsSlider({ products }: FeaturedProductsSliderProps
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
                   activeTab === tab.id
-                    ? "bg-[#80273B] text-white shadow-md scale-105"
+                    ? "bg-[#A507FA] text-white shadow-md shadow-[#A507FA]/25 scale-105"
                     : "bg-white/70 dark:bg-gray-800/60 text-slate-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-700 border border-gray-200/60 dark:border-gray-700"
                 }`}
               >
@@ -131,14 +131,14 @@ export function FeaturedProductsSlider({ products }: FeaturedProductsSliderProps
           <div className="hidden lg:flex items-center gap-2">
             <button
               onClick={() => handleScroll("left")}
-              className="p-2.5 rounded-full bg-white dark:bg-gray-800 text-[#2B0002] dark:text-white hover:bg-[#80273B] hover:text-white dark:hover:bg-[#80273B] shadow-md border border-gray-100 dark:border-gray-700 transition-all active:scale-95"
+              className="p-2.5 rounded-full bg-white dark:bg-gray-800 text-[#1A1C1C] dark:text-white hover:bg-[#A507FA] hover:text-white dark:hover:bg-[#A507FA] shadow-md border border-gray-100 dark:border-gray-700 transition-all active:scale-95"
               aria-label="Anterior"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={() => handleScroll("right")}
-              className="p-2.5 rounded-full bg-white dark:bg-gray-800 text-[#2B0002] dark:text-white hover:bg-[#80273B] hover:text-white dark:hover:bg-[#80273B] shadow-md border border-gray-100 dark:border-gray-700 transition-all active:scale-95"
+              className="p-2.5 rounded-full bg-white dark:bg-gray-800 text-[#1A1C1C] dark:text-white hover:bg-[#A507FA] hover:text-white dark:hover:bg-[#A507FA] shadow-md border border-gray-100 dark:border-gray-700 transition-all active:scale-95"
               aria-label="Siguiente"
             >
               <ChevronRight size={18} />
@@ -166,7 +166,7 @@ export function FeaturedProductsSlider({ products }: FeaturedProductsSliderProps
             return (
               <div
                 key={product._id.toString()}
-                className="w-[280px] sm:w-[320px] flex-shrink-0 snap-start group relative bg-white dark:bg-[#12131A] rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-[0_6px_20px_rgba(42,0,2,0.06)] dark:shadow-[0_6px_20px_rgba(0,0,0,0.4)] hover:shadow-[0_16px_36px_rgba(42,0,2,0.15)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between"
+                className="w-[280px] sm:w-[320px] flex-shrink-0 snap-start group relative bg-white dark:bg-[#12131A] rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-[0_6px_20px_rgba(165,7,250,0.06)] dark:shadow-[0_6px_20px_rgba(0,0,0,0.4)] hover:shadow-[0_16px_36px_rgba(165,7,250,0.15)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between"
               >
                 {/* Imagen del Producto */}
                 <Link
@@ -201,15 +201,15 @@ export function FeaturedProductsSlider({ products }: FeaturedProductsSliderProps
                   
                   {/* Badge de Categoría */}
                   <div className="absolute top-3 left-3">
-                    <span className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md text-[#8B0024] dark:text-pink-300 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
-                      {product.category || "Boutique"}
+                    <span className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md text-[#A507FA] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm border border-[#A507FA]/20">
+                      {product.category || "Colchón"}
                     </span>
                   </div>
 
                   {/* Badge Destacado */}
                   {product.badge && (
                     <div className="absolute top-3 right-3">
-                      <span className="bg-[#80273B] text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-md border border-[#D4AF37]/40 flex items-center gap-1">
+                      <span className="bg-[#A507FA] text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-md flex items-center gap-1">
                         <Flame size={10} className="text-amber-300" />
                         {product.badge}
                       </span>
@@ -232,7 +232,7 @@ export function FeaturedProductsSlider({ products }: FeaturedProductsSliderProps
                       draggable={false}
                       onDragStart={(e) => e.preventDefault()}
                     >
-                      <h3 className="font-serif font-bold text-base text-[#1A1C1C] dark:text-white line-clamp-1 group-hover:text-[#80273B] dark:group-hover:text-[#FF97A4] transition-colors select-none">
+                      <h3 className="font-serif font-bold text-base text-[#1A1C1C] dark:text-white line-clamp-1 group-hover:text-[#A507FA] transition-colors select-none">
                         {product.name}
                       </h3>
                     </Link>
@@ -242,7 +242,7 @@ export function FeaturedProductsSlider({ products }: FeaturedProductsSliderProps
                   <div className="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-gray-800/80">
                     <div>
                       <span className="text-[10px] text-gray-600 dark:text-gray-300 block font-bold uppercase tracking-wider">Precio</span>
-                      <span className="text-lg font-black text-[#8B0024] dark:text-[#FF97A4]">
+                      <span className="text-lg font-black text-[#A507FA]">
                         ${product.price ? product.price.toFixed(2) : "0.00"}
                       </span>
                     </div>
@@ -254,7 +254,7 @@ export function FeaturedProductsSlider({ products }: FeaturedProductsSliderProps
                         price: product.price,
                         image: image
                       })}
-                      className="inline-flex items-center gap-1.5 bg-[#80273B] hover:bg-[#2B0002] text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-md hover:shadow-lg active:scale-95 transition-all"
+                      className="inline-flex items-center gap-1.5 bg-[#A507FA] hover:bg-[#8B00D9] text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-md hover:shadow-lg active:scale-95 transition-all"
                     >
                       <ShoppingBag size={14} />
                       <span>{t("addToCart") || "Agregar"}</span>

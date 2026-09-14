@@ -286,7 +286,7 @@ export default function AdminSeoPage() {
 
                 <div className="p-4 bg-gray-50 dark:bg-gray-900/80 rounded-2xl border border-gray-200 dark:border-gray-800 space-y-1">
                   <div className="flex items-center gap-2 text-[11px] text-gray-600 dark:text-gray-400">
-                    <span className="w-4 h-4 rounded-full bg-pink-100 text-[#FF97A4] flex items-center justify-center font-bold text-[9px]">F</span>
+                    <span className="w-4 h-4 rounded-full bg-[#FAF2FF] text-[#A507FA] flex items-center justify-center font-bold text-[9px]">F</span>
                     <span>https://lamegatiendadelcolchon.com</span>
                   </div>
                   <h3 className="text-sm font-bold text-blue-700 dark:text-blue-400 hover:underline cursor-pointer leading-snug">

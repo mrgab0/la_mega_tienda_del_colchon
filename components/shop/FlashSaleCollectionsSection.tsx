@@ -42,15 +42,15 @@ export function FlashSaleCollectionsSection() {
         
         {/* Encabezado de Sección */}
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-          <div className="inline-flex items-center gap-1.5 bg-[#fff0ef] dark:bg-pink-950/60 text-[#8B0024] dark:text-pink-300 border border-[#D4AF37]/40 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-sm">
-            <Flame size={13} className="text-rose-500" />
+          <div className="inline-flex items-center gap-1.5 bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] border border-[#A507FA]/30 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-sm">
+            <Flame size={13} className="text-[#A507FA]" />
             <span>Colección & Ofertas Especiales</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-serif font-black text-[#2B0002] dark:text-white tracking-tight">
-            Colección Boutique 2026
+          <h2 className="text-3xl sm:text-5xl font-serif font-black text-[#1A1C1C] dark:text-white tracking-tight">
+            Colección Descanso Barinas 2026
           </h2>
           <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 font-medium">
-            Diseños florales contemporáneos con descuentos exclusivos por tiempo limitado.
+            Colchones ortopédicos y conjuntos con descuentos exclusivos por tiempo limitado en Barinas.
           </p>
         </div>
 
@@ -58,43 +58,43 @@ export function FlashSaleCollectionsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* TARJETA PRINCIPAL IZQUIERDA: Flash Sale con Temporizador en Vivo */}
-          <div className="lg:col-span-6 bg-gradient-to-br from-white via-[#fff8f7] to-[#faeae9] dark:from-[#181922] dark:to-[#12131A] p-6 sm:p-8 rounded-3xl border border-[#D4AF37]/30 dark:border-gray-800 shadow-xl flex flex-col justify-between space-y-6 relative overflow-hidden">
+          <div className="lg:col-span-6 bg-gradient-to-br from-white via-[#FAF2FF] to-[#F3E0FF] dark:from-[#181922] dark:to-[#12021E] p-6 sm:p-8 rounded-3xl border border-[#A507FA]/30 dark:border-gray-800 shadow-xl flex flex-col justify-between space-y-6 relative overflow-hidden">
             
             {/* Encabezado del Flash Sale & Contador */}
             <div className="space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <span className="inline-flex items-center gap-1.5 bg-rose-600 text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-md animate-pulse">
+                <span className="inline-flex items-center gap-1.5 bg-[#A507FA] text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-md animate-pulse">
                   <Tag size={12} />
                   <span>Oferta Flash • -25% OFF</span>
                 </span>
                 <span className="text-xs font-bold text-gray-500 dark:text-gray-400 flex items-center gap-1">
-                  <Clock size={13} className="text-[#8B0024] dark:text-[#FF97A4]" />
+                  <Clock size={13} className="text-[#A507FA]" />
                   <span>Termina en:</span>
                 </span>
               </div>
 
               {/* Bloques del Contador */}
               <div className="grid grid-cols-4 gap-2 sm:gap-3 text-center">
-                <div className="bg-white dark:bg-gray-800/80 p-3 rounded-2xl border border-gray-200/80 dark:border-gray-700 shadow-sm">
-                  <span className="font-serif font-black text-2xl sm:text-3xl text-[#2B0002] dark:text-white block">
+                <div className="bg-white dark:bg-gray-800/80 p-3 rounded-2xl border border-purple-100 dark:border-gray-700 shadow-sm">
+                  <span className="font-serif font-black text-2xl sm:text-3xl text-[#1A1C1C] dark:text-white block">
                     {String(timeLeft.days).padStart(2, '0')}
                   </span>
                   <span className="text-[10px] uppercase font-extrabold text-gray-700 dark:text-gray-200 tracking-wider">Días</span>
                 </div>
-                <div className="bg-white dark:bg-gray-800/80 p-3 rounded-2xl border border-gray-200/80 dark:border-gray-700 shadow-sm">
-                  <span className="font-serif font-black text-2xl sm:text-3xl text-[#2B0002] dark:text-white block">
+                <div className="bg-white dark:bg-gray-800/80 p-3 rounded-2xl border border-purple-100 dark:border-gray-700 shadow-sm">
+                  <span className="font-serif font-black text-2xl sm:text-3xl text-[#1A1C1C] dark:text-white block">
                     {String(timeLeft.hours).padStart(2, '0')}
                   </span>
                   <span className="text-[10px] uppercase font-extrabold text-gray-700 dark:text-gray-200 tracking-wider">Horas</span>
                 </div>
-                <div className="bg-white dark:bg-gray-800/80 p-3 rounded-2xl border border-gray-200/80 dark:border-gray-700 shadow-sm">
-                  <span className="font-serif font-black text-2xl sm:text-3xl text-[#2B0002] dark:text-white block">
+                <div className="bg-white dark:bg-gray-800/80 p-3 rounded-2xl border border-purple-100 dark:border-gray-700 shadow-sm">
+                  <span className="font-serif font-black text-2xl sm:text-3xl text-[#1A1C1C] dark:text-white block">
                     {String(timeLeft.minutes).padStart(2, '0')}
                   </span>
                   <span className="text-[10px] uppercase font-extrabold text-gray-700 dark:text-gray-200 tracking-wider">Min</span>
                 </div>
-                <div className="bg-white dark:bg-gray-800/80 p-3 rounded-2xl border border-gray-200/80 dark:border-gray-700 shadow-sm">
-                  <span className="font-serif font-black text-2xl sm:text-3xl text-[#8B0024] dark:text-[#FF97A4] block">
+                <div className="bg-white dark:bg-gray-800/80 p-3 rounded-2xl border border-purple-100 dark:border-gray-700 shadow-sm">
+                  <span className="font-serif font-black text-2xl sm:text-3xl text-[#A507FA] block">
                     {String(timeLeft.seconds).padStart(2, '0')}
                   </span>
                   <span className="text-[10px] uppercase font-extrabold text-gray-700 dark:text-gray-200 tracking-wider">Seg</span>
@@ -102,31 +102,31 @@ export function FlashSaleCollectionsSection() {
               </div>
             </div>
 
-            {/* Imagen del Ramo Estrella & Detalles */}
+            {/* Imagen del Colchón Estrella & Detalles */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center my-2">
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border border-white dark:border-gray-700 group">
                 <img
-                  src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500&auto=format&fit=crop&q=80"
-                  alt="Ramo Estrella en Descuento"
+                  src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&auto=format&fit=crop&q=80"
+                  alt="Colchón Ortopédico en Oferta"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <span className="absolute top-2 left-2 bg-[#80273B] text-white text-[10px] font-black px-2.5 py-0.5 rounded-full">
+                <span className="absolute top-2 left-2 bg-[#A507FA] text-white text-[10px] font-black px-2.5 py-0.5 rounded-full">
                   🔥 Más Vendido
                 </span>
               </div>
 
               <div className="space-y-3">
-                <h3 className="font-serif font-black text-xl text-[#2B0002] dark:text-white">
-                  Caja Velvet con 50 Rosas Rojas & Ferrero
+                <h3 className="font-serif font-black text-xl text-[#1A1C1C] dark:text-white">
+                  Colchón Ortopédico Imperial Queen Pillow Top
                 </h3>
                 <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-                  Rosas rojas premium de exportación ecuatoriana en caja aterciopelada de lujo con lazo de seda.
+                  Espuma de alta densidad indeformable con tela acolchada hipoalergénica y soporte lumbar avanzado.
                 </p>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-black text-[#8B0024] dark:text-[#FF97A4]">$119.99</span>
-                  <span className="text-sm font-bold text-gray-400 line-through">$159.99</span>
+                  <span className="text-2xl font-black text-[#A507FA]">$199.99</span>
+                  <span className="text-sm font-bold text-gray-400 line-through">$269.99</span>
                 </div>
               </div>
             </div>
@@ -135,12 +135,12 @@ export function FlashSaleCollectionsSection() {
             <div className="pt-2">
               <button
                 onClick={() => addToCart({
-                  id: "flash-sale-50-roses",
-                  name: "Caja Velvet con 50 Rosas Rojas & Ferrero",
-                  price: 119.99,
-                  image: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500&auto=format&fit=crop&q=80"
+                  id: "flash-sale-colchon-queen",
+                  name: "Colchón Ortopédico Imperial Queen Pillow Top",
+                  price: 199.99,
+                  image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&auto=format&fit=crop&q=80"
                 })}
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#80273B] hover:bg-[#2B0002] text-white py-3.5 px-6 rounded-2xl font-black text-xs uppercase tracking-wider transition-all duration-300 shadow-lg active:scale-95"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#A507FA] hover:bg-[#8B00D9] text-white py-3.5 px-6 rounded-2xl font-black text-xs uppercase tracking-wider transition-all duration-300 shadow-lg shadow-[#A507FA]/20 active:scale-95"
               >
                 <ShoppingBag size={16} />
                 <span>Aprovechar Oferta Flash Ahora</span>
@@ -151,75 +151,75 @@ export function FlashSaleCollectionsSection() {
           {/* TARJETAS DERECHAS: Colecciones Visuales con Botón Central */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
             
-            {/* Colección 1: Ramos de Lujo */}
+            {/* Colección 1: Ortopédicos */}
             <div className="group relative rounded-3xl overflow-hidden min-h-[260px] flex items-center justify-center shadow-lg border border-white/20">
               <img
-                src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=500&auto=format&fit=crop&q=80"
-                alt="Colección Ramos de Lujo"
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&auto=format&fit=crop&q=80"
+                alt="Colección Colchones Ortopédicos"
                 loading="lazy"
                 decoding="async"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
+              <div className="absolute inset-0 bg-[#12021E]/50 group-hover:bg-[#12021E]/40 transition-colors" />
               <Link
-                href="/productos?cat=rosas"
-                className="relative z-10 bg-white text-[#2B0002] hover:bg-[#80273B] hover:text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95"
+                href="/productos?cat=ortopedicos"
+                className="relative z-10 bg-white text-[#12021E] hover:bg-[#A507FA] hover:text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95"
               >
-                Rosas de Lujo ↗
+                Ortopédicos ↗
               </Link>
             </div>
 
-            {/* Colección 2: Bouquets Silvestres */}
+            {/* Colección 2: Matrimoniales */}
             <div className="group relative rounded-3xl overflow-hidden min-h-[260px] flex items-center justify-center shadow-lg border border-white/20">
               <img
-                src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=500&auto=format&fit=crop&q=80"
-                alt="Colección Bouquets Mixtos"
+                src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?w=500&auto=format&fit=crop&q=80"
+                alt="Colección Matrimoniales"
                 loading="lazy"
                 decoding="async"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
+              <div className="absolute inset-0 bg-[#12021E]/50 group-hover:bg-[#12021E]/40 transition-colors" />
               <Link
-                href="/productos?cat=bouquets"
-                className="relative z-10 bg-white text-[#2B0002] hover:bg-[#80273B] hover:text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95"
+                href="/productos?cat=matrimonial"
+                className="relative z-10 bg-white text-[#12021E] hover:bg-[#A507FA] hover:text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95"
               >
-                Bouquets Mixtos ↗
+                Matrimoniales ↗
               </Link>
             </div>
 
-            {/* Colección 3: Cajas Velvet & Cúpulas */}
+            {/* Colección 3: King & Queen */}
             <div className="group relative rounded-3xl overflow-hidden min-h-[260px] flex items-center justify-center shadow-lg border border-white/20">
               <img
-                src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=500&auto=format&fit=crop&q=80"
-                alt="Colección Cajas Velvet"
+                src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&auto=format&fit=crop&q=80"
+                alt="Colección King & Queen"
                 loading="lazy"
                 decoding="async"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
+              <div className="absolute inset-0 bg-[#12021E]/50 group-hover:bg-[#12021E]/40 transition-colors" />
               <Link
-                href="/productos?cat=cajas"
-                className="relative z-10 bg-white text-[#2B0002] hover:bg-[#80273B] hover:text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95"
+                href="/productos?cat=queen"
+                className="relative z-10 bg-white text-[#12021E] hover:bg-[#A507FA] hover:text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95"
               >
-                Cajas Velvet ↗
+                King & Queen ↗
               </Link>
             </div>
 
-            {/* Colección 4: Adicionales & Detalles */}
+            {/* Colección 4: Almohadas & Bases */}
             <div className="group relative rounded-3xl overflow-hidden min-h-[260px] flex items-center justify-center shadow-lg border border-white/20">
               <img
-                src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&auto=format&fit=crop&q=80"
-                alt="Colección Complementos & Regalos"
+                src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=500&auto=format&fit=crop&q=80"
+                alt="Colección Almohadas & Bases"
                 loading="lazy"
                 decoding="async"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
+              <div className="absolute inset-0 bg-[#12021E]/50 group-hover:bg-[#12021E]/40 transition-colors" />
               <Link
-                href="/productos?cat=adicionales"
-                className="relative z-10 bg-white text-[#2B0002] hover:bg-[#80273B] hover:text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95"
+                href="/productos?cat=almohadas"
+                className="relative z-10 bg-white text-[#12021E] hover:bg-[#A507FA] hover:text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95"
               >
-                Regalos & Extras ↗
+                Almohadas & Bases ↗
               </Link>
             </div>
 

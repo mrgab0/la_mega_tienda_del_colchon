@@ -56,13 +56,13 @@ export function ContactFormClient() {
           
           {/* Header de la Página */}
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-blue-600 text-xs font-extrabold uppercase tracking-[0.25em] bg-blue-50 px-4 py-1.5 rounded-full border border-blue-100 inline-block">
+            <span className="text-[#A507FA] text-xs font-extrabold uppercase tracking-[0.25em] bg-[#FAF2FF] dark:bg-[#1A032A] px-4 py-1.5 rounded-full border border-[#A507FA]/20 inline-block">
               🛏️ Atención & Asesoría Especializada
             </span>
-            <h1 className="text-4xl md:text-5xl font-serif font-black text-[#1A1C1C] tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-serif font-black text-[#1A1C1C] dark:text-white tracking-tight">
               Ponte en Contacto con Nosotros
             </h1>
-            <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed">
+            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-medium leading-relaxed">
               ¿Tienes alguna consulta sobre tu colchón, medidas especiales, flete en Barinas o métodos de pago? Estamos para ayudarte a descansar mejor.
             </p>
           </div>
@@ -70,18 +70,18 @@ export function ContactFormClient() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             {/* Tarjeta Izquierda: Información de Contacto Directo */}
-            <div className="bg-[#0F172A] text-white p-8 rounded-3xl shadow-xl space-y-8 flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl pointer-events-none" />
+            <div className="bg-[#12021E] text-white p-8 rounded-3xl shadow-xl space-y-8 flex flex-col justify-between relative overflow-hidden border border-[#A507FA]/30">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#A507FA]/10 rounded-full blur-2xl pointer-events-none" />
               
               <div className="space-y-6">
                 <div>
-                  <span className="text-amber-400 text-[10px] font-black uppercase tracking-widest block mb-1">La Mega Tienda del Colchón</span>
+                  <span className="text-[#A507FA] text-[10px] font-black uppercase tracking-widest block mb-1">La Mega Tienda del Colchón</span>
                   <h2 className="text-2xl font-serif font-bold">Información de Tienda</h2>
                 </div>
 
                 <div className="space-y-5 text-sm">
                   <div className="flex items-start gap-3.5">
-                    <div className="p-2.5 bg-white/10 rounded-xl text-blue-400">
+                    <div className="p-2.5 bg-white/10 rounded-xl text-[#A507FA]">
                       <MapPin size={20} />
                     </div>
                     <div>
@@ -103,19 +103,19 @@ export function ContactFormClient() {
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="p-2.5 bg-white/10 rounded-xl text-amber-400">
+                    <div className="p-2.5 bg-white/10 rounded-xl text-[#A507FA]">
                       <Mail size={20} />
                     </div>
                     <div>
                       <strong className="block text-white text-xs uppercase tracking-wider font-bold">Instagram Oficial</strong>
-                      <a href="https://www.instagram.com/lamegatiendadelcolchon/reels/" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-pink-400 font-medium transition-colors">
+                      <a href="https://www.instagram.com/lamegatiendadelcolchon/reels/" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-purple-300 font-medium transition-colors">
                         @lamegatiendadelcolchon
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="p-2.5 bg-white/10 rounded-xl text-blue-400">
+                    <div className="p-2.5 bg-white/10 rounded-xl text-[#A507FA]">
                       <Clock size={20} />
                     </div>
                     <div>
@@ -126,7 +126,7 @@ export function ContactFormClient() {
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-slate-800">
+              <div className="pt-6 border-t border-[#A507FA]/20">
                 <a
                   href="https://wa.me/584141584360?text=¡Hola!%20🛏️%20Quisiera%20asesoría%20para%20un%20colchón."
                   target="_blank"
@@ -140,7 +140,7 @@ export function ContactFormClient() {
             </div>
 
             {/* Tarjeta Derecha: Formulario de Contacto Directo */}
-            <div className="lg:col-span-2 bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm relative">
+            <div className="lg:col-span-2 bg-white dark:bg-[#181922] p-8 md:p-10 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm relative">
               
               {/* Tooltip Verde de Confirmación */}
               {showTooltip && (
@@ -160,9 +160,9 @@ export function ContactFormClient() {
                   <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-sm">
                     <CheckCircle2 size={36} />
                   </div>
-                  <h2 className="text-2xl font-bold text-[#1A1C1C]">¡Gracias por escribirnos!</h2>
-                  <p className="text-gray-500 text-sm font-medium leading-relaxed">
-                    Tu mensaje ha sido enviado a <strong className="text-[#1A1C1C]">flowersforyou403@gmail.com</strong>. Si deseas atención inmediata, puedes chatear directo con nosotros por WhatsApp.
+                  <h2 className="text-2xl font-bold text-[#1A1C1C] dark:text-white">¡Gracias por escribirnos!</h2>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm font-medium leading-relaxed">
+                    Tu mensaje ha sido enviado al equipo de <strong className="text-[#1A1C1C] dark:text-white">La Mega Tienda del Colchón</strong>. Si deseas atención inmediata, puedes chatear directo con nosotros por WhatsApp.
                   </p>
                   
                   <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
@@ -170,7 +170,7 @@ export function ContactFormClient() {
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#FF97A4] hover:bg-[#B0004A] text-white px-7 py-3.5 rounded-full font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2"
+                      className="bg-[#A507FA] hover:bg-[#8B00D9] text-white px-7 py-3.5 rounded-full font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2"
                     >
                       <MessageCircle size={16} />
                       <span>Continuar por WhatsApp</span>
@@ -181,7 +181,7 @@ export function ContactFormClient() {
                         setShowTooltip(false);
                         setFormData({ name: "", email: "", phone: "", message: "" });
                       }}
-                      className="bg-gray-100 text-gray-700 px-6 py-3.5 rounded-full font-bold text-xs hover:bg-gray-200 transition-all"
+                      className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-6 py-3.5 rounded-full font-bold text-xs hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
                     >
                       Enviar otro mensaje
                     </button>
@@ -190,68 +190,68 @@ export function ContactFormClient() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <h2 className="text-xl font-bold text-[#1A1C1C]">Envíanos un Mensaje</h2>
+                    <h2 className="text-xl font-bold text-[#1A1C1C] dark:text-white">Envíanos un Mensaje</h2>
                     <p className="text-xs text-gray-400 font-medium">Completa los campos a continuación y nos pondremos en contacto contigo.</p>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-gray-700 block">Nombre Completo *</label>
+                      <label className="text-xs font-bold text-gray-700 dark:text-gray-300 block">Nombre Completo *</label>
                       <input
                         type="text"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Ej: Maria González"
-                        className="w-full p-3.5 border border-gray-200 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#FF97A4] bg-gray-50/50"
+                        className="w-full p-3.5 border border-gray-200 dark:border-gray-700 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#A507FA] bg-gray-50/50 dark:bg-gray-900 dark:text-white"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-gray-700 block">Correo Electrónico *</label>
+                      <label className="text-xs font-bold text-gray-700 dark:text-gray-300 block">Correo Electrónico *</label>
                       <input
                         type="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="maria@ejemplo.com"
-                        className="w-full p-3.5 border border-gray-200 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#FF97A4] bg-gray-50/50"
+                        className="w-full p-3.5 border border-gray-200 dark:border-gray-700 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#A507FA] bg-gray-50/50 dark:bg-gray-900 dark:text-white"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-gray-700 block">Teléfono / WhatsApp (Opcional)</label>
+                    <label className="text-xs font-bold text-gray-700 dark:text-gray-300 block">Teléfono / WhatsApp (Opcional)</label>
                     <input
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+1 (555) 000-0000"
-                      className="w-full p-3.5 border border-gray-200 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#FF97A4] bg-gray-50/50"
+                      placeholder="0414-1234567"
+                      className="w-full p-3.5 border border-gray-200 dark:border-gray-700 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#A507FA] bg-gray-50/50 dark:bg-gray-900 dark:text-white"
                     />
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-gray-700 block">Mensaje o Consulta Floral *</label>
+                    <label className="text-xs font-bold text-gray-700 dark:text-gray-300 block">Mensaje o Consulta de Colchones *</label>
                     <textarea
                       required
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Escribe aquí tu consulta, idea para arreglo personalizado o fecha especial..."
-                      className="w-full p-3.5 border border-gray-200 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#FF97A4] bg-gray-50/50"
+                      placeholder="Escribe aquí tu consulta, medida de colchón requerida o pregunta sobre despacho..."
+                      className="w-full p-3.5 border border-gray-200 dark:border-gray-700 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#A507FA] bg-gray-50/50 dark:bg-gray-900 dark:text-white"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-[#FF97A4] hover:bg-[#B0004A] text-white py-4 rounded-full font-bold text-sm transition-all shadow-lg shadow-[#FF97A4]/20 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 disabled:bg-gray-300"
+                    className="w-full bg-[#A507FA] hover:bg-[#8B00D9] text-white py-4 rounded-full font-bold text-sm transition-all shadow-lg shadow-[#A507FA]/20 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 disabled:bg-gray-300"
                   >
                     {loading ? (
                       <>
                         <Loader2 className="animate-spin" size={18} />
-                        <span>Enviando correo...</span>
+                        <span>Enviando mensaje...</span>
                       </>
                     ) : (
                       <>

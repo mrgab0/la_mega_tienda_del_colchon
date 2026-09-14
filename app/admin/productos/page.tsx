@@ -93,7 +93,7 @@ export default function InventarioAdmin() {
           </Link>
           <Link
             href="/admin/productos/crear"
-            className="bg-[#FF97A4] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#B0004A] transition-colors shadow-md flex items-center gap-2"
+            className="bg-[#A507FA] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#8B00D9] transition-colors shadow-md flex items-center gap-2"
           >
             <Plus size={18} /> Crear Nuevo Producto
           </Link>
@@ -129,7 +129,7 @@ export default function InventarioAdmin() {
           onClick={() => setStatusFilter("pre_aggregation")}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
             statusFilter === "pre_aggregation"
-              ? "bg-[#8B0024] text-white shadow-md"
+              ? "bg-[#7A00BD] text-white shadow-md"
               : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
           }`}
         >
@@ -147,7 +147,7 @@ export default function InventarioAdmin() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Buscar por nombre, SKU, categoría o insignia (ej: Bestseller)..."
-            className="w-full pl-10 pr-4 py-2.5 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+            className="w-full pl-10 pr-4 py-2.5 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
           />
         </div>
 
@@ -157,7 +157,7 @@ export default function InventarioAdmin() {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="p-2.5 border rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#FF97A4] w-full md:w-auto"
+              className="p-2.5 border rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#A507FA] w-full md:w-auto"
             >
               <option value="all">Todas las categorías</option>
               {categories.filter((c) => c !== "all").map((cat) => (
@@ -174,7 +174,7 @@ export default function InventarioAdmin() {
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         {loading ? (
           <div className="p-12 text-center text-gray-400 flex items-center justify-center gap-2">
-            <Loader2 className="animate-spin text-[#FF97A4]" size={20} />
+            <Loader2 className="animate-spin text-[#A507FA]" size={20} />
             <span>Cargando catálogo...</span>
           </div>
         ) : filteredProducts.length === 0 ? (
@@ -187,7 +187,7 @@ export default function InventarioAdmin() {
                   setSearchTerm("");
                   setSelectedCategory("all");
                 }}
-                className="text-xs text-[#FF97A4] font-bold hover:underline"
+                className="text-xs text-[#A507FA] font-bold hover:underline"
               >
                 Limpiar filtros de búsqueda
               </button>
@@ -240,14 +240,14 @@ export default function InventarioAdmin() {
                           {product.category}
                         </span>
                         {product.badge && (
-                          <div className="flex items-center gap-1 text-[10px] font-bold text-[#FF97A4]">
+                          <div className="flex items-center gap-1 text-[10px] font-bold text-[#A507FA]">
                             <Tag size={10} /> {product.badge}
                           </div>
                         )}
                       </td>
 
                       {/* Precio */}
-                      <td className="p-4 font-bold text-[#FF97A4]">${product.price.toFixed(2)}</td>
+                      <td className="p-4 font-bold text-[#A507FA]">${product.price.toFixed(2)}</td>
 
                       {/* Stock / Estado */}
                       <td className="p-4">

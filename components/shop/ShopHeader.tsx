@@ -26,18 +26,18 @@ export const ShopHeader = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-40 bg-white/90 dark:bg-[#181922]/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all">
+      <header className="sticky top-0 z-40 bg-white/95 dark:bg-[#12021E]/95 backdrop-blur-md border-b border-purple-100 dark:border-purple-950/60 shadow-sm transition-all">
         <div className="container mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-3 sm:gap-6">
           {/* Logo Presionable hacia el Home */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0 z-10">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden border-2 border-blue-500/50 shadow-md group-hover:scale-105 group-active:scale-95 transition-transform bg-blue-900 flex items-center justify-center text-xl text-white flex-shrink-0">
-              <span className="text-amber-400">🛏️</span>
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden border-2 border-[#A507FA] shadow-md group-hover:scale-105 group-active:scale-95 transition-transform bg-[#A507FA] flex items-center justify-center text-xl text-white flex-shrink-0">
+              <span>🛏️</span>
             </div>
             <div className="hidden xl:block flex-shrink-0">
-              <span className="text-lg font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-blue-600 transition-colors block">
-                La Mega Tienda <span className="text-blue-600 dark:text-blue-400">del Colchón</span>
+              <span className="text-lg font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-[#A507FA] transition-colors block">
+                La Mega Tienda <span className="text-[#A507FA] dark:text-[#D48FFF]">del Colchón</span>
               </span>
-              <span className="text-[9px] uppercase tracking-widest text-slate-500 font-bold block -mt-0.5">
+              <span className="text-[9px] uppercase tracking-widest text-slate-500 dark:text-purple-300 font-bold block -mt-0.5">
                 Barinas • Av. Sucre
               </span>
             </div>
@@ -49,7 +49,7 @@ export const ShopHeader = () => {
               <Link 
                 key={idx}
                 href={link.href} 
-                className="px-4 py-2.5 rounded-full bg-white/60 dark:bg-gray-800/60 text-[#2B0002] dark:text-gray-200 shadow-[0_4px_12px_rgba(42,0,2,0.15)] dark:shadow-none hover:shadow-[0_8px_20px_rgba(42,0,2,0.25)] hover:bg-white dark:hover:bg-gray-700 hover:text-[#8B0025] hover:-translate-y-0.5 active:scale-95 active:translate-y-0 transition-all duration-300 border border-transparent hover:border-[#FF97A4]/30"
+                className="px-4 py-2.5 rounded-full bg-purple-50/70 dark:bg-purple-950/40 text-slate-800 dark:text-gray-200 shadow-sm hover:shadow-md hover:bg-[#A507FA] hover:text-white dark:hover:bg-[#A507FA] dark:hover:text-white hover:-translate-y-0.5 active:scale-95 transition-all duration-300 border border-purple-100 dark:border-purple-900/50"
               >
                 {link.label}
               </Link>
@@ -61,7 +61,7 @@ export const ShopHeader = () => {
             {/* Botón de Acceso Biométrico / Passkeys con Huella */}
             <button
               onClick={() => setIsBioModalOpen(true)}
-              className="flex items-center gap-1.5 bg-pink-50 dark:bg-pink-950/60 text-[#8B0025] border border-pink-200 dark:border-pink-900 px-3 py-2 rounded-full text-xs font-bold shadow-[0_2px_8px_rgba(42,0,2,0.06)] hover:shadow-[0_6px_16px_rgba(42,0,2,0.12)] hover:-translate-y-0.5 active:scale-95 transition-all duration-300"
+              className="flex items-center gap-1.5 bg-purple-50 dark:bg-purple-950/60 text-[#A507FA] dark:text-purple-300 border border-purple-200 dark:border-purple-800/80 px-3 py-2 rounded-full text-xs font-bold shadow-sm hover:bg-[#A507FA] hover:text-white hover:-translate-y-0.5 active:scale-95 transition-all duration-300"
               title="Acceso con Huella / Face ID"
             >
               <Fingerprint size={16} />
@@ -79,12 +79,12 @@ export const ShopHeader = () => {
             <div className="relative ml-1">
               <Link
                 href="/checkout"
-                className="flex items-center gap-2 bg-[#FF97A4] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs hover:bg-[#B0004A] transition-all shadow-md shadow-[#FF97A4]/20"
+                className="flex items-center gap-2 bg-[#A507FA] hover:bg-[#8B00D9] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs transition-all shadow-md shadow-[#A507FA]/30 hover:scale-105 active:scale-95"
               >
                 <ShoppingCart size={18} />
                 <span className="hidden sm:inline">Carrito</span>
                 {totalCount > 0 && (
-                  <span className="bg-[#1A1C1C] text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full">
+                  <span className="bg-white text-[#A507FA] text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-sm">
                     {totalCount}
                   </span>
                 )}
@@ -94,7 +94,7 @@ export const ShopHeader = () => {
             {/* Botón Toggle de Menú Móvil */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-full bg-slate-100 dark:bg-gray-800 text-[#2B0002] dark:text-gray-200 border border-gray-200 dark:border-gray-700 hover:bg-slate-200 dark:hover:bg-gray-700 active:scale-95 transition-all"
+              className="md:hidden p-2 rounded-full bg-purple-50 dark:bg-purple-950/60 text-slate-900 dark:text-gray-200 border border-purple-200 dark:border-purple-800 hover:bg-[#A507FA] hover:text-white active:scale-95 transition-all"
               aria-label={isMobileMenuOpen ? "Contraer menú" : "Desplegar menú"}
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -104,17 +104,17 @@ export const ShopHeader = () => {
 
         {/* MENÚ MÓVIL DESPLEGABLE */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-100 dark:border-gray-800 bg-white/95 dark:bg-[#181922]/95 backdrop-blur-xl px-4 py-4 space-y-2 shadow-lg animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="md:hidden border-t border-purple-100 dark:border-purple-900/60 bg-white/95 dark:bg-[#12021E]/95 backdrop-blur-xl px-4 py-4 space-y-2 shadow-lg animate-in fade-in slide-in-from-top-2 duration-200">
             <nav className="flex flex-col gap-2">
               {navLinks.map((link, idx) => (
                 <Link
                   key={idx}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-between px-4 py-3 rounded-2xl bg-gray-50 dark:bg-gray-800/80 text-[#2B0002] dark:text-gray-100 font-bold text-sm shadow-sm active:scale-[0.98] transition-all hover:bg-[#FF97A4]/10 hover:text-[#8B0025] dark:hover:text-[#FF97A4]"
+                  className="flex items-center justify-between px-4 py-3 rounded-2xl bg-purple-50/60 dark:bg-purple-950/40 text-slate-800 dark:text-gray-100 font-bold text-sm shadow-sm active:scale-[0.98] transition-all hover:bg-[#A507FA] hover:text-white dark:hover:bg-[#A507FA]"
                 >
                   <span>{link.label}</span>
-                  <span className="text-xs text-[#FF97A4]">→</span>
+                  <span className="text-xs text-[#A507FA] group-hover:text-white">→</span>
                 </Link>
               ))}
             </nav>

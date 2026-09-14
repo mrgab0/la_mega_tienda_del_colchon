@@ -176,7 +176,7 @@ export function CustomerBiometricModal({ isOpen, onClose, onSuccess }: Biometric
 
         {/* Icono Principal de Huella Dactilar */}
         <div className="text-center space-y-3">
-          <div className="relative w-20 h-20 mx-auto bg-gradient-to-tr from-pink-500 to-[#FF97A4] text-white rounded-full flex items-center justify-center shadow-lg shadow-pink-500/30">
+          <div className="relative w-20 h-20 mx-auto bg-gradient-to-tr from-[#7A00BD] to-[#A507FA] text-white rounded-full flex items-center justify-center shadow-lg shadow-[#A507FA]/30">
             <Fingerprint size={42} className="animate-pulse" />
             <span className="absolute -bottom-1 -right-1 bg-emerald-500 text-white p-1 rounded-full border-2 border-white dark:border-[#12131A]">
               <Lock size={12} />
@@ -201,7 +201,7 @@ export function CustomerBiometricModal({ isOpen, onClose, onSuccess }: Biometric
                 ? "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950 dark:text-emerald-300"
                 : message.type === "error"
                 ? "bg-red-50 text-red-700 border-red-200 dark:bg-red-950 dark:text-red-300"
-                : "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950 dark:text-blue-300"
+                : "bg-purple-50 text-[#A507FA] border-purple-200 dark:bg-purple-950 dark:text-purple-300"
             }`}
           >
             {message.type === "success" ? <CheckCircle2 size={16} /> : <AlertCircle size={16} />}
@@ -236,7 +236,7 @@ export function CustomerBiometricModal({ isOpen, onClose, onSuccess }: Biometric
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="ejemplo@correo.com"
-                className="w-full p-3.5 border rounded-2xl text-sm font-medium dark:bg-gray-900 dark:border-gray-800 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                className="w-full p-3.5 border rounded-2xl text-sm font-medium dark:bg-gray-900 dark:border-gray-800 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                 required
               />
             </div>
@@ -245,7 +245,7 @@ export function CustomerBiometricModal({ isOpen, onClose, onSuccess }: Biometric
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#FF97A4] hover:bg-[#B0004A] text-white py-3.5 rounded-2xl font-bold text-sm transition-all shadow-md flex items-center justify-center gap-2 disabled:bg-gray-300"
+              className="w-full bg-[#A507FA] hover:bg-[#8B00D9] text-white py-3.5 rounded-2xl font-bold text-sm transition-all shadow-md shadow-[#A507FA]/20 flex items-center justify-center gap-2 disabled:bg-gray-300"
             >
               <Fingerprint size={20} />
               <span>{loading ? "Activando Sensor..." : "👆 Escanear Huella e Ingresar"}</span>
@@ -256,9 +256,9 @@ export function CustomerBiometricModal({ isOpen, onClose, onSuccess }: Biometric
               type="button"
               onClick={handleRegister}
               disabled={loading}
-              className="w-full bg-purple-50 dark:bg-purple-950/60 hover:bg-purple-100 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-900/50 py-3 rounded-2xl font-bold text-xs transition-colors flex items-center justify-center gap-1.5"
+              className="w-full bg-[#FAF2FF] dark:bg-[#1A032A] hover:bg-purple-100 text-[#A507FA] dark:text-purple-300 border border-[#A507FA]/30 dark:border-purple-900/50 py-3 rounded-2xl font-bold text-xs transition-colors flex items-center justify-center gap-1.5"
             >
-              <Sparkles size={14} className="text-purple-600 dark:text-purple-400" />
+              <Sparkles size={14} className="text-[#A507FA] dark:text-purple-400" />
               <span>✨ Activar mi Huella en este Celular (Primera Vez)</span>
             </button>
           </form>

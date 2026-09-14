@@ -214,7 +214,7 @@ export function DialogflowChatbot({ siteConfig }: DialogflowChatbotProps) {
                           <button
                             key={i}
                             onClick={opt.action}
-                            className="bg-white dark:bg-pink-950/60 text-black dark:text-pink-300 border border-gray-300 dark:border-pink-900/60 hover:bg-[#80273B] hover:text-white dark:hover:bg-[#80273B] dark:hover:text-white px-3 py-1.5 rounded-xl text-[11px] font-extrabold transition-all shadow-xs active:scale-95 text-left chatbot-chip-btn"
+                            className="bg-white dark:bg-[#1A032A] text-black dark:text-purple-300 border border-gray-300 dark:border-purple-900/60 hover:bg-[#80273B] hover:text-white dark:hover:bg-[#80273B] dark:hover:text-white px-3 py-1.5 rounded-xl text-[11px] font-extrabold transition-all shadow-xs active:scale-95 text-left chatbot-chip-btn"
                           >
                             {opt.label}
                           </button>
@@ -285,7 +285,7 @@ export function DialogflowChatbot({ siteConfig }: DialogflowChatbotProps) {
               aria-label="Abrir y expandir Asistente Virtual"
             >
               {/* Brillo sutil decorativo */}
-              <div className="absolute top-0 right-0 -mr-6 -mt-6 w-24 h-24 bg-gradient-to-br from-pink-500/20 to-transparent rounded-full blur-xl pointer-events-none"></div>
+              <div className="absolute top-0 right-0 -mr-6 -mt-6 w-24 h-24 bg-gradient-to-br from-purple-600/20 to-transparent rounded-full blur-xl pointer-events-none"></div>
 
               {/* Cabecera del Mini-Chat */}
               <div className="flex items-center justify-between gap-2 pb-2.5 border-b border-gray-100 dark:border-gray-800">
@@ -320,7 +320,7 @@ export function DialogflowChatbot({ siteConfig }: DialogflowChatbotProps) {
               </div>
 
               {/* Barra de Acción Rápida para Expandir */}
-              <div className="flex items-center justify-between text-[10px] font-extrabold text-[#80273B] dark:text-pink-300 bg-gray-50 dark:bg-gray-800/60 px-3 py-1.5 rounded-xl border border-gray-150 dark:border-gray-700/60">
+              <div className="flex items-center justify-between text-[10px] font-extrabold text-[#80273B] dark:text-purple-300 bg-gray-50 dark:bg-gray-800/60 px-3 py-1.5 rounded-xl border border-gray-150 dark:border-gray-700/60">
                 <span>💬 Toca para chatear</span>
                 <span className="text-[9px] uppercase tracking-wider opacity-75">Expandir ↗</span>
               </div>

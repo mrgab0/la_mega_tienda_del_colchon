@@ -41,7 +41,7 @@ export default function AdminEstadisticasPage() {
   if (loading) {
     return (
       <div className="p-12 text-center text-gray-500 font-bold animate-pulse flex flex-col items-center justify-center gap-3">
-        <RefreshCw className="animate-spin text-[#FF97A4]" size={28} />
+        <RefreshCw className="animate-spin text-[#A507FA]" size={28} />
         <span>Cargando Estadísticas y Carritos Abandonados...</span>
       </div>
     );
@@ -52,7 +52,7 @@ export default function AdminEstadisticasPage() {
       {/* Encabezado Principal */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white dark:bg-[#12131A] p-6 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
         <div className="flex items-center gap-3.5">
-          <div className="p-3 bg-pink-50 dark:bg-pink-950/60 text-[#FF97A4] rounded-2xl border border-pink-100 dark:border-pink-900/50">
+          <div className="p-3 bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] rounded-2xl border border-purple-100 dark:border-purple-900/50">
             <BarChart3 size={26} />
           </div>
           <div>
@@ -69,7 +69,7 @@ export default function AdminEstadisticasPage() {
             <button
               onClick={() => setDays(1)}
               className={`px-3 py-1.5 rounded-xl transition-all ${
-                days === 1 ? "bg-white dark:bg-gray-900 text-[#FF97A4] shadow-sm" : "text-gray-500"
+                days === 1 ? "bg-white dark:bg-gray-900 text-[#A507FA] shadow-sm" : "text-gray-500"
               }`}
             >
               Hoy
@@ -77,7 +77,7 @@ export default function AdminEstadisticasPage() {
             <button
               onClick={() => setDays(7)}
               className={`px-3 py-1.5 rounded-xl transition-all ${
-                days === 7 ? "bg-white dark:bg-gray-900 text-[#FF97A4] shadow-sm" : "text-gray-500"
+                days === 7 ? "bg-white dark:bg-gray-900 text-[#A507FA] shadow-sm" : "text-gray-500"
               }`}
             >
               7 Días
@@ -85,7 +85,7 @@ export default function AdminEstadisticasPage() {
             <button
               onClick={() => setDays(30)}
               className={`px-3 py-1.5 rounded-xl transition-all ${
-                days === 30 ? "bg-white dark:bg-gray-900 text-[#FF97A4] shadow-sm" : "text-gray-500"
+                days === 30 ? "bg-white dark:bg-gray-900 text-[#A507FA] shadow-sm" : "text-gray-500"
               }`}
             >
               30 Días
@@ -224,7 +224,7 @@ export default function AdminEstadisticasPage() {
 
                       <td className="py-4 px-4">
                         <div className="space-y-1">
-                          <span className="font-bold text-[#FF97A4] block">{mainName}</span>
+                          <span className="font-bold text-[#A507FA] block">{mainName}</span>
                           {items.length > 1 && (
                             <span className="text-[10px] text-gray-400 font-medium block">
                               + {items.length - 1} adicional(es) en carrito
@@ -268,7 +268,7 @@ export default function AdminEstadisticasPage() {
         {/* Fuentes de Tráfico */}
         <div className="bg-white dark:bg-[#12131A] p-6 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-4">
           <div className="flex items-center gap-2 border-b pb-3 border-gray-100 dark:border-gray-800">
-            <Globe size={18} className="text-[#FF97A4]" />
+            <Globe size={18} className="text-[#A507FA]" />
             <h2 className="font-bold text-sm text-[#1A1C1C] dark:text-white">Origen de los Visitantes</h2>
           </div>
 
@@ -285,7 +285,7 @@ export default function AdminEstadisticasPage() {
                   </div>
                   <div className="w-full bg-gray-100 dark:bg-gray-800 h-2.5 rounded-full overflow-hidden">
                     <div
-                      className="bg-[#FF97A4] h-full rounded-full transition-all duration-700"
+                      className="bg-[#A507FA] h-full rounded-full transition-all duration-700"
                       style={{ width: `${Math.max(percentage, 5)}%` }}
                     />
                   </div>
@@ -313,7 +313,7 @@ export default function AdminEstadisticasPage() {
                 </div>
                 <div className="flex items-center gap-4 text-xs">
                   <span className="text-gray-400 font-medium">{prod.views} vistas</span>
-                  <span className="font-extrabold text-[#FF97A4]">${prod.price}</span>
+                  <span className="font-extrabold text-[#A507FA]">${prod.price}</span>
                 </div>
               </div>
             ))}

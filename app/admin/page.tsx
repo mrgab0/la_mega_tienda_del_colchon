@@ -45,7 +45,7 @@ export default function AdminPage() {
           <span className="text-sm tracking-wide">Estadísticas & Carritos</span>
         </Link>
         
-        <Link href="/admin/sliders" className={`${clayBase} bg-[#FF97A4]`}>
+        <Link href="/admin/sliders" className={`${clayBase} bg-[#A507FA]`}>
           <ImageIcon className={`${iconBase} group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-lg`} strokeWidth={1.5} />
           <span className="text-sm tracking-wide text-white">Gestionar Banners</span>
         </Link>

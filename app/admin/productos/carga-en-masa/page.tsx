@@ -533,12 +533,12 @@ export default function CargaEnMasaAdmin() {
         <div>
           <Link
             href="/admin/productos"
-            className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-[#8B0024] font-bold mb-2 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-[#7A00BD] font-bold mb-2 transition-colors"
           >
             <ArrowLeft size={14} /> Volver al Inventario
           </Link>
           <h1 className="text-2xl font-black text-[#1A1C1C] flex items-center gap-2">
-            <Layers className="text-[#8B0024]" size={24} />
+            <Layers className="text-[#7A00BD]" size={24} />
             Módulo de Carga en Masa y Pre-Agregador
           </h1>
           <p className="text-xs text-gray-400">
@@ -553,7 +553,7 @@ export default function CargaEnMasaAdmin() {
             onClick={() => setActiveTab("step1")}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
               activeTab === "step1"
-                ? "bg-[#8B0024] text-white shadow-md"
+                ? "bg-[#7A00BD] text-white shadow-md"
                 : "text-gray-600 hover:bg-white"
             }`}
           >
@@ -574,7 +574,7 @@ export default function CargaEnMasaAdmin() {
             }}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
               activeTab === "step2"
-                ? "bg-[#8B0024] text-white shadow-md"
+                ? "bg-[#7A00BD] text-white shadow-md"
                 : "text-gray-600 hover:bg-white"
             }`}
           >
@@ -605,8 +605,8 @@ export default function CargaEnMasaAdmin() {
             style={{ display: "none" }}
           />
 
-          <div className="bg-white p-8 rounded-2xl border-2 border-dashed border-[#8B0024]/40 bg-[#8B0024]/5 hover:bg-[#8B0024]/10 transition-all text-center space-y-4 shadow-sm">
-            <div className="w-14 h-14 bg-white rounded-2xl mx-auto flex items-center justify-center text-[#8B0024] shadow-md border border-pink-100">
+          <div className="bg-white p-8 rounded-2xl border-2 border-dashed border-[#7A00BD]/40 bg-[#7A00BD]/5 hover:bg-[#7A00BD]/10 transition-all text-center space-y-4 shadow-sm">
+            <div className="w-14 h-14 bg-white rounded-2xl mx-auto flex items-center justify-center text-[#7A00BD] shadow-md border border-purple-100">
               {uploading ? <Loader2 className="animate-spin" size={28} /> : <Upload size={28} />}
             </div>
 
@@ -624,7 +624,7 @@ export default function CargaEnMasaAdmin() {
                 type="button"
                 onClick={() => fileInputRef.current?.click()}
                 disabled={uploading}
-                className="bg-[#8B0024] hover:bg-[#70001d] text-white px-6 py-2.5 rounded-xl font-bold text-xs shadow-md transition-all flex items-center gap-2 active:scale-95 disabled:opacity-50"
+                className="bg-[#7A00BD] hover:bg-[#70001d] text-white px-6 py-2.5 rounded-xl font-bold text-xs shadow-md transition-all flex items-center gap-2 active:scale-95 disabled:opacity-50"
               >
                 <Upload size={14} />
                 <span>{uploading ? "Cargando Fotos..." : "Seleccionar Fotos Múltiples"}</span>
@@ -655,7 +655,7 @@ export default function CargaEnMasaAdmin() {
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-3">
               <div className="flex flex-wrap justify-between items-center border-b pb-2 gap-2">
                 <h4 className="text-xs font-black uppercase tracking-wider text-gray-800 flex items-center gap-2">
-                  <Clock size={14} className="text-[#8B0024]" />
+                  <Clock size={14} className="text-[#7A00BD]" />
                   Cola de Subida a ImageKit ({uploadQueue.filter(q => q.status === "completed").length} / {uploadQueue.length} completados)
                 </h4>
                 <div className="flex items-center gap-3">
@@ -664,7 +664,7 @@ export default function CargaEnMasaAdmin() {
                       type="button"
                       onClick={handleRetryAllFailed}
                       disabled={uploading}
-                      className="text-[11px] text-[#8B0024] hover:text-[#70001d] font-bold flex items-center gap-1 disabled:opacity-50"
+                      className="text-[11px] text-[#7A00BD] hover:text-[#70001d] font-bold flex items-center gap-1 disabled:opacity-50"
                     >
                       <RefreshCw size={12} className={uploading ? "animate-spin" : ""} />
                       Reintentar fallidos
@@ -696,7 +696,7 @@ export default function CargaEnMasaAdmin() {
                           </span>
                         )}
                         {item.status === "uploading" && (
-                          <span className="font-extrabold text-[#8B0024] flex items-center gap-1">
+                          <span className="font-extrabold text-[#7A00BD] flex items-center gap-1">
                             <Loader2 size={12} className="animate-spin" /> {item.progress}%
                           </span>
                         )}
@@ -734,7 +734,7 @@ export default function CargaEnMasaAdmin() {
                             ? "bg-red-500"
                             : item.status === "pending"
                             ? "bg-gray-300"
-                            : "bg-[#8B0024]"
+                            : "bg-[#7A00BD]"
                         }`}
                         style={{ width: `${item.status === "pending" ? 5 : item.progress}%` }}
                       />
@@ -761,11 +761,11 @@ export default function CargaEnMasaAdmin() {
                     value={manualUrl}
                     onChange={(e) => setManualUrl(e.target.value)}
                     placeholder="https://ik.imagekit.io/du7tc3jqd/products/rosas.jpg"
-                    className="w-full p-3 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                    className="w-full p-3 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                   />
                 </div>
                 <div className="flex justify-end gap-2 pt-2">
-                  <button type="button" onClick={handleAddManualUrl} className="px-4 py-2 text-xs font-bold bg-[#8B0024] text-white rounded-xl">
+                  <button type="button" onClick={handleAddManualUrl} className="px-4 py-2 text-xs font-bold bg-[#7A00BD] text-white rounded-xl">
                     Añadir
                   </button>
                 </div>
@@ -779,7 +779,7 @@ export default function CargaEnMasaAdmin() {
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
                 <div>
                   <h3 className="font-extrabold text-base text-gray-900 flex items-center gap-2">
-                    <Package size={18} className="text-[#8B0024]" />
+                    <Package size={18} className="text-[#7A00BD]" />
                     Tarjetas de Productos Generadas ({draftItems.length})
                   </h3>
                   <p className="text-xs text-gray-400">Edita los bloques de cada producto antes de enviarlos al Pre-Agregador.</p>
@@ -800,7 +800,7 @@ export default function CargaEnMasaAdmin() {
                     type="button"
                     onClick={handleSaveToPreAggregator}
                     disabled={isSavingPreAgregated}
-                    className="bg-[#8B0024] hover:bg-[#70001d] text-white px-5 py-2.5 rounded-full text-xs font-black shadow-md flex items-center justify-center gap-1.5 transition-all active:scale-95 disabled:opacity-50 w-full sm:w-auto"
+                    className="bg-[#7A00BD] hover:bg-[#70001d] text-white px-5 py-2.5 rounded-full text-xs font-black shadow-md flex items-center justify-center gap-1.5 transition-all active:scale-95 disabled:opacity-50 w-full sm:w-auto"
                   >
                     {isSavingPreAgregated ? <Loader2 className="animate-spin" size={14} /> : <CheckCircle2 size={14} />}
                     <span>Enviar a Pre-Agregador (Paso 2)</span>
@@ -813,7 +813,7 @@ export default function CargaEnMasaAdmin() {
                 {draftItems.map((item, idx) => (
                   <div
                     key={item.id}
-                    className="bg-white rounded-2xl border-2 border-gray-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-[#8B0024]/40 transition-all animate-in fade-in slide-in-from-bottom-2 duration-300"
+                    className="bg-white rounded-2xl border-2 border-gray-200 shadow-sm overflow-hidden flex flex-col justify-between hover:border-[#7A00BD]/40 transition-all animate-in fade-in slide-in-from-bottom-2 duration-300"
                   >
                     {/* Header de la Tarjeta */}
                     <div className="bg-gradient-to-r from-gray-900 to-[#12131A] text-white px-4 py-2.5 flex items-center justify-between">
@@ -850,7 +850,7 @@ export default function CargaEnMasaAdmin() {
                               value={item.name}
                               onChange={(e) => handleUpdateDraftItem(item.id, "name", e.target.value)}
                               placeholder="Nombre del arreglo..."
-                              className="w-full p-2 border rounded-xl text-xs font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                              className="w-full p-2 border rounded-xl text-xs font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                             />
                           </div>
 
@@ -858,14 +858,14 @@ export default function CargaEnMasaAdmin() {
                           <div className="grid grid-cols-2 gap-2">
                             <div>
                               <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5 flex items-center gap-1">
-                                <DollarSign size={10} className="text-[#8B0024]" /> Precio ($)
+                                <DollarSign size={10} className="text-[#7A00BD]" /> Precio ($)
                               </label>
                               <input
                                 type="number"
                                 step="0.01"
                                 value={item.price}
                                 onChange={(e) => handleUpdateDraftItem(item.id, "price", parseFloat(e.target.value) || 0)}
-                                className="w-full p-2 border rounded-xl text-xs font-black text-[#8B0024] bg-white focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                                className="w-full p-2 border rounded-xl text-xs font-black text-[#7A00BD] bg-white focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                               />
                             </div>
 
@@ -877,7 +877,7 @@ export default function CargaEnMasaAdmin() {
                                 type="number"
                                 value={item.stock}
                                 onChange={(e) => handleUpdateDraftItem(item.id, "stock", parseInt(e.target.value) || 0)}
-                                className="w-full p-2 border rounded-xl text-xs font-bold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                                className="w-full p-2 border rounded-xl text-xs font-bold text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                               />
                             </div>
                           </div>
@@ -897,7 +897,7 @@ export default function CargaEnMasaAdmin() {
                               value={item.category}
                               onChange={(e) => handleUpdateDraftItem(item.id, "category", e.target.value)}
                               placeholder="Escribe la categoría nueva..."
-                              className="w-full p-2 border border-pink-400 bg-pink-50/40 rounded-xl text-xs font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                              className="w-full p-2 border border-pink-400 bg-[#FAF2FF]/40 rounded-xl text-xs font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                             />
                             <button
                               type="button"
@@ -922,7 +922,7 @@ export default function CargaEnMasaAdmin() {
                                 handleUpdateDraftItem(item.id, "category", e.target.value);
                               }
                             }}
-                            className="w-full p-2 border rounded-xl text-xs font-semibold bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                            className="w-full p-2 border rounded-xl text-xs font-semibold bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                           >
                             {CATEGORIES.map((cat) => (
                               <option key={cat} value={cat}>
@@ -938,12 +938,12 @@ export default function CargaEnMasaAdmin() {
                       <div className="grid grid-cols-3 gap-2 pt-1 border-t border-gray-100">
                         <div>
                           <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5 flex items-center gap-1">
-                            <Flower2 size={10} className="text-pink-600" /> Rosas
+                            <Flower2 size={10} className="text-[#A507FA]" /> Rosas
                           </label>
                           <select
                             value={item.flowerCount}
                             onChange={(e) => handleUpdateDraftItem(item.id, "flowerCount", parseInt(e.target.value) || 0)}
-                            className="w-full p-1.5 border rounded-xl text-xs font-bold bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                            className="w-full p-1.5 border rounded-xl text-xs font-bold bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                           >
                             {FLOWER_COUNT_OPTIONS.map((fc) => (
                               <option key={fc} value={fc}>
@@ -960,7 +960,7 @@ export default function CargaEnMasaAdmin() {
                           <select
                             value={item.bouquetType}
                             onChange={(e) => handleUpdateDraftItem(item.id, "bouquetType", e.target.value)}
-                            className="w-full p-1.5 border rounded-xl text-xs font-semibold bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                            className="w-full p-1.5 border rounded-xl text-xs font-semibold bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                           >
                             <option value="">Sin definir</option>
                             {BOUQUET_TYPES.map((bt) => (
@@ -973,12 +973,12 @@ export default function CargaEnMasaAdmin() {
 
                         <div>
                           <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5 flex items-center gap-1">
-                            <Tag size={10} className="text-[#8B0024]" /> Badge
+                            <Tag size={10} className="text-[#7A00BD]" /> Badge
                           </label>
                           <select
                             value={item.badge}
                             onChange={(e) => handleUpdateDraftItem(item.id, "badge", e.target.value)}
-                            className="w-full p-1.5 border rounded-xl text-xs font-semibold bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                            className="w-full p-1.5 border rounded-xl text-xs font-semibold bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                           >
                             <option value="">Ninguno</option>
                             {BADGES.filter(Boolean).map((b) => (
@@ -999,7 +999,7 @@ export default function CargaEnMasaAdmin() {
                           rows={2}
                           value={item.description}
                           onChange={(e) => handleUpdateDraftItem(item.id, "description", e.target.value)}
-                          className="w-full p-2 border rounded-xl text-xs text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                          className="w-full p-2 border rounded-xl text-xs text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                         />
                       </div>
 
@@ -1023,13 +1023,13 @@ export default function CargaEnMasaAdmin() {
           <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-2">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-black text-gray-900 flex items-center gap-2">
-                <Clock className="text-[#8B0024]" size={20} />
+                <Clock className="text-[#7A00BD]" size={20} />
                 Panel Pre-Agregador: Productos Pausados Agrupados por Fecha
               </h2>
               <button
                 type="button"
                 onClick={fetchPreProductsData}
-                className="text-xs text-[#8B0024] font-bold hover:underline flex items-center gap-1"
+                className="text-xs text-[#7A00BD] font-bold hover:underline flex items-center gap-1"
               >
                 Actualizar Lista
               </button>
@@ -1041,7 +1041,7 @@ export default function CargaEnMasaAdmin() {
 
           {loadingPreProducts ? (
             <div className="p-16 text-center text-gray-400 flex items-center justify-center gap-2">
-              <Loader2 className="animate-spin text-[#8B0024]" size={24} />
+              <Loader2 className="animate-spin text-[#7A00BD]" size={24} />
               <span>Cargando productos en Pre-Agregador...</span>
             </div>
           ) : batchGroups.length === 0 ? (
@@ -1054,7 +1054,7 @@ export default function CargaEnMasaAdmin() {
               <button
                 type="button"
                 onClick={() => setActiveTab("step1")}
-                className="bg-[#8B0024] text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-[#70001d] transition-colors inline-flex items-center gap-1.5 shadow-md"
+                className="bg-[#7A00BD] text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-[#70001d] transition-colors inline-flex items-center gap-1.5 shadow-md"
               >
                 <Plus size={14} /> Ir al Paso 1: Subir Fotos
               </button>
@@ -1074,7 +1074,7 @@ export default function CargaEnMasaAdmin() {
                   {/* Encabezado del Grupo / Lote por Fecha */}
                   <div className="bg-gradient-to-r from-gray-900 via-[#1A1C1C] to-gray-900 text-white p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gray-800">
                     <div className="flex items-center gap-3">
-                      <div className="p-2.5 bg-[#8B0024] rounded-xl text-white font-black text-xs">
+                      <div className="p-2.5 bg-[#7A00BD] rounded-xl text-white font-black text-xs">
                         #{groupIdx + 1}
                       </div>
                       <div>
@@ -1106,9 +1106,9 @@ export default function CargaEnMasaAdmin() {
                   </div>
 
                   {/* Barra de Edición Masiva Avanzada para este Lote */}
-                  <div className="p-5 bg-pink-50/40 dark:bg-gray-800/30 border-b border-gray-200/80 space-y-4">
+                  <div className="p-5 bg-[#FAF2FF]/40 dark:bg-gray-800/30 border-b border-gray-200/80 space-y-4">
                     <div className="flex items-center justify-between border-b border-gray-200 pb-2">
-                      <div className="flex items-center gap-2 text-xs font-black text-[#8B0024] uppercase tracking-wider">
+                      <div className="flex items-center gap-2 text-xs font-black text-[#7A00BD] uppercase tracking-wider">
                         <Wand2 size={16} />
                         Edición en Lote para este Grupo ({group.products.length} ítems)
                       </div>
@@ -1117,7 +1117,7 @@ export default function CargaEnMasaAdmin() {
                         type="button"
                         onClick={() => handleApplyBatchEditToGroup(group.products, group.dateLabel)}
                         disabled={isGroupUpdating}
-                        className="bg-[#8B0024] hover:bg-[#70001d] text-white px-4 py-2 rounded-xl text-xs font-bold shadow transition-all active:scale-95 disabled:opacity-50 flex items-center gap-1.5"
+                        className="bg-[#7A00BD] hover:bg-[#70001d] text-white px-4 py-2 rounded-xl text-xs font-bold shadow transition-all active:scale-95 disabled:opacity-50 flex items-center gap-1.5"
                       >
                         {isGroupUpdating ? (
                           <Loader2 className="animate-spin" size={14} />
@@ -1138,7 +1138,7 @@ export default function CargaEnMasaAdmin() {
                         <select
                           value={batchCategory}
                           onChange={(e) => setBatchCategory(e.target.value)}
-                          className="w-full p-2 border rounded-xl text-xs font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                          className="w-full p-2 border rounded-xl text-xs font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                         >
                           {CATEGORIES.map((cat) => (
                             <option key={cat} value={cat}>
@@ -1151,12 +1151,12 @@ export default function CargaEnMasaAdmin() {
                       {/* Cantidad de Rosas */}
                       <div>
                         <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1 flex items-center gap-1">
-                          <Flower2 size={10} className="text-pink-600" /> Cant. Rosas
+                          <Flower2 size={10} className="text-[#A507FA]" /> Cant. Rosas
                         </label>
                         <select
                           value={batchFlowerCount}
                           onChange={(e) => setBatchFlowerCount(parseInt(e.target.value) || 0)}
-                          className="w-full p-2 border rounded-xl text-xs font-bold bg-white focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                          className="w-full p-2 border rounded-xl text-xs font-bold bg-white focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                         >
                           {FLOWER_COUNT_OPTIONS.map((count) => (
                             <option key={count} value={count}>
@@ -1174,7 +1174,7 @@ export default function CargaEnMasaAdmin() {
                         <select
                           value={batchBouquetType}
                           onChange={(e) => setBatchBouquetType(e.target.value)}
-                          className="w-full p-2 border rounded-xl text-xs font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                          className="w-full p-2 border rounded-xl text-xs font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                         >
                           {BOUQUET_TYPES.map((bt) => (
                             <option key={bt} value={bt}>
@@ -1194,7 +1194,7 @@ export default function CargaEnMasaAdmin() {
                           step="0.01"
                           value={batchPrice}
                           onChange={(e) => setBatchPrice(parseFloat(e.target.value) || 0)}
-                          className="w-full p-2 border rounded-xl text-xs font-black text-[#8B0024] bg-white focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                          className="w-full p-2 border rounded-xl text-xs font-black text-[#7A00BD] bg-white focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                         />
                       </div>
 
@@ -1207,19 +1207,19 @@ export default function CargaEnMasaAdmin() {
                           type="number"
                           value={batchStock}
                           onChange={(e) => setBatchStock(parseInt(e.target.value) || 0)}
-                          className="w-full p-2 border rounded-xl text-xs font-bold bg-white focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                          className="w-full p-2 border rounded-xl text-xs font-bold bg-white focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                         />
                       </div>
 
                       {/* Badge / Insignia */}
                       <div>
                         <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1 flex items-center gap-1">
-                          <Tag size={10} className="text-[#8B0024]" /> Insignia
+                          <Tag size={10} className="text-[#7A00BD]" /> Insignia
                         </label>
                         <select
                           value={batchBadge}
                           onChange={(e) => setBatchBadge(e.target.value)}
-                          className="w-full p-2 border rounded-xl text-xs font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-[#8B0024]"
+                          className="w-full p-2 border rounded-xl text-xs font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-[#7A00BD]"
                         >
                           <option value="">Sin insignia</option>
                           {BADGES.filter(Boolean).map((b) => (
@@ -1235,7 +1235,7 @@ export default function CargaEnMasaAdmin() {
                     {availableAddons.length > 0 && (
                       <div className="pt-2 border-t border-gray-200">
                         <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 flex items-center gap-1">
-                          <Gift size={12} className="text-[#8B0024]" /> Adicionales que Aplican a este Lote:
+                          <Gift size={12} className="text-[#7A00BD]" /> Adicionales que Aplican a este Lote:
                         </label>
 
                         <div className="flex flex-wrap gap-2">
@@ -1248,7 +1248,7 @@ export default function CargaEnMasaAdmin() {
                                 onClick={() => toggleAddonSelection(addon._id)}
                                 className={`text-xs px-3 py-1.5 rounded-xl border font-bold transition-all flex items-center gap-1.5 ${
                                   isSelected
-                                    ? "bg-[#8B0024] text-white border-[#8B0024] shadow-sm"
+                                    ? "bg-[#7A00BD] text-white border-[#7A00BD] shadow-sm"
                                     : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
                                 }`}
                               >
@@ -1280,13 +1280,13 @@ export default function CargaEnMasaAdmin() {
                               {prod.name}
                             </span>
                             <div className="flex items-center gap-2 mt-1">
-                              <span className="text-xs font-black text-[#8B0024]">${prod.price?.toFixed(2)}</span>
+                              <span className="text-xs font-black text-[#7A00BD]">${prod.price?.toFixed(2)}</span>
                               <span className="text-[10px] bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full font-bold">
                                 {prod.category}
                               </span>
                             </div>
                             {prod.flowerCount ? (
-                              <span className="text-[10px] text-pink-600 font-bold block mt-0.5">
+                              <span className="text-[10px] text-[#A507FA] font-bold block mt-0.5">
                                 🌹 {prod.flowerCount} Rosas {prod.bouquetType ? `• ${prod.bouquetType}` : ''}
                               </span>
                             ) : null}

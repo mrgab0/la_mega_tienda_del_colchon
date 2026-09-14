@@ -80,7 +80,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           
           {/* Badge Flotante estilo Categoría */}
           <div className="absolute top-3 left-3">
-            <span className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md text-blue-700 dark:text-blue-300 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider border border-blue-200 dark:border-blue-900 shadow-sm">
+            <span className="bg-white/95 dark:bg-[#12021E]/95 backdrop-blur-md text-[#A507FA] dark:text-[#D48FFF] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider border border-purple-200 dark:border-purple-800/80 shadow-sm">
               {category}
             </span>
           </div>
@@ -88,8 +88,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           {/* Insignia / Badge Personalizada */}
           {badge && (
             <div className="absolute top-3 right-3">
-              <span className="bg-slate-950/90 text-amber-400 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-md border border-amber-400/40 flex items-center gap-1">
-                <Sparkles size={10} className="text-amber-400" />
+              <span className="bg-[#A507FA] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-md border border-white/40 flex items-center gap-1">
+                <Sparkles size={10} className="text-white" />
                 {badge}
               </span>
             </div>
@@ -99,7 +99,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
       <div className="p-5 flex flex-col justify-between flex-grow">
         <div>
-          <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-1.5 line-clamp-1">
+          <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-[#A507FA] dark:group-hover:text-[#D48FFF] transition-colors mb-1.5 line-clamp-1">
             <Link
               href={`/productos/${slug}`}
               draggable={false}
@@ -108,20 +108,20 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               {name}
             </Link>
           </h3>
-          <p className="text-xs text-slate-500 dark:text-slate-400 font-medium line-clamp-1 mb-3">
+          <p className="text-xs text-slate-500 dark:text-purple-300 font-medium line-clamp-1 mb-3">
             Colchón & Descanso • Barinas, VE
           </p>
         </div>
 
-        <div className="flex justify-between items-center pt-2 border-t border-slate-100 dark:border-slate-800">
+        <div className="flex justify-between items-center pt-2 border-t border-purple-100 dark:border-purple-950/60">
           <div>
-            <span className="text-xs text-slate-500 dark:text-slate-400 block font-semibold">Precio</span>
-            <span className="text-xl font-black text-blue-700 dark:text-blue-400">${price.toFixed(2)}</span>
+            <span className="text-xs text-slate-500 dark:text-gray-400 block font-semibold">Precio</span>
+            <span className="text-xl font-black text-[#A507FA] dark:text-[#D48FFF]">${price.toFixed(2)}</span>
           </div>
 
           <button 
             onClick={() => addToCart({ id, name, price, image })}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl active:scale-95 transition-all duration-300 font-bold text-xs shadow-md shadow-blue-900/20 border border-amber-400/30 flex items-center gap-1.5 hover:scale-105"
+            className="bg-[#A507FA] hover:bg-[#8B00D9] text-white px-4 py-2.5 rounded-xl active:scale-95 transition-all duration-300 font-bold text-xs shadow-md shadow-purple-900/20 border border-white/30 flex items-center gap-1.5 hover:scale-105"
           >
             <ShoppingBag size={14} />
             <span>{t('addToCart')}</span>

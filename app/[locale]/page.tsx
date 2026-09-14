@@ -64,19 +64,19 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   }[desktopCols] || "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
 
   return (
-    <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 relative selection:bg-blue-600 selection:text-white">
+    <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0B0115] text-slate-900 dark:text-slate-100 relative selection:bg-[#A507FA] selection:text-white">
       
       {/* Header & Sticky Nav Bar */}
       <StickyNav siteConfig={siteConfig} />
 
       {/* Hero Section Editorial de La Mega Tienda del Colchón */}
-      <section className="relative z-20 min-h-[440px] pt-10 pb-14 flex flex-col items-center justify-center bg-gradient-to-b from-blue-950/20 via-slate-900/10 to-transparent border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+      <section className="relative z-20 min-h-[440px] pt-10 pb-14 flex flex-col items-center justify-center bg-gradient-to-b from-[#12021E]/15 via-[#FAF2FF]/30 to-transparent dark:from-[#12021E]/60 dark:via-[#0D0115]/40 dark:to-transparent border-b border-[#A507FA]/20 transition-colors duration-300">
         
         <div className="container mx-auto px-6 text-center z-20 flex flex-col items-center">
           
           {/* Kicker Editorial */}
-          <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-700/50 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-[0.18em] mb-4 shadow-sm">
-            <Sparkles size={13} className="text-amber-500" />
+          <div className="inline-flex items-center gap-2 bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] border border-[#A507FA]/30 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-[0.18em] mb-4 shadow-sm">
+            <Sparkles size={13} className="text-[#A507FA]" />
             <span>Especialistas en Colchones & Descanso</span>
           </div>
 
@@ -87,15 +87,15 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
           {/* Eslogan e Información de Ubicación / Servicios */}
           <div className="text-sm sm:text-base md:text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto mb-8 font-medium leading-relaxed space-y-2">
-            <p className="font-serif italic text-blue-700 dark:text-amber-400 text-lg sm:text-xl font-bold">
+            <p className="font-serif italic text-[#A507FA] text-lg sm:text-xl font-bold">
               {siteConfig?.brandSlogan || "Especialistas en Descanso • Barinas, Venezuela"}
             </p>
             <div className="flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-semibold pt-1">
-              <span className="flex items-center gap-1"><MapPin size={15} className="text-blue-600" /> Avenida Sucre, Barinas</span>
+              <span className="flex items-center gap-1"><MapPin size={15} className="text-[#A507FA]" /> Avenida Sucre, Barinas</span>
               <span>•</span>
-              <span className="flex items-center gap-1"><Truck size={15} className="text-blue-600" /> Flete y Despacho</span>
+              <span className="flex items-center gap-1"><Truck size={15} className="text-[#A507FA]" /> Flete y Despacho</span>
               <span>•</span>
-              <span className="flex items-center gap-1"><ShieldCheck size={15} className="text-amber-500" /> Garantía de Fábrica</span>
+              <span className="flex items-center gap-1"><ShieldCheck size={15} className="text-[#A507FA]" /> Garantía de Fábrica</span>
             </div>
           </div>
 
@@ -105,15 +105,15 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               href="https://wa.me/584141584360"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-xl shadow-blue-900/30 border border-amber-400/60 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto bg-[#A507FA] hover:bg-[#8B00D9] text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-xl shadow-[#A507FA]/30 border border-[#A507FA]/60 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
             >
-              <PhoneCall size={16} className="text-amber-400 group-hover:rotate-12 transition-transform" />
+              <PhoneCall size={16} className="text-white group-hover:rotate-12 transition-transform" />
               <span>WhatsApp: 0414-1584360</span>
             </a>
 
             <a 
               href="/productos" 
-              className="w-full sm:w-auto bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-50 dark:hover:bg-slate-800 transition-all border border-slate-300 dark:border-slate-800 shadow-md hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto bg-white dark:bg-[#12021E] text-slate-900 dark:text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-[#FAF2FF] dark:hover:bg-[#1A032A] hover:border-[#A507FA] transition-all border border-slate-300 dark:border-gray-800 shadow-md hover:scale-105 active:scale-95"
             >
               <span>{locale === 'en' ? t('Index.exploreButton') : "Explorar Catálogo"}</span>
             </a>
@@ -133,9 +133,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       {/* Main Catalog Grid */}
       <section className="container mx-auto px-4 sm:px-6 py-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-[#A507FA]/20">
           <div>
-            <span className="text-xs font-bold text-blue-600 dark:text-amber-400 uppercase tracking-widest block mb-1">
+            <span className="text-xs font-bold text-[#A507FA] uppercase tracking-widest block mb-1">
               Catálogo de Confort
             </span>
             <h2 className="text-3xl font-serif font-bold text-slate-900 dark:text-white">

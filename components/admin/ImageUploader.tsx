@@ -96,7 +96,7 @@ export function ImageUploader({ defaultImages = [], maxImages = 7 }: ImageUpload
         <button
           type="button"
           onClick={() => setShowManualInput(!showManualInput)}
-          className="text-xs text-[#FF97A4] font-bold hover:underline flex items-center gap-1"
+          className="text-xs text-[#A507FA] font-bold hover:underline flex items-center gap-1"
         >
           <LinkIcon size={12} />
           {showManualInput ? "Ocultar URL manual" : "Agregar URL manual"}
@@ -111,12 +111,12 @@ export function ImageUploader({ defaultImages = [], maxImages = 7 }: ImageUpload
             value={manualUrl}
             onChange={(e) => setManualUrl(e.target.value)}
             placeholder="https://ejemplo.com/imagen.jpg"
-            className="flex-1 p-2 border text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+            className="flex-1 p-2 border text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
           />
           <button
             type="button"
             onClick={handleAddManualUrl}
-            className="bg-[#1A1C1C] text-white px-4 py-2 text-xs font-bold rounded-lg hover:bg-black transition-colors"
+            className="bg-[#12021E] text-white px-4 py-2 text-xs font-bold rounded-lg hover:bg-[#A507FA] transition-colors"
           >
             Añadir
           </button>
@@ -142,17 +142,17 @@ export function ImageUploader({ defaultImages = [], maxImages = 7 }: ImageUpload
             className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition-all duration-200 flex flex-col items-center justify-center gap-2 ${
               uploading
                 ? "bg-gray-50 border-gray-300 opacity-60 cursor-not-allowed"
-                : "border-[#FF97A4]/50 bg-[#FF97A4]/5 hover:bg-[#FF97A4]/10 hover:border-[#FF97A4]"
+                : "border-[#A507FA]/50 bg-[#FAF2FF]/30 hover:bg-[#FAF2FF]/60 hover:border-[#A507FA]"
             }`}
           >
             {uploading ? (
               <>
-                <Loader2 className="animate-spin text-[#FF97A4]" size={32} />
+                <Loader2 className="animate-spin text-[#A507FA]" size={32} />
                 <p className="text-sm font-bold text-gray-600">Subiendo a ImageKit...</p>
               </>
             ) : (
               <>
-                <div className="p-3 bg-white rounded-full shadow-sm text-[#FF97A4]">
+                <div className="p-3 bg-white rounded-full shadow-sm text-[#A507FA]">
                   <Upload size={24} />
                 </div>
                 <p className="text-sm font-bold text-gray-700">Haz clic para subir imagen a ImageKit</p>
@@ -175,8 +175,8 @@ export function ImageUploader({ defaultImages = [], maxImages = 7 }: ImageUpload
 
               {/* Insignia de Portada / Principal */}
               {idx === 0 && (
-                <div className="absolute top-2 left-2 bg-[#1A1C1C] text-[#FF97A4] text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-md">
-                  <Star size={10} className="fill-[#FF97A4]" /> Principal
+                <div className="absolute top-2 left-2 bg-[#12021E] text-[#A507FA] text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-md">
+                  <Star size={10} className="fill-[#A507FA]" /> Principal
                 </div>
               )}
 

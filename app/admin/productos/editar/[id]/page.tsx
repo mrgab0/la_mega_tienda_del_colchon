@@ -21,7 +21,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
       <div className="max-w-2xl mx-auto p-12 bg-white dark:bg-[#12131A] rounded-2xl border border-gray-100 dark:border-gray-800 text-center space-y-4 my-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-800 dark:text-white">ID de Producto Inválido</h2>
         <p className="text-sm text-gray-500 dark:text-gray-400">El identificador proporcionado no es un código válido.</p>
-        <Link href="/admin/productos" className="inline-block bg-[#FF97A4] text-white px-6 py-2.5 rounded-full font-bold text-sm">
+        <Link href="/admin/productos" className="inline-block bg-[#A507FA] text-white px-6 py-2.5 rounded-full font-bold text-sm">
           Volver a la lista
         </Link>
       </div>
@@ -36,7 +36,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
       <div className="max-w-2xl mx-auto p-12 bg-white dark:bg-[#12131A] rounded-2xl border border-gray-100 dark:border-gray-800 text-center space-y-4 my-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-800 dark:text-white">Producto No Encontrado</h2>
         <p className="text-sm text-gray-500 dark:text-gray-400">El producto solicitado no existe o fue eliminado.</p>
-        <Link href="/admin/productos" className="inline-block bg-[#FF97A4] text-white px-6 py-2.5 rounded-full font-bold text-sm">
+        <Link href="/admin/productos" className="inline-block bg-[#A507FA] text-white px-6 py-2.5 rounded-full font-bold text-sm">
           Volver a la lista
         </Link>
       </div>
@@ -72,7 +72,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
         {/* SECCIÓN 1: Información Básica */}
         <div className="bg-white dark:bg-[#12131A] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 space-y-4">
           <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 flex items-center gap-2 border-b pb-3 border-gray-100 dark:border-gray-800">
-            <Package size={18} className="text-[#FF97A4]" /> Información General
+            <Package size={18} className="text-[#A507FA]" /> Información General
           </h2>
 
           <ProductNameSkuInputs
@@ -88,20 +88,20 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
                 name="category"
                 defaultValue={product.category}
                 placeholder="Bestseller"
-                className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4] dark:bg-gray-900 dark:text-white"
+                className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA] dark:bg-gray-900 dark:text-white"
                 required
               />
             </div>
 
             <div className="flex flex-col gap-1.5">
               <label className="text-xs font-bold text-gray-700 dark:text-gray-300 flex items-center gap-1">
-                <Tag size={12} className="text-[#FF97A4]" /> Insignia / Etiqueta Destacada (Opcional)
+                <Tag size={12} className="text-[#A507FA]" /> Insignia / Etiqueta Destacada (Opcional)
               </label>
               <input
                 name="badge"
                 defaultValue={product.badge || ""}
                 placeholder="Ej: Bestseller 🌟, ¡Nuevo!, Edición Limitada"
-                className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4] dark:bg-gray-900 dark:text-white"
+                className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA] dark:bg-gray-900 dark:text-white"
               />
             </div>
           </div>
@@ -112,7 +112,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
               name="description"
               defaultValue={product.description}
               placeholder="Detalles sobre el diseño floral..."
-              className="p-3 border rounded-xl h-28 focus:outline-none focus:ring-2 focus:ring-[#FF97A4] dark:bg-gray-900 dark:text-white"
+              className="p-3 border rounded-xl h-28 focus:outline-none focus:ring-2 focus:ring-[#A507FA] dark:bg-gray-900 dark:text-white"
               required
             />
           </div>
@@ -121,7 +121,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
         {/* SECCIÓN 2: Precio e Inventario */}
         <div className="bg-white dark:bg-[#12131A] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 space-y-4">
           <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 flex items-center gap-2 border-b pb-3 border-gray-100 dark:border-gray-800">
-            <DollarSign size={18} className="text-[#FF97A4]" /> Precio y Disponibilidad
+            <DollarSign size={18} className="text-[#A507FA]" /> Precio y Disponibilidad
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -135,7 +135,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
                   step="0.01"
                   defaultValue={product.price}
                   placeholder="85.00"
-                  className="p-3 pl-8 border rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-[#FF97A4] font-bold text-gray-800 dark:bg-gray-900 dark:text-white"
+                  className="p-3 pl-8 border rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-[#A507FA] font-bold text-gray-800 dark:bg-gray-900 dark:text-white"
                   required
                 />
               </div>
@@ -148,7 +148,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
                 type="number"
                 defaultValue={product.stock || 0}
                 placeholder="10"
-                className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4] dark:bg-gray-900 dark:text-white"
+                className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA] dark:bg-gray-900 dark:text-white"
                 required
               />
             </div>
@@ -158,7 +158,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
         {/* SECCIÓN 3: Galería de Imágenes ImageKit */}
         <div className="bg-white dark:bg-[#12131A] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 space-y-4">
           <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 flex items-center gap-2 border-b pb-3 border-gray-100 dark:border-gray-800">
-            <ImageIcon size={18} className="text-[#FF97A4]" /> Galería de Imágenes (ImageKit)
+            <ImageIcon size={18} className="text-[#A507FA]" /> Galería de Imágenes (ImageKit)
           </h2>
           <ImageUploader defaultImages={product.images || []} maxImages={7} />
         </div>
@@ -166,7 +166,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
         {/* SECCIÓN 4: Especificaciones Florales */}
         <div className="bg-white dark:bg-[#12131A] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 space-y-4">
           <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 flex items-center gap-2 border-b pb-3 border-gray-100 dark:border-gray-800">
-            <Flower2 size={18} className="text-[#FF97A4]" /> Especificaciones del Arreglo
+            <Flower2 size={18} className="text-[#A507FA]" /> Especificaciones del Arreglo
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -241,7 +241,7 @@ export default async function EditarProductoPage({ params }: { params: Promise<{
         <div className="flex gap-4 pt-4">
           <button
             type="submit"
-            className="bg-[#FF97A4] text-white px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#B0004A] transition-all shadow-md flex items-center justify-center gap-2 flex-1 md:flex-none"
+            className="bg-[#A507FA] text-white px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#8B00D9] transition-all shadow-md flex items-center justify-center gap-2 flex-1 md:flex-none"
           >
             <Save size={18} />
             <span>Guardar Cambios</span>

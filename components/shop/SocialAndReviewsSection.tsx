@@ -170,8 +170,8 @@ export function SocialAndReviewsSection({
     },
     {
       id: "post5",
-      image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?w=800&auto=format&fit=crop&q=80",
-      caption: "Felicidad en tonos pasteles con nuestro bouquet de tulipanes holandeses. 🌷",
+      image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800&auto=format&fit=crop&q=80",
+      caption: "Juegos de sábanas y protectores impermeables para mantener tu colchón impecable. 🛏️",
       likes: 285,
       comments: 15,
     },
@@ -190,7 +190,7 @@ export function SocialAndReviewsSection({
   if (!enableReviews && !enableSocialFeed) return null;
 
   return (
-    <section ref={sectionRef} className="relative z-20 py-16 bg-[#fff8f7]/90 dark:bg-[#0B0C10]/90 backdrop-blur-sm border-t border-[#D4AF37]/20 transition-colors duration-300">
+    <section ref={sectionRef} className="relative z-20 py-16 bg-[#FAF2FF]/40 dark:bg-[#0D0115]/90 backdrop-blur-sm border-t border-[#A507FA]/20 transition-colors duration-300">
       <div className="container mx-auto px-4 max-w-7xl relative z-20">
         <div className={`grid grid-cols-1 ${enableReviews && enableSocialFeed ? "lg:grid-cols-12" : "max-w-4xl mx-auto"} gap-8 items-stretch`}>
 
@@ -239,9 +239,9 @@ export function SocialAndReviewsSection({
                     {reviewsList.map((rev) => (
                       <div
                         key={rev.id}
-                        className="bg-[#F9F9F9] dark:bg-gray-900/70 p-4 sm:p-5 rounded-2xl border border-gray-200/70 dark:border-gray-800/80 shadow-sm relative transition-all hover:border-pink-200 review-card-item"
+                        className="bg-[#F9F9F9] dark:bg-gray-900/70 p-4 sm:p-5 rounded-2xl border border-gray-200/70 dark:border-gray-800/80 shadow-sm relative transition-all hover:border-[#A507FA]/40 review-card-item"
                       >
-                        <Quote size={24} className="absolute right-4 top-4 text-pink-200 dark:text-pink-950/40 pointer-events-none" />
+                        <Quote size={24} className="absolute right-4 top-4 text-purple-200 dark:text-[#A507FA]/20 pointer-events-none" />
 
                         {/* Estrellas */}
                         <div className="flex items-center gap-1 text-amber-400 mb-2">
@@ -257,7 +257,7 @@ export function SocialAndReviewsSection({
 
                         {/* Autor e Info */}
                         <div className="flex items-center justify-between text-[11px] font-bold text-slate-500">
-                          <span className="flex items-center gap-1 text-[#2B0002] dark:text-white review-author">
+                          <span className="flex items-center gap-1 text-[#1A1C1C] dark:text-white review-author">
                             {rev.name}
                             <span className="text-[10px] text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded-md">
                               <CheckCircle2 size={10} className="inline mr-0.5" /> Verificado
@@ -293,7 +293,7 @@ export function SocialAndReviewsSection({
                     <div>
                       <h4 className="text-sm font-extrabold text-[#1A1C1C] dark:text-white flex items-center gap-1">
                         Instagram Live Feed
-                        <Sparkles size={12} className="text-[#8B0024] dark:text-[#FF97A4]" />
+                        <Sparkles size={12} className="text-[#A507FA]" />
                       </h4>
                       <p className="text-[11px] text-gray-600 dark:text-gray-300 font-semibold">@lamegatiendadelcolchon</p>
                     </div>
@@ -303,7 +303,7 @@ export function SocialAndReviewsSection({
                     href={instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-pink-100 dark:bg-pink-950/60 text-[#8B0024] dark:text-pink-300 border border-pink-200 dark:border-pink-900/50 hover:bg-[#8B0024] hover:text-white px-3.5 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
+                    className="bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] border border-[#A507FA]/30 hover:bg-[#A507FA] hover:text-white px-3.5 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
                   >
                     <span>Seguir</span>
                     <ExternalLink size={12} />
@@ -353,7 +353,7 @@ export function SocialAndReviewsSection({
                             key={idx}
                             onClick={() => setCurrentSlide(idx)}
                             className={`h-2 rounded-full transition-all ${
-                              currentSlide === idx ? "w-6 bg-[#FF97A4]" : "w-2 bg-gray-200 dark:bg-gray-800"
+                              currentSlide === idx ? "w-6 bg-[#A507FA]" : "w-2 bg-gray-200 dark:bg-gray-800"
                             }`}
                           />
                         ))}
@@ -378,7 +378,7 @@ export function SocialAndReviewsSection({
                           </p>
                           <div className="flex items-center gap-4 text-xs font-bold text-gray-200">
                             <span className="flex items-center gap-1">
-                              <Heart size={14} className="text-rose-500 fill-rose-500" />
+                              <Heart size={14} className="text-[#A507FA] fill-[#A507FA]" />
                               {instagramPosts[currentSlide].likes}
                             </span>
                             <span className="flex items-center gap-1">
@@ -414,7 +414,7 @@ export function SocialAndReviewsSection({
                           key={idx}
                           onClick={() => setCurrentSlide(idx)}
                           className={`h-2 rounded-full transition-all ${
-                            currentSlide === idx ? "w-6 bg-[#FF97A4]" : "w-2 bg-gray-200 dark:bg-gray-800"
+                            currentSlide === idx ? "w-6 bg-[#A507FA]" : "w-2 bg-gray-200 dark:bg-gray-800"
                           }`}
                         />
                       ))}
@@ -429,7 +429,7 @@ export function SocialAndReviewsSection({
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-gradient-to-r from-pink-500 via-rose-500 to-purple-600 text-white font-extrabold text-xs py-3.5 px-4 rounded-2xl shadow-lg shadow-pink-500/20 hover:opacity-95 transition-all flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98]"
+                  className="w-full bg-gradient-to-r from-[#7A00BD] via-[#A507FA] to-[#8B00D9] text-white font-extrabold text-xs py-3.5 px-4 rounded-2xl shadow-lg shadow-[#A507FA]/25 hover:opacity-95 transition-all flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <Instagram size={16} />
                   <span>Ver todas las publicaciones en Instagram</span>

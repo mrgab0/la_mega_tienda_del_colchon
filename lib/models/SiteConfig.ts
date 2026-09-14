@@ -107,7 +107,7 @@ const SiteConfigSchema: Schema = new Schema({
   menuTrackingLabel: { type: String, default: "📦 Rastreo" },
   menuAboutLabel: { type: String, default: "Nosotros" },
   menuContactLabel: { type: String, default: "Contacto" },
-  primaryColor: { type: String, default: "#1E40AF" },
+  primaryColor: { type: String, default: "#A507FA" },
 
   // Redes Sociales en Cabecera
   enableHeaderSocials: { type: Boolean, default: true },

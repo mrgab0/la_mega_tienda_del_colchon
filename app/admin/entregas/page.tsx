@@ -72,7 +72,7 @@ export default function DeliveryAdminPage() {
             )}
 
             <div className="flex items-center gap-3 border-b pb-3">
-              <div className="p-2.5 bg-[#FF97A4]/15 text-[#FF97A4] rounded-xl">
+              <div className="p-2.5 bg-[#A507FA]/15 text-[#A507FA] rounded-xl">
                 <Truck size={20} />
               </div>
               <div>
@@ -80,7 +80,7 @@ export default function DeliveryAdminPage() {
                   name="title"
                   defaultValue={option.title}
                   placeholder="Nombre de la entrega"
-                  className="font-bold text-sm text-[#1A1C1C] border-b border-transparent hover:border-gray-300 focus:border-[#FF97A4] focus:outline-none w-full"
+                  className="font-bold text-sm text-[#1A1C1C] border-b border-transparent hover:border-gray-300 focus:border-[#A507FA] focus:outline-none w-full"
                   required
                 />
                 <span className="text-[10px] text-gray-400 font-bold block uppercase tracking-wider">ID: {option.id || option._id}</span>
@@ -94,27 +94,27 @@ export default function DeliveryAdminPage() {
                   name="description"
                   defaultValue={option.description}
                   placeholder="Detalles sobre el horario o cobertura..."
-                  className="p-2.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                  className="p-2.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="flex flex-col gap-1">
                   <label className="font-bold text-gray-600 flex items-center gap-1">
-                    <Clock size={12} className="text-[#FF97A4]" /> Tiempo Estimado
+                    <Clock size={12} className="text-[#A507FA]" /> Tiempo Estimado
                   </label>
                   <input
                     name="estimatedTimeLabel"
                     defaultValue={option.estimatedTimeLabel}
                     placeholder="Ej: 30-45 Minutos"
-                    className="p-2.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                    className="p-2.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                     required
                   />
                 </div>
 
                 <div className="flex flex-col gap-1">
                   <label className="font-bold text-gray-600 flex items-center gap-1">
-                    <DollarSign size={12} className="text-[#FF97A4]" /> Precio Base ($ USD)
+                    <DollarSign size={12} className="text-[#A507FA]" /> Precio Base ($ USD)
                   </label>
                   <input
                     name="extraPrice"
@@ -122,14 +122,14 @@ export default function DeliveryAdminPage() {
                     step="0.01"
                     defaultValue={option.extraPrice}
                     placeholder="0.00"
-                    className="p-2.5 border rounded-xl font-bold text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                    className="p-2.5 border rounded-xl font-bold text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                     required
                   />
                 </div>
 
                 <div className="flex flex-col gap-1">
                   <label className="font-bold text-gray-600 flex items-center gap-1">
-                    <DollarSign size={12} className="text-[#FF97A4]" /> Costo por Milla ($/milla)
+                    <DollarSign size={12} className="text-[#A507FA]" /> Costo por Milla ($/milla)
                   </label>
                   <input
                     name="pricePerMile"
@@ -145,13 +145,13 @@ export default function DeliveryAdminPage() {
 
               <div className="flex flex-col gap-1">
                 <label className="font-bold text-gray-600 flex items-center gap-1">
-                  <Tag size={12} className="text-[#FF97A4]" /> Insignia / Badge Flotante (Opcional)
+                  <Tag size={12} className="text-[#A507FA]" /> Insignia / Badge Flotante (Opcional)
                 </label>
                 <input
                   name="badge"
                   defaultValue={option.badge || ""}
                   placeholder="Ej: Ultra Rápido ⚡, Recomendado 🔥, Gratis"
-                  className="p-2.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                  className="p-2.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                 />
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function DeliveryAdminPage() {
               <button
                 type="submit"
                 disabled={savingId === (option._id || option.id)}
-                className="bg-[#FF97A4] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-[#B0004A] transition-colors shadow-sm disabled:bg-gray-400 flex items-center gap-1.5"
+                className="bg-[#A507FA] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-[#8B00D9] transition-colors shadow-sm disabled:bg-gray-400 flex items-center gap-1.5"
               >
                 <Save size={14} />
                 {savingId === (option._id || option.id) ? "Guardando..." : "Guardar Opción"}

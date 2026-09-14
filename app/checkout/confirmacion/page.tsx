@@ -16,9 +16,9 @@ export default async function ConfirmacionPage({
   const order = orderDoc ? JSON.parse(JSON.stringify(orderDoc)) : null;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F9F9F9] p-6">
-      <div className="bg-white p-12 rounded-2xl shadow-xl border border-gray-100 text-center animate-in zoom-in-95 duration-500 max-w-lg w-full">
-        <div className="bg-green-100 p-4 rounded-full text-green-600 mb-6 animate-bounce mx-auto w-20">
+    <div className="min-h-screen flex items-center justify-center bg-[#FAF2FF]/30 p-6">
+      <div className="bg-white p-12 rounded-3xl shadow-xl border border-purple-100 text-center animate-in zoom-in-95 duration-500 max-w-lg w-full">
+        <div className="bg-[#FAF2FF] p-4 rounded-full text-[#A507FA] mb-6 animate-bounce mx-auto w-20">
           <CheckCircle2 size={48} />
         </div>
         <h2 className="text-3xl font-bold text-[#1A1C1C] mb-2">¡Pedido Registrado con Éxito! 🛏️</h2>
@@ -26,9 +26,9 @@ export default async function ConfirmacionPage({
           Pronto coordinaremos el despacho o entrega. Gracias por confiar en La Mega Tienda del Colchón.
         </p>
         
-        <div className="bg-gray-50 p-4 rounded-xl mb-8">
-            <p className="text-sm text-gray-500 uppercase tracking-widest font-bold">Número de Pedido</p>
-            <p className="text-2xl font-mono font-bold text-blue-600">{orderId}</p>
+        <div className="bg-[#FAF2FF]/50 border border-purple-100 p-4 rounded-2xl mb-8">
+            <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">Número de Pedido</p>
+            <p className="text-2xl font-mono font-black text-[#A507FA]">{orderId}</p>
         </div>
 
         {order && <OrderSummary items={order.items} />}
@@ -38,13 +38,13 @@ export default async function ConfirmacionPage({
             href={`https://wa.me/584141584360?text=Hola!%20He%20finalizado%20mi%20pedido%20${orderId}%20en%20La%20Mega%20Tienda%20del%20Colchón.%20Quisiera%20confirmar%20los%20detalles.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-green-600 transition-all shadow-md"
+            className="flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3.5 rounded-full font-bold hover:bg-[#1EBE5D] transition-all shadow-md"
           >
             <MessageCircle size={20} /> Confirmar por WhatsApp (0414-1584360)
           </a>
           <Link 
             href="/"
-            className="flex items-center justify-center gap-2 bg-[#1A1C1C] text-white px-6 py-3 rounded-xl font-bold hover:bg-black transition-all"
+            className="flex items-center justify-center gap-2 bg-[#12021E] text-white px-6 py-3.5 rounded-full font-bold hover:bg-[#A507FA] transition-all"
           >
             <Home size={20} /> Volver al Inicio
           </Link>

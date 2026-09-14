@@ -145,7 +145,7 @@ export default function AdminPagosPage() {
                       name="holderName"
                       defaultValue={cfg.holderName || ""}
                       placeholder="Ej: La Mega Tienda del Colchón"
-                      className="p-3 border rounded-xl text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                      className="p-3 border rounded-xl text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                     />
                   </div>
 
@@ -159,7 +159,7 @@ export default function AdminPagosPage() {
                         name="accountDetail"
                         defaultValue={cfg.accountDetail || ""}
                         placeholder={m.id === "zelle" ? "pagos@flowersforyou.com" : m.id === "cashapp" ? "$FlowersShop" : "paypal@flowers.com"}
-                        className="p-3 border rounded-xl text-xs font-bold text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                        className="p-3 border rounded-xl text-xs font-bold text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                       />
                     </div>
                   )}
@@ -168,13 +168,13 @@ export default function AdminPagosPage() {
                   {(m.id === "square" || m.id === "paypal" || m.id === "cashapp") && (
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-bold text-gray-700 dark:text-gray-300 flex items-center gap-1">
-                        <LinkIcon size={12} className="text-[#FF97A4]" /> Enlace Directo de Pago (URL)
+                        <LinkIcon size={12} className="text-[#A507FA]" /> Enlace Directo de Pago (URL)
                       </label>
                       <input
                         name="linkUrl"
                         defaultValue={cfg.linkUrl || ""}
                         placeholder={m.id === "square" ? "https://square.link/u/..." : "https://paypal.me/..."}
-                        className="p-3 border rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                        className="p-3 border rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                       />
                     </div>
                   )}
@@ -183,7 +183,7 @@ export default function AdminPagosPage() {
                   {m.id !== "efectivo" && m.id !== "square" && (
                     <div className="flex flex-col gap-1 pt-1">
                       <label className="text-xs font-bold text-gray-700 dark:text-gray-300 flex items-center gap-1">
-                        <QrCode size={14} className="text-[#FF97A4]" /> Imagen del Código QR (ImageKit)
+                        <QrCode size={14} className="text-[#A507FA]" /> Imagen del Código QR (ImageKit)
                       </label>
                       <SingleImageUploader
                         name="qrImage"
@@ -201,7 +201,7 @@ export default function AdminPagosPage() {
                       name="instructions"
                       defaultValue={cfg.instructions || ""}
                       placeholder="Instrucciones al cliente al seleccionar este pago..."
-                      className="p-3 border rounded-xl text-xs h-20 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                      className="p-3 border rounded-xl text-xs h-20 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                     />
                   </div>
                 </div>
@@ -236,7 +236,7 @@ export default function AdminPagosPage() {
                 <button
                   type="submit"
                   disabled={isSaving}
-                  className="bg-[#FF97A4] text-white px-6 py-2.5 rounded-full text-xs font-bold hover:bg-[#B0004A] transition-colors shadow-sm disabled:bg-gray-400 flex items-center gap-1.5 ml-auto"
+                  className="bg-[#A507FA] text-white px-6 py-2.5 rounded-full text-xs font-bold hover:bg-[#8B00D9] transition-colors shadow-sm disabled:bg-gray-400 flex items-center gap-1.5 ml-auto"
                 >
                   <Save size={14} />
                   {isSaving ? "Guardando..." : `Guardar Datos`}

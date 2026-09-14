@@ -13,8 +13,8 @@ export function FeatureListBuilder({ initialFeatures = [] }: { initialFeatures?:
     initialFeatures.length > 0
       ? initialFeatures
       : [
-          { label: "Flor Principal", value: "Rosas de Invernadero" },
-          { label: "Empaque", value: "Caja Deluxe de Regalo" },
+          { label: "Nivel de Firmeza", value: "Semi-ortopédico / Ortopédico" },
+          { label: "Garantía", value: "5 Años de Fábrica" },
         ]
   );
 
@@ -36,19 +36,19 @@ export function FeatureListBuilder({ initialFeatures = [] }: { initialFeatures?:
     <div className="space-y-3 pt-3 border-t border-gray-100">
       <div className="flex justify-between items-center">
         <label className="text-xs font-bold uppercase tracking-wider text-gray-700 flex items-center gap-1.5">
-          <ListPlus size={16} className="text-[#FF97A4]" /> Viñetas y Especificaciones Destacadas
+          <ListPlus size={16} className="text-[#A507FA]" /> Viñetas y Especificaciones Destacadas
         </label>
         <button
           type="button"
           onClick={addFeature}
-          className="text-xs font-bold text-[#FF97A4] hover:text-[#B0004A] flex items-center gap-1 bg-[#FF97A4]/10 px-3 py-1 rounded-full hover:bg-[#FF97A4]/20 transition-all"
+          className="text-xs font-bold text-[#A507FA] hover:text-[#8B00D9] flex items-center gap-1 bg-[#FAF2FF] px-3 py-1 rounded-full hover:bg-[#FAF2FF]/80 transition-all"
         >
           <Plus size={14} /> Añadir Viñeta
         </button>
       </div>
 
       <p className="text-[11px] text-gray-400">
-        Añade puntos clave en formato título/valor (ej. "Duración": "7 a 10 días" o "Incluye": "Tarjeta personalizada")
+        Añade puntos clave en formato título/valor (ej. "Núcleo": "Resortes Bicónicos" o "Firmeza": "Ortopédica")
       </p>
 
       <div className="space-y-2">
@@ -58,15 +58,15 @@ export function FeatureListBuilder({ initialFeatures = [] }: { initialFeatures?:
               name="featureLabels"
               value={feature.label}
               onChange={(e) => handleChange(index, "label", e.target.value)}
-              placeholder="Ej: Incluye"
-              className="p-2.5 border rounded-xl text-xs w-1/3 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+              placeholder="Ej: Material"
+              className="p-2.5 border rounded-xl text-xs w-1/3 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
             />
             <input
               name="featureValues"
               value={feature.value}
               onChange={(e) => handleChange(index, "value", e.target.value)}
-              placeholder="Ej: Tarjeta de Dedicatoria Gratis"
-              className="p-2.5 border rounded-xl text-xs flex-1 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+              placeholder="Ej: Espuma de Alta Densidad"
+              className="p-2.5 border rounded-xl text-xs flex-1 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
             />
             <button
               type="button"

@@ -17,7 +17,7 @@ export async function LoginButton() {
         >
           <button
             type="submit"
-            className="bg-[#1A1C1C] text-white px-4 py-1.5 rounded-full text-xs font-bold hover:bg-[#FF97A4] transition-all"
+            className="bg-[#1A1C1C] text-white px-4 py-1.5 rounded-full text-xs font-bold hover:bg-[#A507FA] transition-all"
           >
             Salir
           </button>
@@ -35,7 +35,7 @@ export async function LoginButton() {
     >
       <button
         type="submit"
-        className="bg-white text-[#FF97A4] border-2 border-[#FF97A4] px-6 py-2 rounded-full font-bold hover:bg-[#FF97A4] hover:text-white transition-all shadow-md"
+        className="bg-white text-[#A507FA] border-2 border-[#A507FA] px-6 py-2 rounded-full font-bold hover:bg-[#A507FA] hover:text-white transition-all shadow-md"
       >
         Iniciar Sesión
       </button>

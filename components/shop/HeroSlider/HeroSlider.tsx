@@ -71,7 +71,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ initialSlides }) => {
   };
 
   return (
-    <div className="mt-8 md:mt-12 relative w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[21/9] lg:aspect-[24/9] max-h-[520px] rounded-3xl shadow-2xl border-2 sm:border-4 border-[#D4AF37]/50 dark:border-gray-800 overflow-hidden bg-[#0F1015] transition-all">
+    <div className="mt-8 md:mt-12 relative w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[21/9] lg:aspect-[24/9] max-h-[520px] rounded-3xl shadow-2xl border-2 sm:border-4 border-[#A507FA]/60 dark:border-purple-900/60 overflow-hidden bg-[#12021E] transition-all">
       {slides.map((slide, index) => {
         const isCurrent = index === currentIndex;
         const isVideo = slide.image?.match(/\.(mp4|webm|ogg)$/i);
@@ -143,7 +143,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ initialSlides }) => {
 
                 {/* Superposición de Texto y Botón CTA */}
                 {slide.showOverlay !== false && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent flex flex-col items-start justify-center p-6 md:p-12 text-left pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent flex flex-col items-start justify-center p-6 md:p-12 text-left pointer-events-none">
                     <div className="pointer-events-auto max-w-xl">
                       {slide.title && (
                         <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-2 md:mb-3 tracking-tight">
@@ -151,7 +151,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ initialSlides }) => {
                         </h2>
                       )}
                       {slide.description && (
-                        <p className="text-sm sm:text-base md:text-lg text-white/90 mb-4 md:mb-6 line-clamp-3 font-medium">
+                        <p className="text-sm sm:text-base md:text-lg text-white/95 mb-4 md:mb-6 line-clamp-3 font-medium">
                           {slide.description}
                         </p>
                       )}
@@ -160,7 +160,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ initialSlides }) => {
                           href={slide.link} 
                           draggable={false}
                           onDragStart={(e) => e.preventDefault()}
-                          className="inline-block bg-[#8B0024] hover:bg-[#2a0002] text-white px-6 md:px-8 py-2.5 md:py-3 rounded-xl font-bold text-xs sm:text-sm md:text-base transition-all shadow-xl shadow-pink-950/30 border border-[#D4AF37]/60 hover:scale-105 active:scale-95 select-none"
+                          className="inline-block bg-[#A507FA] hover:bg-[#7A00BD] text-white px-6 md:px-8 py-2.5 md:py-3 rounded-xl font-bold text-xs sm:text-sm md:text-base transition-all shadow-xl shadow-purple-950/40 border border-white/40 hover:scale-105 active:scale-95 select-none"
                         >
                           {slide.ctaText || "Ver Oferta"}
                         </a>
@@ -172,7 +172,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ initialSlides }) => {
             ) : (
               <div className="h-full flex flex-col items-center justify-center p-8 bg-white">
                 <h3 className="text-3xl font-serif font-bold mb-4">{slide.title}</h3>
-                <div className="text-6xl font-black text-[#8B0024] mb-4">{slide.discountPercentage}% OFF</div>
+                <div className="text-6xl font-black text-[#A507FA] mb-4">{slide.discountPercentage}% OFF</div>
                 <p className="text-gray-500 font-medium">Expira: {new Date(slide.discountExpiry).toLocaleDateString()}</p>
               </div>
             )}
@@ -191,7 +191,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ initialSlides }) => {
               className="p-2 flex items-center justify-center focus:outline-none"
             >
               <span className={`h-2.5 rounded-full transition-all duration-300 block ${
-                idx === currentIndex ? "w-8 bg-[#D4AF37]" : "w-2.5 bg-white/60 hover:bg-white"
+                idx === currentIndex ? "w-8 bg-[#A507FA]" : "w-2.5 bg-white/60 hover:bg-white"
               }`} />
             </button>
           ))}

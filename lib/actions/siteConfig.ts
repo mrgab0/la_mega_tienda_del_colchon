@@ -21,7 +21,7 @@ const DEFAULT_SITE_CONFIG = {
   menuTrackingLabel: "📦 Rastreo",
   menuAboutLabel: "Nosotros",
   menuContactLabel: "Contacto",
-  primaryColor: "#1E40AF",
+  primaryColor: "#A507FA",
   enableHeaderSocials: true,
   facebookUrl: "https://facebook.com",
   instagramUrl: "https://www.instagram.com/lamegatiendadelcolchon/reels/",
@@ -107,7 +107,7 @@ export async function updateSiteConfig(formData: FormData) {
     const menuTrackingLabel = getValue("menuTrackingLabel", DEFAULT_SITE_CONFIG.menuTrackingLabel);
     const menuAboutLabel = getValue("menuAboutLabel", DEFAULT_SITE_CONFIG.menuAboutLabel);
     const menuContactLabel = getValue("menuContactLabel", DEFAULT_SITE_CONFIG.menuContactLabel);
-    const primaryColor = getValue("primaryColor", "#FF97A4");
+    const primaryColor = getValue("primaryColor", "#A507FA");
 
     // Redes Sociales en Cabecera (Toggle ON/OFF)
     const enableHeaderSocials = getBool("enableHeaderSocials", true);

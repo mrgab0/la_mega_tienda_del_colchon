@@ -68,17 +68,17 @@ export function RadioColchonPlayer({
 
       <div className="relative group">
         {/* Glow effect */}
-        <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-amber-500 to-indigo-600 rounded-2xl blur-sm opacity-60 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+        <div className="absolute -inset-1 bg-gradient-to-r from-[#A507FA] via-purple-600 to-[#8B00D9] rounded-2xl blur-sm opacity-70 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
 
-        <div className="relative bg-slate-900/95 dark:bg-slate-950/95 backdrop-blur-md border border-blue-500/30 text-white rounded-2xl shadow-2xl p-3.5 sm:p-4 w-[310px] sm:w-[340px]">
+        <div className="relative bg-[#12021E]/95 dark:bg-[#0D0115]/95 backdrop-blur-md border border-[#A507FA]/40 text-white rounded-2xl shadow-2xl p-3.5 sm:p-4 w-[310px] sm:w-[340px]">
           
           {/* Header Bar */}
-          <div className="flex items-center justify-between gap-2 border-b border-slate-700/60 pb-2 mb-2.5">
+          <div className="flex items-center justify-between gap-2 border-b border-purple-900/60 pb-2 mb-2.5">
             <div className="flex items-center gap-2">
-              <div className="relative flex items-center justify-center w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 border border-blue-500/40">
-                <Radio className={`w-4 h-4 ${isPlaying ? "animate-pulse text-amber-400" : "text-blue-300"}`} />
+              <div className="relative flex items-center justify-center w-7 h-7 rounded-lg bg-[#A507FA]/30 text-[#A507FA] border border-[#A507FA]/50">
+                <Radio className={`w-4 h-4 ${isPlaying ? "animate-pulse text-white" : "text-purple-300"}`} />
                 {isPlaying && (
-                  <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
+                  <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping"></span>
                 )}
               </div>
               <div>
@@ -99,7 +99,7 @@ export function RadioColchonPlayer({
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Abrir Radio Colchón en nueva pestaña"
-                className="text-slate-400 hover:text-amber-300 p-1 transition-colors"
+                className="text-purple-300 hover:text-white p-1 transition-colors"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
@@ -107,7 +107,7 @@ export function RadioColchonPlayer({
                 type="button"
                 onClick={() => setIsMinimized(!isMinimized)}
                 aria-label={isMinimized ? "Expandir reproductor de radio" : "Minimizar reproductor de radio"}
-                className="text-slate-400 hover:text-white p-1 transition-colors"
+                className="text-purple-300 hover:text-white p-1 transition-colors"
               >
                 {isMinimized ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
               </button>
@@ -117,20 +117,20 @@ export function RadioColchonPlayer({
           {!isMinimized && (
             <div className="space-y-3">
               {/* Description / Binaural indicator */}
-              <p className="text-[11px] text-slate-300 flex items-center gap-1 leading-snug">
-                <Sparkles className="w-3 h-3 text-amber-400 flex-shrink-0" />
+              <p className="text-[11px] text-purple-200 flex items-center gap-1 leading-snug">
+                <Sparkles className="w-3 h-3 text-[#A507FA] flex-shrink-0" />
                 <span>{description}</span>
               </p>
 
               {/* Player Controls */}
-              <div className="flex items-center justify-between gap-3 bg-slate-800/80 rounded-xl p-2 px-3 border border-slate-700/50">
+              <div className="flex items-center justify-between gap-3 bg-purple-950/60 rounded-xl p-2 px-3 border border-purple-800/40">
                 <button
                   type="button"
                   onClick={togglePlay}
                   className={`flex items-center justify-center w-10 h-10 rounded-full font-bold transition-transform active:scale-95 shadow-md ${
                     isPlaying
-                      ? "bg-amber-500 text-slate-950 hover:bg-amber-400"
-                      : "bg-blue-600 text-white hover:bg-blue-500"
+                      ? "bg-white text-[#A507FA] hover:bg-purple-100"
+                      : "bg-[#A507FA] text-white hover:bg-[#8B00D9]"
                   }`}
                   aria-label={isPlaying ? "Pausar Radio Colchón" : "Reproducir Radio Colchón"}
                 >
@@ -142,7 +142,7 @@ export function RadioColchonPlayer({
                   {[40, 75, 100, 60, 90, 45, 80, 50, 70, 30].map((height, i) => (
                     <span
                       key={i}
-                      className={`w-1 bg-gradient-to-t from-blue-500 to-amber-400 rounded-full transition-all duration-300 ${
+                      className={`w-1 bg-gradient-to-t from-[#A507FA] to-purple-300 rounded-full transition-all duration-300 ${
                         isPlaying ? "animate-pulse" : "opacity-30"
                       }`}
                       style={{
@@ -159,7 +159,7 @@ export function RadioColchonPlayer({
                     type="button"
                     onClick={toggleMute}
                     aria-label={isMuted ? "Activar sonido" : "Silenciar"}
-                    className="text-slate-400 hover:text-white transition-colors"
+                    className="text-purple-300 hover:text-white transition-colors"
                   >
                     {isMuted || volume === 0 ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                   </button>
@@ -174,22 +174,22 @@ export function RadioColchonPlayer({
                       setVolume(parseFloat(e.target.value));
                       if (isMuted) setIsMuted(false);
                     }}
-                    className="w-14 h-1 bg-slate-600 rounded-lg appearance-none cursor-pointer accent-amber-400"
+                    className="w-14 h-1 bg-purple-900 rounded-lg appearance-none cursor-pointer accent-[#A507FA]"
                   />
                 </div>
               </div>
 
               {/* Station footer link */}
-              <div className="flex items-center justify-between text-[10px] text-slate-400 pt-0.5">
+              <div className="flex items-center justify-between text-[10px] text-purple-300 pt-0.5">
                 <span className="flex items-center gap-1">
-                  <Music className="w-3 h-3 text-blue-400" />
+                  <Music className="w-3 h-3 text-[#A507FA]" />
                   <span>Streaming Psychoacoustic</span>
                 </span>
                 <a
                   href="https://radiocolchon.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-400 hover:underline font-bold"
+                  className="text-white hover:text-[#A507FA] hover:underline font-bold"
                 >
                   radiocolchon.com ↗
                 </a>

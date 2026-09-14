@@ -195,7 +195,7 @@ export default function AdminOrdenesPage() {
   if (loading) {
     return (
       <div className="p-12 text-center text-gray-500 font-bold animate-pulse flex flex-col items-center justify-center gap-3">
-        <RefreshCw className="animate-spin text-[#FF97A4]" size={28} />
+        <RefreshCw className="animate-spin text-[#A507FA]" size={28} />
         <span>Cargando Módulo de Despacho & Órdenes...</span>
       </div>
     );
@@ -232,7 +232,7 @@ export default function AdminOrdenesPage() {
       {/* Encabezado Principal */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white dark:bg-[#12131A] p-6 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm no-print">
         <div className="flex items-center gap-3.5">
-          <div className="p-3 bg-pink-50 dark:bg-pink-950/60 text-[#FF97A4] rounded-2xl border border-pink-100 dark:border-pink-900/50">
+          <div className="p-3 bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] rounded-2xl border border-purple-100 dark:border-purple-900/50">
             <Package size={26} />
           </div>
           <div>
@@ -271,7 +271,7 @@ export default function AdminOrdenesPage() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Buscar por ID de Pedido (ej. FFY-...), Nombre del Cliente o Teléfono..."
-            className="w-full pl-10 pr-4 py-2.5 border rounded-2xl text-xs font-medium dark:bg-gray-900 dark:border-gray-800 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+            className="w-full pl-10 pr-4 py-2.5 border rounded-2xl text-xs font-medium dark:bg-gray-900 dark:border-gray-800 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
           />
         </div>
 
@@ -282,7 +282,7 @@ export default function AdminOrdenesPage() {
             <button
               onClick={() => setSelectedFilter("all")}
               className={`px-3 py-1.5 rounded-xl transition-all ${
-                selectedFilter === "all" ? "bg-white dark:bg-gray-900 text-[#FF97A4] shadow-sm" : "text-gray-500"
+                selectedFilter === "all" ? "bg-white dark:bg-gray-900 text-[#A507FA] shadow-sm" : "text-gray-500"
               }`}
             >
               Todos ({orders.length})
@@ -290,7 +290,7 @@ export default function AdminOrdenesPage() {
             <button
               onClick={() => setSelectedFilter("espera")}
               className={`px-3 py-1.5 rounded-xl transition-all ${
-                selectedFilter === "espera" ? "bg-white dark:bg-gray-900 text-[#FF97A4] shadow-sm" : "text-gray-500"
+                selectedFilter === "espera" ? "bg-white dark:bg-gray-900 text-[#A507FA] shadow-sm" : "text-gray-500"
               }`}
             >
               En Preparación
@@ -298,7 +298,7 @@ export default function AdminOrdenesPage() {
             <button
               onClick={() => setSelectedFilter("camino")}
               className={`px-3 py-1.5 rounded-xl transition-all ${
-                selectedFilter === "camino" ? "bg-white dark:bg-gray-900 text-[#FF97A4] shadow-sm" : "text-gray-500"
+                selectedFilter === "camino" ? "bg-white dark:bg-gray-900 text-[#A507FA] shadow-sm" : "text-gray-500"
               }`}
             >
               En Camino / Listo
@@ -306,7 +306,7 @@ export default function AdminOrdenesPage() {
             <button
               onClick={() => setSelectedFilter("entregado")}
               className={`px-3 py-1.5 rounded-xl transition-all ${
-                selectedFilter === "entregado" ? "bg-white dark:bg-gray-900 text-[#FF97A4] shadow-sm" : "text-gray-500"
+                selectedFilter === "entregado" ? "bg-white dark:bg-gray-900 text-[#A507FA] shadow-sm" : "text-gray-500"
               }`}
             >
               Entregados
@@ -316,7 +316,7 @@ export default function AdminOrdenesPage() {
           {/* Filtros de Fecha & Rango */}
           <div className="flex items-center gap-2 flex-wrap">
             <div className="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1.5 rounded-2xl font-semibold text-gray-700 dark:text-gray-300">
-              <Calendar size={14} className="text-[#FF97A4]" />
+              <Calendar size={14} className="text-[#A507FA]" />
               <select
                 value={dateFilter}
                 onChange={(e: any) => setDateFilter(e.target.value)}
@@ -340,7 +340,7 @@ export default function AdminOrdenesPage() {
 
             {/* Ordenamiento por Fecha / Precio */}
             <div className="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1.5 rounded-2xl font-semibold text-gray-700 dark:text-gray-300">
-              <ArrowUpDown size={14} className="text-[#FF97A4]" />
+              <ArrowUpDown size={14} className="text-[#A507FA]" />
               <select
                 value={sortBy}
                 onChange={(e: any) => setSortBy(e.target.value)}
@@ -371,7 +371,7 @@ export default function AdminOrdenesPage() {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 border-b pb-4 border-gray-100 dark:border-gray-800">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <span className="font-mono font-bold text-sm text-[#1A1C1C] dark:text-white bg-pink-50 dark:bg-pink-950/60 px-2.5 py-0.5 rounded-lg border border-pink-200 dark:border-pink-900/50">
+                      <span className="font-mono font-bold text-sm text-[#1A1C1C] dark:text-white bg-[#FAF2FF] dark:bg-[#1A032A] px-2.5 py-0.5 rounded-lg border border-purple-200 dark:border-purple-900/50">
                         {order.orderId}
                       </span>
                       <span className="text-xs text-gray-400 font-medium flex items-center gap-1">
@@ -382,7 +382,7 @@ export default function AdminOrdenesPage() {
 
                     <div className="flex items-center gap-3 text-xs pt-1">
                       <span className="font-bold text-gray-700 dark:text-gray-300 flex items-center gap-1">
-                        <User size={13} className="text-[#FF97A4]" />
+                        <User size={13} className="text-[#A507FA]" />
                         {order.customerName}
                       </span>
                       <span className="text-gray-400 font-mono">{order.customerPhone}</span>
@@ -399,7 +399,7 @@ export default function AdminOrdenesPage() {
                       value={order.status || (isPickup ? "En diseño" : "Confirmado")}
                       onChange={(e) => handleStatusChange(order.orderId, e.target.value)}
                       disabled={updatingId === order.orderId}
-                      className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl px-3 py-1.5 text-xs font-bold text-[#1A1C1C] dark:text-white focus:ring-2 focus:ring-[#FF97A4] focus:outline-none"
+                      className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl px-3 py-1.5 text-xs font-bold text-[#1A1C1C] dark:text-white focus:ring-2 focus:ring-[#A507FA] focus:outline-none"
                     >
                       <option value="Confirmado">🕒 Confirmado</option>
                       <option value="En diseño">🌸 En diseño floral</option>
@@ -451,7 +451,7 @@ export default function AdminOrdenesPage() {
                       {isPickup ? "Método: Retiro en Boutique" : "Dirección de Entrega:"}
                     </span>
                     <p className="font-bold text-gray-800 dark:text-gray-200 flex items-start gap-1">
-                      {isPickup ? <Store size={14} className="text-purple-500 flex-shrink-0 mt-0.5" /> : <MapPin size={14} className="text-[#FF97A4] flex-shrink-0 mt-0.5" />}
+                      {isPickup ? <Store size={14} className="text-purple-500 flex-shrink-0 mt-0.5" /> : <MapPin size={14} className="text-[#A507FA] flex-shrink-0 mt-0.5" />}
                       <span>{order.address}</span>
                     </p>
 
@@ -468,9 +468,9 @@ export default function AdminOrdenesPage() {
                     )}
 
                     {order.cardMessage && (
-                      <div className="bg-pink-50 dark:bg-pink-950/40 p-2.5 rounded-xl border border-pink-200 dark:border-pink-900/50 text-[11px] space-y-0.5 mt-2">
-                        <span className="font-extrabold text-[#FF97A4] flex items-center gap-1">
-                          <Heart size={12} className="fill-[#FF97A4]" /> Tarjeta de Dedicatoria Impresa:
+                      <div className="bg-[#FAF2FF] dark:bg-[#1A032A] p-2.5 rounded-xl border border-purple-200 dark:border-purple-900/50 text-[11px] space-y-0.5 mt-2">
+                        <span className="font-extrabold text-[#A507FA] flex items-center gap-1">
+                          <Heart size={12} className="fill-[#A507FA]" /> Tarjeta de Dedicatoria Impresa:
                         </span>
                         <p className="font-semibold text-gray-800 dark:text-gray-200 italic">
                           "{order.cardMessage}"
@@ -504,14 +504,14 @@ export default function AdminOrdenesPage() {
                           {item.addons && item.addons.length > 0 && (
                             <div className="pl-3 space-y-1 mt-1">
                               {item.addons.map((add: any, idx: number) => (
-                                <div key={idx} className="bg-pink-50 dark:bg-pink-950/40 p-2 rounded-xl border border-pink-200 dark:border-pink-900/50 text-[11px]">
-                                  <span className="font-extrabold text-[#FF97A4] block">
+                                <div key={idx} className="bg-[#FAF2FF] dark:bg-[#1A032A] p-2 rounded-xl border border-purple-200 dark:border-purple-900/50 text-[11px]">
+                                  <span className="font-extrabold text-[#A507FA] block">
                                     ✨ {add.name || add.value} {add.price ? `(+$${add.price.toFixed(2)})` : ''}
                                   </span>
                                   {add.customText && (
-                                    <div className="mt-1 bg-white dark:bg-gray-900 p-2 rounded-lg border border-pink-200 dark:border-pink-900/50 text-gray-800 dark:text-gray-200 font-semibold flex items-start gap-1">
-                                      <MessageSquare size={12} className="text-[#FF97A4] flex-shrink-0 mt-0.5" />
-                                      <span>Texto / Impresión: <strong className="text-[#FF97A4]">"{add.customText}"</strong></span>
+                                    <div className="mt-1 bg-white dark:bg-gray-900 p-2 rounded-lg border border-purple-200 dark:border-purple-900/50 text-gray-800 dark:text-gray-200 font-semibold flex items-start gap-1">
+                                      <MessageSquare size={12} className="text-[#A507FA] flex-shrink-0 mt-0.5" />
+                                      <span>Texto / Impresión: <strong className="text-[#A507FA]">"{add.customText}"</strong></span>
                                     </div>
                                   )}
                                 </div>
@@ -548,7 +548,7 @@ export default function AdminOrdenesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                    Modificar Venta <span className="font-mono text-[#FF97A4]">#{editingOrder.orderId}</span>
+                    Modificar Venta <span className="font-mono text-[#A507FA]">#{editingOrder.orderId}</span>
                   </h3>
                   <p className="text-xs text-gray-400">Las modificaciones requieren código de seguridad 2FA al guardar.</p>
                 </div>
@@ -612,7 +612,7 @@ export default function AdminOrdenesPage() {
                   rows={2}
                   value={editingOrder.cardMessage || ""}
                   onChange={(e) => setEditingOrder({ ...editingOrder, cardMessage: e.target.value })}
-                  className="w-full p-2.5 border rounded-xl dark:bg-gray-900 dark:border-gray-800 font-semibold italic text-pink-600 dark:text-pink-400"
+                  className="w-full p-2.5 border rounded-xl dark:bg-gray-900 dark:border-gray-800 font-semibold italic text-[#A507FA] dark:text-purple-400"
                 />
               </div>
 
@@ -801,7 +801,7 @@ export default function AdminOrdenesPage() {
                   <button
                     onClick={() => setInvoiceLang("es")}
                     className={`px-3 py-1 rounded-lg transition-all ${
-                      invoiceLang === "es" ? "bg-white dark:bg-gray-900 text-[#FF97A4] shadow-sm" : "text-gray-500"
+                      invoiceLang === "es" ? "bg-white dark:bg-gray-900 text-[#A507FA] shadow-sm" : "text-gray-500"
                     }`}
                   >
                     🇪🇸 Español
@@ -809,7 +809,7 @@ export default function AdminOrdenesPage() {
                   <button
                     onClick={() => setInvoiceLang("en")}
                     className={`px-3 py-1 rounded-lg transition-all ${
-                      invoiceLang === "en" ? "bg-white dark:bg-gray-900 text-[#FF97A4] shadow-sm" : "text-gray-500"
+                      invoiceLang === "en" ? "bg-white dark:bg-gray-900 text-[#A507FA] shadow-sm" : "text-gray-500"
                     }`}
                   >
                     🇺🇸 English
@@ -836,7 +836,7 @@ export default function AdminOrdenesPage() {
             {/* ÁREA IMPRIMIBLE DE LA FACTURA */}
             <div id="invoice-print-area" className="bg-white text-gray-900 p-6 rounded-2xl border border-gray-200 space-y-6 text-xs">
               {/* Encabezado Oficial Boutique */}
-              <div className="flex justify-between items-start border-b-2 border-pink-200 pb-5">
+              <div className="flex justify-between items-start border-b-2 border-purple-200 pb-5">
                 <div>
                   <h1 className="text-2xl font-serif font-extrabold text-[#1A1C1C] tracking-tight">La Mega Tienda del Colchón</h1>
                   <p className="text-[11px] font-bold uppercase tracking-wider text-blue-600">Especialistas en Descanso</p>
@@ -845,7 +845,7 @@ export default function AdminOrdenesPage() {
                 </div>
 
                 <div className="text-right space-y-1">
-                  <div className="inline-block bg-pink-50 border border-pink-200 px-3 py-1 rounded-xl text-pink-600 font-mono font-bold text-sm">
+                  <div className="inline-block bg-[#FAF2FF] border border-purple-200 px-3 py-1 rounded-xl text-[#A507FA] font-mono font-bold text-sm">
                     {invoiceLang === "es" ? "FACTURA #" : "INVOICE #"} {invoiceOrder.orderId}
                   </div>
                   <p className="text-gray-500 font-medium text-[11px]">
@@ -881,8 +881,8 @@ export default function AdminOrdenesPage() {
 
               {/* Tarjeta de Dedicatoria (si existe) */}
               {invoiceOrder.cardMessage && (
-                <div className="bg-pink-50/60 p-3 rounded-xl border border-pink-200">
-                  <h4 className="font-bold uppercase text-[10px] tracking-wider text-pink-600 mb-0.5">
+                <div className="bg-[#FAF2FF]/60 p-3 rounded-xl border border-purple-200">
+                  <h4 className="font-bold uppercase text-[10px] tracking-wider text-[#A507FA] mb-0.5">
                     {invoiceLang === "es" ? "💌 TARJETA DE DEDICATORIA IMPRESA" : "💌 PRINTED CARD MESSAGE"}
                   </h4>
                   <p className="italic font-semibold text-gray-800">"{invoiceOrder.cardMessage}"</p>
@@ -906,7 +906,7 @@ export default function AdminOrdenesPage() {
                         <td className="py-2.5 px-3">
                           <strong className="text-gray-900">{item.name}</strong>
                           {item.addons && item.addons.length > 0 && (
-                            <div className="pl-2 mt-1 space-y-0.5 text-[11px] text-pink-600 font-semibold">
+                            <div className="pl-2 mt-1 space-y-0.5 text-[11px] text-[#A507FA] font-semibold">
                               {item.addons.map((a: any, i: number) => (
                                 <div key={i}>
                                   + {a.name || a.value} {a.price ? `(+$${a.price.toFixed(2)})` : ''}

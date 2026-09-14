@@ -47,7 +47,7 @@ export default function EditarSliderPage() {
   if (!slider) {
     return (
       <div className="flex items-center justify-center min-h-[300px] text-gray-500 gap-2">
-        <Loader2 className="animate-spin text-[#FF97A4]" size={24} />
+        <Loader2 className="animate-spin text-[#A507FA]" size={24} />
         <span>Cargando promoción...</span>
       </div>
     );
@@ -75,7 +75,7 @@ export default function EditarSliderPage() {
                   name="title"
                   defaultValue={slider.title || ""}
                   placeholder="Ej: Colección Especial Primavera 🌸"
-                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                 />
               </div>
 
@@ -85,7 +85,7 @@ export default function EditarSliderPage() {
                   name="link"
                   defaultValue={slider.link || ""}
                   placeholder="/productos/ramo-magenta o https://..."
-                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                 />
               </div>
             </div>
@@ -96,14 +96,14 @@ export default function EditarSliderPage() {
                 name="description"
                 defaultValue={slider.description || ""}
                 placeholder="Descripción corta o subtítulo..."
-                className="p-3 border rounded-xl h-20 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                className="p-3 border rounded-xl h-20 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
               />
             </div>
 
             {/* SECCIÓN DE SUBIDA DE IMÁGENES IMAGEKIT: ESCRITORIO Y MÓVIL */}
             <div className="space-y-4 pt-2">
               <h3 className="font-bold text-sm text-[#1A1C1C] flex items-center gap-2 border-b pb-2">
-                <Layers size={18} className="text-[#FF97A4]" /> Banners Responsivos (ImageKit)
+                <Layers size={18} className="text-[#A507FA]" /> Banners Responsivos (ImageKit)
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -151,7 +151,7 @@ export default function EditarSliderPage() {
                     name="ctaText"
                     defaultValue={slider.ctaText || "Ver Oferta"}
                     placeholder="Ej: Comprar Ahora, Ver Colección, Hablar por WhatsApp"
-                    className="p-3 border rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                    className="p-3 border rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                   />
                 </div>
 
@@ -162,7 +162,7 @@ export default function EditarSliderPage() {
                     type="number"
                     defaultValue={slider.order || 0}
                     placeholder="0"
-                    className="p-3 border rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                    className="p-3 border rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                   />
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function EditarSliderPage() {
                   type="checkbox"
                   checked={showOverlay}
                   onChange={(e) => setShowOverlay(e.target.checked)}
-                  className="w-5 h-5 accent-[#FF97A4] rounded"
+                  className="w-5 h-5 accent-[#A507FA] rounded"
                 />
                 <div className="flex-1">
                   <span className="font-bold text-sm text-[#1A1C1C] flex items-center gap-1.5">
@@ -198,7 +198,7 @@ export default function EditarSliderPage() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#FF97A4] text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-[#B0004A] transition-colors shadow-md disabled:bg-gray-400 w-full md:w-auto"
+            className="bg-[#A507FA] text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-[#8B00D9] transition-colors shadow-md disabled:bg-gray-400 w-full md:w-auto"
           >
             {loading ? "Guardando..." : "Guardar Cambios"}
           </button>

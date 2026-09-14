@@ -21,7 +21,7 @@ const NAV_ITEMS = [
     href: "/admin/ordenes",
     label: "Órdenes & Despacho",
     icon: "🛍️",
-    badgeColor: "bg-pink-100 dark:bg-pink-950/80 text-[#B0004A] dark:text-pink-300 border-pink-300 dark:border-pink-800/80 hover:bg-pink-200"
+    badgeColor: "bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] dark:text-purple-300 border-[#A507FA]/40 hover:bg-purple-200"
   },
   {
     href: "/admin/productos",
@@ -87,7 +87,7 @@ export function AdminNavbar({ logoutAction }: AdminNavbarProps) {
   const activeItem = NAV_ITEMS.find((item) => pathname?.startsWith(item.href)) || {
     href: "/admin",
     label: "Panel Principal",
-    icon: "🌸",
+    icon: "🛏️",
     badgeColor: ""
   };
 
@@ -102,11 +102,11 @@ export function AdminNavbar({ logoutAction }: AdminNavbarProps) {
           
           <div className="flex items-center gap-2.5">
             <Link href="/admin" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl border-2 border-blue-500 overflow-hidden flex items-center justify-center bg-blue-900 shadow-sm group-hover:scale-105 transition-transform flex-shrink-0 text-white font-bold">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl border-2 border-[#A507FA] overflow-hidden flex items-center justify-center bg-[#12021E] shadow-sm group-hover:scale-105 transition-transform flex-shrink-0 text-white font-bold">
                 <span>🛏️</span>
               </div>
               <div>
-                <span className="font-bold text-sm sm:text-base text-slate-900 dark:!text-white block leading-tight group-hover:text-blue-500 transition-colors">
+                <span className="font-bold text-sm sm:text-base text-slate-900 dark:!text-white block leading-tight group-hover:text-[#A507FA] transition-colors">
                   La Mega Tienda del Colchón
                 </span>
                 <span className="text-[9px] font-bold text-slate-500 dark:!text-white/80 uppercase tracking-widest block">
@@ -121,7 +121,7 @@ export function AdminNavbar({ logoutAction }: AdminNavbarProps) {
             </div>
 
             {/* Chip de Sección Activa (Visible solo en móvil cuando el menú está cerrado) */}
-            <div className="md:hidden flex items-center gap-1 px-2 py-0.5 rounded-lg bg-pink-50 dark:bg-pink-950/60 border border-pink-200 dark:border-pink-800/60 text-[#8B0024] dark:text-pink-300 text-[11px] font-bold">
+            <div className="md:hidden flex items-center gap-1 px-2 py-0.5 rounded-lg bg-[#FAF2FF] dark:bg-[#1A032A] border border-[#A507FA]/30 text-[#A507FA] dark:text-purple-300 text-[11px] font-bold">
               <span>{activeItem.icon}</span>
               <span className="truncate max-w-[85px]">{activeItem.label}</span>
             </div>
@@ -146,7 +146,7 @@ export function AdminNavbar({ logoutAction }: AdminNavbarProps) {
               className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-black transition-all shadow-sm border ${
                 isMobileOpen
                   ? "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white border-gray-400"
-                  : "bg-[#FF97A4] hover:bg-[#ff7e8e] text-white border-pink-400 active:scale-95"
+                  : "bg-[#A507FA] hover:bg-[#8B00D9] text-white border-[#A507FA] active:scale-95"
               }`}
             >
               {isMobileOpen ? (
@@ -175,7 +175,7 @@ export function AdminNavbar({ logoutAction }: AdminNavbarProps) {
                 href={item.href}
                 className={`px-3 py-1.5 rounded-xl transition-all duration-150 flex items-center gap-1.5 font-bold border shadow-sm ${
                   isActive
-                    ? "ring-2 ring-[#FF97A4] ring-offset-1 dark:ring-offset-gray-900 font-black scale-[1.02] " + (item.badgeColor || "bg-white dark:bg-gray-800 text-[#8B0024] dark:text-pink-300 border-pink-400")
+                    ? "ring-2 ring-[#A507FA] ring-offset-1 dark:ring-offset-gray-900 font-black scale-[1.02] " + (item.badgeColor || "bg-white dark:bg-gray-800 text-[#A507FA] dark:text-purple-300 border-[#A507FA]/50")
                     : item.badgeColor
                 }`}
               >
@@ -191,7 +191,7 @@ export function AdminNavbar({ logoutAction }: AdminNavbarProps) {
           <Link
             href="/"
             target="_blank"
-            className="px-3 py-1.5 rounded-xl bg-pink-100 dark:bg-pink-950/80 hover:bg-pink-200 text-[#B0004A] dark:text-pink-300 transition-colors border border-pink-300 dark:border-pink-800 flex items-center gap-1 font-extrabold"
+            className="px-3 py-1.5 rounded-xl bg-[#FAF2FF] dark:bg-[#1A032A] hover:bg-purple-200 text-[#A507FA] dark:text-purple-300 transition-colors border border-[#A507FA]/30 flex items-center gap-1 font-extrabold"
             title="Abrir tienda en nueva pestaña"
           >
             <span>👁️ Ver Tienda</span>
@@ -225,7 +225,7 @@ export function AdminNavbar({ logoutAction }: AdminNavbarProps) {
                   onClick={() => setIsMobileOpen(false)}
                   className={`px-3 py-2.5 rounded-xl transition-all flex items-center gap-2 font-bold border shadow-sm ${
                     isActive
-                      ? "ring-2 ring-[#FF97A4] font-black " + (item.badgeColor || "bg-white dark:bg-gray-800 text-[#8B0024] dark:text-pink-300 border-pink-400")
+                      ? "ring-2 ring-[#A507FA] font-black " + (item.badgeColor || "bg-white dark:bg-gray-800 text-[#A507FA] dark:text-purple-300 border-[#A507FA]/50")
                       : item.badgeColor
                   }`}
                 >
@@ -240,7 +240,7 @@ export function AdminNavbar({ logoutAction }: AdminNavbarProps) {
               href="/"
               target="_blank"
               onClick={() => setIsMobileOpen(false)}
-              className="col-span-2 px-3 py-2.5 rounded-xl bg-pink-100 dark:bg-pink-950/80 hover:bg-pink-200 text-[#B0004A] dark:text-pink-300 transition-colors border border-pink-300 dark:border-pink-800 flex items-center justify-center gap-2 font-bold"
+              className="col-span-2 px-3 py-2.5 rounded-xl bg-[#FAF2FF] dark:bg-[#1A032A] hover:bg-purple-200 text-[#A507FA] dark:text-purple-300 transition-colors border border-[#A507FA]/30 flex items-center justify-center gap-2 font-bold"
             >
               <span>👁️ Ver Tienda Online</span>
               <ExternalLink size={13} />

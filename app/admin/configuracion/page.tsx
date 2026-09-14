@@ -54,7 +54,7 @@ export default function AdminConfiguracionPage() {
       {/* Header del Editor Global */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white dark:bg-[#12131A] p-6 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
         <div className="flex items-center gap-3.5">
-          <div className="p-3.5 bg-gradient-to-tr from-pink-500 to-[#FF97A4] text-white rounded-2xl shadow-md shadow-pink-500/20">
+          <div className="p-3.5 bg-gradient-to-tr from-purple-600 to-[#A507FA] text-white rounded-2xl shadow-md shadow-purple-500/20">
             <Sliders size={26} />
           </div>
           <div>
@@ -67,7 +67,7 @@ export default function AdminConfiguracionPage() {
           <Link
             href="/"
             target="_blank"
-            className="bg-pink-50 dark:bg-pink-950/60 text-[#FF97A4] border border-pink-200 dark:border-pink-900/50 px-4 py-2.5 rounded-full font-bold text-xs hover:bg-pink-100 transition-colors flex items-center gap-1.5"
+            className="bg-[#FAF2FF] dark:bg-[#1A032A] text-[#A507FA] border border-purple-200 dark:border-purple-900/50 px-4 py-2.5 rounded-full font-bold text-xs hover:bg-[#FAF2FF] transition-colors flex items-center gap-1.5"
           >
             <Eye size={14} /> Vista Previa Tienda
           </Link>
@@ -87,7 +87,7 @@ export default function AdminConfiguracionPage() {
           onClick={() => setActiveTab("grid")}
           className={`flex items-center gap-2 px-5 py-3 rounded-xl font-extrabold text-xs whitespace-nowrap transition-all ${
             activeTab === "grid"
-              ? "bg-[#FF97A4] text-white shadow-md shadow-pink-500/20"
+              ? "bg-[#A507FA] text-white shadow-md shadow-purple-500/20"
               : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
           }`}
         >
@@ -99,7 +99,7 @@ export default function AdminConfiguracionPage() {
           onClick={() => setActiveTab("branding")}
           className={`flex items-center gap-2 px-5 py-3 rounded-xl font-extrabold text-xs whitespace-nowrap transition-all ${
             activeTab === "branding"
-              ? "bg-[#FF97A4] text-white shadow-md shadow-pink-500/20"
+              ? "bg-[#A507FA] text-white shadow-md shadow-purple-500/20"
               : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
           }`}
         >
@@ -111,7 +111,7 @@ export default function AdminConfiguracionPage() {
           onClick={() => setActiveTab("reviews")}
           className={`flex items-center gap-2 px-5 py-3 rounded-xl font-extrabold text-xs whitespace-nowrap transition-all ${
             activeTab === "reviews"
-              ? "bg-[#FF97A4] text-white shadow-md shadow-pink-500/20"
+              ? "bg-[#A507FA] text-white shadow-md shadow-purple-500/20"
               : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
           }`}
         >
@@ -123,7 +123,7 @@ export default function AdminConfiguracionPage() {
           onClick={() => setActiveTab("social")}
           className={`flex items-center gap-2 px-5 py-3 rounded-xl font-extrabold text-xs whitespace-nowrap transition-all ${
             activeTab === "social"
-              ? "bg-[#FF97A4] text-white shadow-md shadow-pink-500/20"
+              ? "bg-[#A507FA] text-white shadow-md shadow-purple-500/20"
               : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
           }`}
         >
@@ -135,7 +135,7 @@ export default function AdminConfiguracionPage() {
           onClick={() => setActiveTab("iframe")}
           className={`flex items-center gap-2 px-5 py-3 rounded-xl font-extrabold text-xs whitespace-nowrap transition-all ${
             activeTab === "iframe"
-              ? "bg-[#FF97A4] text-white shadow-md shadow-pink-500/20"
+              ? "bg-[#A507FA] text-white shadow-md shadow-purple-500/20"
               : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
           }`}
         >
@@ -147,7 +147,7 @@ export default function AdminConfiguracionPage() {
           onClick={() => setActiveTab("chatbot")}
           className={`flex items-center gap-2 px-5 py-3 rounded-xl font-extrabold text-xs whitespace-nowrap transition-all ${
             activeTab === "chatbot"
-              ? "bg-[#FF97A4] text-white shadow-md shadow-pink-500/20"
+              ? "bg-[#A507FA] text-white shadow-md shadow-purple-500/20"
               : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
           }`}
         >
@@ -159,7 +159,7 @@ export default function AdminConfiguracionPage() {
           onClick={() => setActiveTab("security")}
           className={`flex items-center gap-2 px-5 py-3 rounded-xl font-extrabold text-xs whitespace-nowrap transition-all ${
             activeTab === "security"
-              ? "bg-[#FF97A4] text-white shadow-md shadow-pink-500/20"
+              ? "bg-[#A507FA] text-white shadow-md shadow-purple-500/20"
               : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
           }`}
         >
@@ -175,7 +175,7 @@ export default function AdminConfiguracionPage() {
           <div className="bg-white dark:bg-[#12131A] p-6 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-6 animate-in fade-in duration-200">
             <div className="flex items-center justify-between border-b pb-3 border-gray-100 dark:border-gray-800">
               <div className="flex items-center gap-2.5">
-                <Grid size={22} className="text-[#FF97A4]" />
+                <Grid size={22} className="text-[#A507FA]" />
                 <h2 className="font-serif font-black text-lg text-[#1A1C1C] dark:text-white">
                   Distribución de Productos en Escritorio
                 </h2>
@@ -192,8 +192,8 @@ export default function AdminConfiguracionPage() {
               <label
                 className={`p-5 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between space-y-4 ${
                   (config.productColumnsDesktop || 3) === 3
-                    ? "border-[#FF97A4] bg-pink-50/30 dark:bg-pink-950/30 shadow-sm"
-                    : "border-gray-200 dark:border-gray-800 hover:border-pink-300"
+                    ? "border-[#A507FA] bg-[#FAF2FF]/30 dark:bg-[#1A032A] shadow-sm"
+                    : "border-gray-200 dark:border-gray-800 hover:border-purple-300"
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -207,9 +207,9 @@ export default function AdminConfiguracionPage() {
                   />
                 </div>
                 <div className="grid grid-cols-3 gap-1.5 h-12 p-1 bg-gray-100 dark:bg-gray-800 rounded-xl">
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
                 </div>
                 <span className="text-[11px] text-gray-400 font-medium">Diseño tradicional amplio. Recomiendo para fotos grandes.</span>
               </label>
@@ -218,8 +218,8 @@ export default function AdminConfiguracionPage() {
               <label
                 className={`p-5 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between space-y-4 ${
                   config.productColumnsDesktop === 4
-                    ? "border-[#FF97A4] bg-pink-50/30 dark:bg-pink-950/30 shadow-sm"
-                    : "border-gray-200 dark:border-gray-800 hover:border-pink-300"
+                    ? "border-[#A507FA] bg-[#FAF2FF]/30 dark:bg-[#1A032A] shadow-sm"
+                    : "border-gray-200 dark:border-gray-800 hover:border-purple-300"
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -233,10 +233,10 @@ export default function AdminConfiguracionPage() {
                   />
                 </div>
                 <div className="grid grid-cols-4 gap-1 h-12 p-1 bg-gray-100 dark:bg-gray-800 rounded-xl">
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
                 </div>
                 <span className="text-[11px] text-gray-400 font-medium">Permite mostrar más productos por fila en pantallas de laptop.</span>
               </label>
@@ -245,8 +245,8 @@ export default function AdminConfiguracionPage() {
               <label
                 className={`p-5 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between space-y-4 ${
                   config.productColumnsDesktop === 5
-                    ? "border-[#FF97A4] bg-pink-50/30 dark:bg-pink-950/30 shadow-sm"
-                    : "border-gray-200 dark:border-gray-800 hover:border-pink-300"
+                    ? "border-[#A507FA] bg-[#FAF2FF]/30 dark:bg-[#1A032A] shadow-sm"
+                    : "border-gray-200 dark:border-gray-800 hover:border-purple-300"
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -260,11 +260,11 @@ export default function AdminConfiguracionPage() {
                   />
                 </div>
                 <div className="grid grid-cols-5 gap-1 h-12 p-1 bg-gray-100 dark:bg-gray-800 rounded-xl">
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
-                  <div className="bg-[#FF97A4]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
+                  <div className="bg-[#A507FA]/60 rounded-lg"></div>
                 </div>
                 <span className="text-[11px] text-gray-400 font-medium">Abarca todo el ancho de pantalla para catálogos muy extensos.</span>
               </label>
@@ -278,7 +278,7 @@ export default function AdminConfiguracionPage() {
             {/* Sección Logo & Subida de Imagen */}
             <div className="bg-white dark:bg-[#12131A] p-6 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-4">
               <div className="flex items-center gap-2.5 border-b pb-3 border-gray-100 dark:border-gray-800">
-                <ImageIcon size={20} className="text-[#FF97A4]" />
+                <ImageIcon size={20} className="text-[#A507FA]" />
                 <h2 className="font-serif font-black text-lg text-[#1A1C1C] dark:text-white">Imagen del Logo Principal</h2>
               </div>
               <SingleImageUploader
@@ -372,7 +372,7 @@ export default function AdminConfiguracionPage() {
             {/* Sección Etiquetas de Menú de Navegación */}
             <div className="bg-white dark:bg-[#12131A] p-6 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-4">
               <div className="flex items-center gap-2.5 border-b pb-3 border-gray-100 dark:border-gray-800">
-                <Menu size={20} className="text-[#FF97A4]" />
+                <Menu size={20} className="text-[#A507FA]" />
                 <h2 className="font-serif font-black text-lg text-[#1A1C1C] dark:text-white">Nombres del Menú de Navegación</h2>
               </div>
 
@@ -446,7 +446,7 @@ export default function AdminConfiguracionPage() {
                   type="checkbox"
                   checked={config.enableReviewsSection !== false}
                   onChange={(e) => setConfig({ ...config, enableReviewsSection: e.target.checked })}
-                  className="w-5 h-5 accent-[#FF97A4] rounded cursor-pointer"
+                  className="w-5 h-5 accent-[#A507FA] rounded cursor-pointer"
                 />
                 <input type="hidden" name="enableReviewsSection" value={config.enableReviewsSection !== false ? "true" : "false"} />
               </label>
@@ -513,7 +513,7 @@ export default function AdminConfiguracionPage() {
             <div className="bg-white dark:bg-[#12131A] p-6 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-5">
               <div className="flex items-center justify-between border-b pb-3 border-gray-100 dark:border-gray-800">
                 <div className="flex items-center gap-2.5">
-                  <Share2 size={20} className="text-[#FF97A4]" />
+                  <Share2 size={20} className="text-[#A507FA]" />
                   <h2 className="font-serif font-black text-lg text-[#1A1C1C] dark:text-white">
                     Íconos de Redes Sociales en Cabecera
                   </h2>
@@ -528,7 +528,7 @@ export default function AdminConfiguracionPage() {
                     type="checkbox"
                     checked={config.enableHeaderSocials !== false}
                     onChange={(e) => setConfig({ ...config, enableHeaderSocials: e.target.checked })}
-                    className="w-5 h-5 accent-[#FF97A4] rounded cursor-pointer"
+                    className="w-5 h-5 accent-[#A507FA] rounded cursor-pointer"
                   />
                   <input type="hidden" name="enableHeaderSocials" value={config.enableHeaderSocials !== false ? "true" : "false"} />
                 </label>
@@ -585,7 +585,7 @@ export default function AdminConfiguracionPage() {
             <div className="bg-white dark:bg-[#12131A] p-6 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-5">
               <div className="flex items-center justify-between border-b pb-3 border-gray-100 dark:border-gray-800">
                 <div className="flex items-center gap-2.5">
-                  <Sparkles size={20} className="text-[#FF97A4]" />
+                  <Sparkles size={20} className="text-[#A507FA]" />
                   <h2 className="font-serif font-black text-lg text-[#1A1C1C] dark:text-white">
                     Publicaciones Incrustadas de Instagram / TikTok (Pre-Footer)
                   </h2>
@@ -600,7 +600,7 @@ export default function AdminConfiguracionPage() {
                     type="checkbox"
                     checked={!!config.enableSocialFeed}
                     onChange={(e) => setConfig({ ...config, enableSocialFeed: e.target.checked })}
-                    className="w-5 h-5 accent-[#FF97A4] rounded cursor-pointer"
+                    className="w-5 h-5 accent-[#A507FA] rounded cursor-pointer"
                   />
                   <input type="hidden" name="enableSocialFeed" value={config.enableSocialFeed ? "true" : "false"} />
                 </label>
@@ -640,7 +640,7 @@ export default function AdminConfiguracionPage() {
           <div className="bg-white dark:bg-[#12131A] p-6 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-5 animate-in fade-in duration-200">
             <div className="flex items-center justify-between border-b pb-3 border-gray-100 dark:border-gray-800">
               <div className="flex items-center gap-2.5">
-                <Globe size={20} className="text-[#FF97A4]" />
+                <Globe size={20} className="text-[#A507FA]" />
                 <h2 className="font-serif font-black text-lg text-[#1A1C1C] dark:text-white">
                   Módulo de iFrames / Widgets Externos
                 </h2>
@@ -655,7 +655,7 @@ export default function AdminConfiguracionPage() {
                   type="checkbox"
                   checked={!!config.enableCustomIframe}
                   onChange={(e) => setConfig({ ...config, enableCustomIframe: e.target.checked })}
-                  className="w-5 h-5 accent-[#FF97A4] rounded cursor-pointer"
+                  className="w-5 h-5 accent-[#A507FA] rounded cursor-pointer"
                 />
                 <input type="hidden" name="enableCustomIframe" value={config.enableCustomIframe ? "true" : "false"} />
               </label>
@@ -695,7 +695,7 @@ export default function AdminConfiguracionPage() {
           <div className="bg-white dark:bg-[#12131A] p-6 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-6 animate-in fade-in duration-200">
             <div className="flex items-center justify-between border-b pb-4 border-gray-100 dark:border-gray-800">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-pink-50 dark:bg-pink-950/60 rounded-2xl text-[#8B0024] dark:text-pink-300">
+                <div className="p-3 bg-[#FAF2FF] dark:bg-[#1A032A] rounded-2xl text-[#7A00BD] dark:text-purple-300">
                   <Bot size={24} />
                 </div>
                 <div>
@@ -715,14 +715,14 @@ export default function AdminConfiguracionPage() {
                   type="checkbox"
                   checked={config.enableChatbot !== false}
                   onChange={(e) => setConfig({ ...config, enableChatbot: e.target.checked })}
-                  className="w-5 h-5 accent-[#FF97A4] rounded cursor-pointer"
+                  className="w-5 h-5 accent-[#A507FA] rounded cursor-pointer"
                 />
                 <input type="hidden" name="enableChatbot" value={config.enableChatbot !== false ? "true" : "false"} />
               </label>
             </div>
 
-            <div className="p-4 rounded-2xl bg-pink-50/50 dark:bg-pink-950/20 border border-pink-100 dark:border-pink-900/40 text-xs text-slate-700 dark:text-gray-300 space-y-2">
-              <p className="font-bold flex items-center gap-1.5 text-[#8B0024] dark:text-pink-300">
+            <div className="p-4 rounded-2xl bg-[#FAF2FF]/50 dark:bg-[#1A032A] border border-purple-100 dark:border-purple-900/40 text-xs text-slate-700 dark:text-gray-300 space-y-2">
+              <p className="font-bold flex items-center gap-1.5 text-[#7A00BD] dark:text-purple-300">
                 <Sparkles size={14} /> ¿Cómo conectar tu Agente de Dialogflow CX (Google Cloud)?
               </p>
               <p className="leading-relaxed">
@@ -819,7 +819,7 @@ export default function AdminConfiguracionPage() {
             <button
               type="submit"
               disabled={saving}
-              className="bg-[#FF97A4] text-white px-8 py-3.5 rounded-full text-xs font-black hover:bg-[#B0004A] transition-all shadow-lg shadow-pink-500/20 disabled:bg-gray-400 flex items-center gap-2 ml-auto hover:scale-105 active:scale-95"
+              className="bg-[#A507FA] text-white px-8 py-3.5 rounded-full text-xs font-black hover:bg-[#8B00D9] transition-all shadow-lg shadow-purple-500/20 disabled:bg-gray-400 flex items-center gap-2 ml-auto hover:scale-105 active:scale-95"
             >
               <Save size={16} />
               {saving ? "Guardando Cambios..." : "Guardar Configuración del Home"}
@@ -915,7 +915,7 @@ function TwoFactorConfigSection({ config, onSaveSuccess }: { config: any; onSave
     <div className="bg-white dark:bg-[#12131A] p-6 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-6">
       <div className="flex justify-between items-center border-b pb-3 border-gray-100 dark:border-gray-800">
         <div className="flex items-center gap-2.5">
-          <ShieldCheck size={20} className="text-[#FF97A4]" />
+          <ShieldCheck size={20} className="text-[#A507FA]" />
           <h2 className="font-bold text-base text-[#1A1C1C] dark:text-white">Seguridad & Verificación en 2 Pasos (2FA)</h2>
         </div>
         <span className="text-[11px] font-extrabold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800">
@@ -948,7 +948,7 @@ function TwoFactorConfigSection({ config, onSaveSuccess }: { config: any; onSave
           onClick={() => setMode("none")}
           className={`p-4 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between space-y-3 ${
             mode === "none"
-              ? "border-[#FF97A4] bg-pink-50/20 dark:bg-pink-950/20 shadow-sm"
+              ? "border-[#A507FA] bg-[#FAF2FF]/20 dark:bg-[#1A032A] shadow-sm"
               : "border-gray-100 dark:border-gray-800 hover:border-gray-200 bg-gray-50/50 dark:bg-gray-900/50"
           }`}
         >
@@ -969,7 +969,7 @@ function TwoFactorConfigSection({ config, onSaveSuccess }: { config: any; onSave
           onClick={() => setMode("pin")}
           className={`p-4 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between space-y-3 ${
             mode === "pin"
-              ? "border-[#FF97A4] bg-pink-50/20 dark:bg-pink-950/20 shadow-sm"
+              ? "border-[#A507FA] bg-[#FAF2FF]/20 dark:bg-[#1A032A] shadow-sm"
               : "border-gray-100 dark:border-gray-800 hover:border-gray-200 bg-gray-50/50 dark:bg-gray-900/50"
           }`}
         >
@@ -993,7 +993,7 @@ function TwoFactorConfigSection({ config, onSaveSuccess }: { config: any; onSave
           }}
           className={`p-4 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between space-y-3 ${
             mode === "totp"
-              ? "border-[#FF97A4] bg-pink-50/20 dark:bg-pink-950/20 shadow-sm"
+              ? "border-[#A507FA] bg-[#FAF2FF]/20 dark:bg-[#1A032A] shadow-sm"
               : "border-gray-100 dark:border-gray-800 hover:border-gray-200 bg-gray-50/50 dark:bg-gray-900/50"
           }`}
         >
@@ -1022,7 +1022,7 @@ function TwoFactorConfigSection({ config, onSaveSuccess }: { config: any; onSave
             value={pin}
             onChange={(e) => setPin(e.target.value.replace(/\D/g, ""))}
             placeholder="Ej: 849204"
-            className="p-3.5 border rounded-xl text-center font-mono font-extrabold tracking-widest text-lg w-full max-w-xs focus:outline-none focus:ring-2 focus:ring-[#FF97A4] dark:bg-gray-900 dark:text-white"
+            className="p-3.5 border rounded-xl text-center font-mono font-extrabold tracking-widest text-lg w-full max-w-xs focus:outline-none focus:ring-2 focus:ring-[#A507FA] dark:bg-gray-900 dark:text-white"
           />
           <p className="text-[11px] text-purple-700 dark:text-purple-300">
             Al iniciar sesión, el sistema te solicitará tu contraseña principal y luego este PIN de 6 dígitos.
@@ -1090,7 +1090,7 @@ function TwoFactorConfigSection({ config, onSaveSuccess }: { config: any; onSave
                         value={testCode}
                         onChange={(e) => setTestCode(e.target.value.replace(/\D/g, ""))}
                         placeholder="0 0 0 0 0 0"
-                        className="p-2.5 border rounded-xl text-center font-mono font-extrabold text-base tracking-widest bg-white dark:bg-gray-900 dark:text-white w-36 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                        className="p-2.5 border rounded-xl text-center font-mono font-extrabold text-base tracking-widest bg-white dark:bg-gray-900 dark:text-white w-36 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                       />
                       <button
                         type="button"
@@ -1123,7 +1123,7 @@ function TwoFactorConfigSection({ config, onSaveSuccess }: { config: any; onSave
           disabled={saving2FA}
           className="bg-[#1A1C1C] dark:bg-white text-white dark:text-gray-900 px-7 py-3 rounded-full text-xs font-bold hover:bg-black dark:hover:bg-gray-100 transition-all shadow-sm flex items-center gap-2"
         >
-          <ShieldCheck size={16} className="text-[#FF97A4]" />
+          <ShieldCheck size={16} className="text-[#A507FA]" />
           {saving2FA ? "Guardando 2FA..." : "Guardar Ajustes de Seguridad (2FA)"}
         </button>
       </div>

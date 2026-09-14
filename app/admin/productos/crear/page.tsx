@@ -86,7 +86,7 @@ export default function CrearProductoPage() {
           {/* SECCIÓN 1: Información Básica */}
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-4">
             <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 flex items-center gap-2 border-b pb-3">
-              <Package size={18} className="text-[#FF97A4]" /> Información General
+              <Package size={18} className="text-[#A507FA]" /> Información General
             </h2>
 
             <ProductNameSkuInputs
@@ -102,20 +102,20 @@ export default function CrearProductoPage() {
                   name="category"
                   defaultValue={initialData?.category || ""}
                   placeholder="Ej: Bestsellers, Ramos de Rosas, Cajas Deluxe"
-                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                   required
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs font-bold text-gray-700 flex items-center gap-1">
-                  <Tag size={12} className="text-[#FF97A4]" /> Insignia / Etiqueta Destacada (Opcional)
+                  <Tag size={12} className="text-[#A507FA]" /> Insignia / Etiqueta Destacada (Opcional)
                 </label>
                 <input
                   name="badge"
                   defaultValue={initialData?.badge || ""}
                   placeholder="Ej: Bestseller 🌟, ¡Nuevo!, Edición Limitada"
-                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                 />
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function CrearProductoPage() {
                 name="description"
                 defaultValue={initialData?.description || ""}
                 placeholder="Escribe una descripción detallada sobre las flores, el diseño y la presentación..."
-                className="p-3 border rounded-xl h-28 focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                className="p-3 border rounded-xl h-28 focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                 required
               />
             </div>
@@ -135,7 +135,7 @@ export default function CrearProductoPage() {
           {/* SECCIÓN 2: Precio e Inventario */}
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-4">
             <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 flex items-center gap-2 border-b pb-3">
-              <DollarSign size={18} className="text-[#FF97A4]" /> Precio y Disponibilidad
+              <DollarSign size={18} className="text-[#A507FA]" /> Precio y Disponibilidad
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -149,7 +149,7 @@ export default function CrearProductoPage() {
                     step="0.01"
                     placeholder="85.00"
                     defaultValue={initialData?.price || ""}
-                    className="p-3 pl-8 border rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-[#FF97A4] font-bold text-gray-800"
+                    className="p-3 pl-8 border rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-[#A507FA] font-bold text-gray-800"
                     required
                   />
                 </div>
@@ -162,7 +162,7 @@ export default function CrearProductoPage() {
                   type="number"
                   placeholder="10"
                   defaultValue={initialData?.stock || "10"}
-                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF97A4]"
+                  className="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#A507FA]"
                   required
                 />
               </div>
@@ -172,7 +172,7 @@ export default function CrearProductoPage() {
           {/* SECCIÓN 3: Carga de Imágenes con ImageKit */}
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-4">
             <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 flex items-center gap-2 border-b pb-3">
-              <ImageIcon size={18} className="text-[#FF97A4]" /> Galería de Imágenes (ImageKit)
+              <ImageIcon size={18} className="text-[#A507FA]" /> Galería de Imágenes (ImageKit)
             </h2>
             <ImageUploader defaultImages={initialData?.images || []} maxImages={7} />
           </div>
@@ -259,7 +259,7 @@ export default function CrearProductoPage() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#FF97A4] text-white px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#B0004A] transition-all shadow-md disabled:bg-gray-400 flex items-center justify-center gap-2 flex-1 md:flex-none"
+              className="bg-[#A507FA] text-white px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#8B00D9] transition-all shadow-md disabled:bg-gray-400 flex items-center justify-center gap-2 flex-1 md:flex-none"
             >
               {loading ? (
                 <span>Guardando Producto...</span>

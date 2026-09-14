@@ -57,7 +57,7 @@ export const ProductDetail = ({ product }: { product: any }) => {
   }, [selectedAddons.length]);
 
   return (
-    <div className="min-h-screen bg-[#F9F9F9] dark:bg-[#0F1015] flex flex-col font-sans">
+    <div className="min-h-screen bg-[#FAF2FF] dark:bg-[#0D0115] flex flex-col font-sans">
       {/* Header Visible con Logo al Home y Carrito */}
       <ShopHeader />
 
@@ -66,11 +66,11 @@ export const ProductDetail = ({ product }: { product: any }) => {
         <div className="container mx-auto px-4 md:px-6 max-w-6xl space-y-10">
           
           {/* Tarjeta Principal de Producto */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white dark:bg-[#181922] p-6 md:p-10 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white dark:bg-[#12021E] p-6 md:p-10 rounded-3xl shadow-sm border border-purple-100 dark:border-purple-950/80">
             
             {/* COLUMNA IZQUIERDA: Galería de Imágenes (hasta 7 fotos) */}
             <div className="space-y-4">
-              <div className="relative aspect-square overflow-hidden rounded-2xl bg-gray-50 dark:bg-[#12131A] border border-gray-100 dark:border-gray-800 shadow-sm group">
+              <div className="relative aspect-square overflow-hidden rounded-2xl bg-purple-50/50 dark:bg-purple-950/30 border border-purple-100 dark:border-purple-900/50 shadow-sm group">
                 <img
                   src={activeImage}
                   alt={product.name}
@@ -79,11 +79,11 @@ export const ProductDetail = ({ product }: { product: any }) => {
                 
                 {/* Insignia o Categoría Flotante */}
                 <div className="absolute top-4 left-4 flex gap-2">
-                  <span className="bg-[#1A1C1C] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+                  <span className="bg-white/95 text-[#A507FA] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-md border border-purple-200">
                     {product.category}
                   </span>
                   {product.badge && (
-                    <span className="bg-[#FF97A4] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+                    <span className="bg-[#A507FA] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
                       {product.badge}
                     </span>
                   )}
@@ -98,7 +98,7 @@ export const ProductDetail = ({ product }: { product: any }) => {
                       key={idx}
                       onClick={() => setActiveImage(img)}
                       className={`relative w-20 h-20 rounded-xl overflow-hidden border-2 flex-shrink-0 transition-all ${
-                        activeImage === img ? "border-[#FF97A4] ring-2 ring-[#FF97A4]/30 scale-105" : "border-gray-200 dark:border-gray-700 opacity-70 hover:opacity-100"
+                        activeImage === img ? "border-[#A507FA] ring-2 ring-[#A507FA]/30 scale-105" : "border-purple-100 dark:border-purple-900/60 opacity-70 hover:opacity-100"
                       }`}
                     >
                       <img src={img} alt={`Vista ${idx + 1}`} className="w-full h-full object-cover" />
@@ -113,16 +113,16 @@ export const ProductDetail = ({ product }: { product: any }) => {
               
               {/* Titular y Precio Dinámico */}
               <div>
-                <span className="text-[#FF97A4] text-xs font-black uppercase tracking-[0.2em] block mb-1">
-                  Arreglo Floral Exclusivo
+                <span className="text-[#A507FA] text-xs font-black uppercase tracking-[0.2em] block mb-1">
+                  Colchón & Descanso de Lujo
                 </span>
-                <h1 className="text-3xl md:text-4xl font-serif font-black text-[#1A1C1C] dark:text-white leading-tight mb-3">
+                <h1 className="text-3xl md:text-4xl font-serif font-black text-[#12021E] dark:text-white leading-tight mb-3">
                   {product.name}
                 </h1>
 
                 <div className="flex flex-wrap items-baseline gap-3">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-3xl md:text-4xl font-extrabold text-[#FF97A4] transition-all">
+                    <span className="text-3xl md:text-4xl font-extrabold text-[#A507FA] dark:text-[#D48FFF] transition-all">
                       ${combinedTotalPrice.toFixed(2)} USD
                     </span>
                     {addonsTotalPrice > 0 && (
@@ -133,23 +133,23 @@ export const ProductDetail = ({ product }: { product: any }) => {
                   </div>
 
                   {addonsTotalPrice > 0 && (
-                    <span className="bg-pink-50 dark:bg-pink-950/50 text-[#FF97A4] text-xs font-black px-3 py-1 rounded-full border border-pink-200 dark:border-pink-800 flex items-center gap-1 animate-pulse">
-                      <Sparkles size={13} /> +${addonsTotalPrice.toFixed(2)} en adicionales
+                    <span className="bg-purple-50 dark:bg-purple-950/60 text-[#A507FA] dark:text-purple-300 text-xs font-black px-3 py-1 rounded-full border border-purple-200 dark:border-purple-800 flex items-center gap-1 animate-pulse">
+                      <Sparkles size={13} /> +${addonsTotalPrice.toFixed(2)} en complementos
                     </span>
                   )}
                 </div>
               </div>
 
               {/* CAJA VISUAL DE ESPECIFICACIONES DE COLCHÓN */}
-              <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 space-y-3">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-2">
-                  <Sparkles size={14} className="text-amber-500" /> Especificaciones de Confort & Descanso
+              <div className="bg-purple-50/60 dark:bg-purple-950/40 rounded-2xl p-5 border border-purple-100 dark:border-purple-900/60 space-y-3">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-purple-900 dark:text-purple-300 flex items-center gap-2">
+                  <Sparkles size={14} className="text-[#A507FA]" /> Especificaciones de Confort & Descanso
                 </h3>
 
                 <div className="grid grid-cols-2 gap-3 text-xs">
                   {product.mattressSize ? (
-                    <div className="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center gap-2.5">
-                      <div className="p-2 bg-blue-50 dark:bg-slate-700 text-blue-600 dark:text-blue-400 rounded-lg">
+                    <div className="bg-white dark:bg-[#1A032A] p-3 rounded-xl border border-purple-100 dark:border-purple-900/60 flex items-center gap-2.5">
+                      <div className="p-2 bg-purple-50 dark:bg-purple-900/50 text-[#A507FA] rounded-lg">
                         <Package size={16} />
                       </div>
                       <div>
@@ -160,8 +160,8 @@ export const ProductDetail = ({ product }: { product: any }) => {
                   ) : null}
 
                   {product.firmness ? (
-                    <div className="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center gap-2.5">
-                      <div className="p-2 bg-blue-50 dark:bg-slate-700 text-blue-600 dark:text-blue-400 rounded-lg">
+                    <div className="bg-white dark:bg-[#1A032A] p-3 rounded-xl border border-purple-100 dark:border-purple-900/60 flex items-center gap-2.5">
+                      <div className="p-2 bg-purple-50 dark:bg-purple-900/50 text-[#A507FA] rounded-lg">
                         <Sparkles size={16} />
                       </div>
                       <div>
@@ -172,8 +172,8 @@ export const ProductDetail = ({ product }: { product: any }) => {
                   ) : null}
 
                   {product.structureType ? (
-                    <div className="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center gap-2.5">
-                      <div className="p-2 bg-blue-50 dark:bg-slate-700 text-blue-600 dark:text-blue-400 rounded-lg">
+                    <div className="bg-white dark:bg-[#1A032A] p-3 rounded-xl border border-purple-100 dark:border-purple-900/60 flex items-center gap-2.5">
+                      <div className="p-2 bg-purple-50 dark:bg-purple-900/50 text-[#A507FA] rounded-lg">
                         <Tag size={16} />
                       </div>
                       <div>
@@ -183,8 +183,8 @@ export const ProductDetail = ({ product }: { product: any }) => {
                     </div>
                   ) : null}
 
-                  <div className="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center gap-2.5">
-                    <div className="p-2 bg-amber-50 dark:bg-slate-700 text-amber-500 rounded-lg">
+                  <div className="bg-white dark:bg-[#1A032A] p-3 rounded-xl border border-purple-100 dark:border-purple-900/60 flex items-center gap-2.5">
+                    <div className="p-2 bg-purple-50 dark:bg-purple-900/50 text-[#A507FA] rounded-lg">
                       <ShieldCheck size={16} />
                     </div>
                     <div>
@@ -201,8 +201,8 @@ export const ProductDetail = ({ product }: { product: any }) => {
                   <h3 className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">{t('includesTitle')}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {product.features.map((feature: any, index: number) => (
-                      <div key={index} className="flex items-center gap-2 text-xs bg-white dark:bg-[#181922] p-2.5 rounded-xl border border-gray-100 dark:border-gray-800">
-                        <CheckCircle2 size={16} className="text-[#FF97A4] flex-shrink-0" />
+                      <div key={index} className="flex items-center gap-2 text-xs bg-white dark:bg-[#1A032A] p-2.5 rounded-xl border border-purple-100 dark:border-purple-900/60">
+                        <CheckCircle2 size={16} className="text-[#A507FA] flex-shrink-0" />
                         <span className="font-medium text-gray-700 dark:text-gray-300">
                           <strong className="text-gray-900 dark:text-white">{feature.label}:</strong> {feature.value}
                         </span>
@@ -216,19 +216,19 @@ export const ProductDetail = ({ product }: { product: any }) => {
               {product.addons && product.addons.length > 0 && (
                 <div className="space-y-3 pt-2">
                   <h3 className="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 flex items-center gap-2">
-                    <Tag size={14} className="text-[#FF97A4]" /> {t('addonsTitle')}
+                    <Tag size={14} className="text-[#A507FA]" /> {t('addonsTitle')}
                   </h3>
                   <AddonSelection addons={product.addons} onSelectionChange={handleSelectionChange} />
                 </div>
               )}
 
               {/* DESCRIPCIÓN SECTORIZADA EN VIÑETAS LIMPIAS */}
-              <div className="space-y-3 pt-2 border-t border-gray-100 dark:border-gray-800">
+              <div className="space-y-3 pt-2 border-t border-purple-100 dark:border-purple-900/60">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300">{t('descriptionTitle')}</h3>
-                <div className="bg-white dark:bg-[#181922] p-5 rounded-2xl border border-gray-100 dark:border-gray-800 space-y-2 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                <div className="bg-white dark:bg-[#1A032A] p-5 rounded-2xl border border-purple-100 dark:border-purple-900/60 space-y-2 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">
                   {descriptionBullets.map((paragraph: string, i: number) => (
                     <div key={i} className="flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF97A4] mt-2 flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#A507FA] mt-2 flex-shrink-0" />
                       <p>{paragraph}</p>
                     </div>
                   ))}
@@ -240,17 +240,17 @@ export const ProductDetail = ({ product }: { product: any }) => {
 
                 {/* Toast / Tooltip Flotante Animado cuando se selecciona un adicional */}
                 {lastAddonToast && (
-                  <div className="p-3 bg-[#1A1C1C] text-white rounded-2xl shadow-xl border border-pink-500/30 flex items-center justify-between animate-in slide-in-from-bottom-2 duration-300">
+                  <div className="p-3 bg-[#12021E] text-white rounded-2xl shadow-xl border border-purple-500/30 flex items-center justify-between animate-in slide-in-from-bottom-2 duration-300">
                     <div className="flex items-center gap-2.5">
-                      <div className="p-1.5 bg-[#FF97A4] rounded-lg text-white">
+                      <div className="p-1.5 bg-[#A507FA] rounded-lg text-white">
                         <Sparkles size={16} />
                       </div>
                       <div>
-                        <span className="text-xs font-extrabold block text-white">¡+1 {lastAddonToast.name} añadido al regalo!</span>
-                        <span className="text-[10px] text-pink-300 font-medium">Sumado al total: ${combinedTotalPrice.toFixed(2)} USD</span>
+                        <span className="text-xs font-extrabold block text-white">¡+1 {lastAddonToast.name} añadido!</span>
+                        <span className="text-[10px] text-purple-200 font-medium">Sumado al total: ${combinedTotalPrice.toFixed(2)} USD</span>
                       </div>
                     </div>
-                    <span className="text-xs font-black text-[#FF97A4] bg-white/10 px-2.5 py-1 rounded-full">
+                    <span className="text-xs font-black text-white bg-[#A507FA] px-2.5 py-1 rounded-full">
                       +${lastAddonToast.price.toFixed(2)}
                     </span>
                   </div>
@@ -258,11 +258,11 @@ export const ProductDetail = ({ product }: { product: any }) => {
 
                 {/* Banner Tutorial Animado estilo Boutique con Flecha Rebotando cuando hay adicionales */}
                 {selectedAddons.length > 0 && (
-                  <div className="p-3.5 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-2xl shadow-lg border border-pink-300/40 flex items-center justify-between animate-bounce duration-1000">
+                  <div className="p-3.5 bg-gradient-to-r from-[#7A00BD] to-[#A507FA] text-white rounded-2xl shadow-lg border border-purple-300/40 flex items-center justify-between animate-bounce duration-1000">
                     <div className="flex items-center gap-2.5">
-                      <Flower2 size={20} className="text-pink-200 animate-spin duration-1000" />
+                      <Sparkles size={20} className="text-white animate-spin duration-1000" />
                       <span className="text-xs font-black tracking-wide">
-                        🌸 ¡Tu ramo personalizado está listo! Presiona el botón de abajo 🌸
+                        🛏️ ¡Tu combo de descanso está listo! Presiona el botón de abajo 🛏️
                       </span>
                     </div>
                     <ArrowDown size={20} className="text-white animate-pulse" />

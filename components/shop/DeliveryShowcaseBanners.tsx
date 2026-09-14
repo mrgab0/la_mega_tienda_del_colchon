@@ -26,11 +26,11 @@ export function DeliveryShowcaseBanners() {
 
             {/* Badges Superiores */}
             <div className="relative z-10 flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 bg-blue-600/90 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider backdrop-blur-md shadow-md">
+              <span className="inline-flex items-center gap-1.5 bg-[#A507FA] text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider backdrop-blur-md shadow-md">
                 <Truck size={13} />
                 <span>Despacho Confiable</span>
               </span>
-              <span className="inline-flex items-center gap-1 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-amber-300">
+              <span className="inline-flex items-center gap-1 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white">
                 <MapPin size={12} />
                 <span>Barinas & Envíos Nacionales</span>
               </span>
@@ -39,10 +39,10 @@ export function DeliveryShowcaseBanners() {
             {/* Texto y Llamado a la Acción Inferior */}
             <div className="relative z-10 space-y-4 max-w-lg">
               <div className="space-y-2">
-                <span className="text-amber-400 text-xs font-black uppercase tracking-[0.2em] block">
+                <span className="text-purple-300 text-xs font-black uppercase tracking-[0.2em] block">
                   Entrega Segura y Puntual
                 </span>
-                <h3 className="font-serif font-black text-3xl sm:text-4xl leading-tight tracking-tight">
+                <h3 className="font-serif font-black text-3xl sm:text-4xl leading-tight tracking-tight text-white">
                   Tu Colchón Nuevo Directo a la Puerta de tu Hogar
                 </h3>
                 <p className="text-sm text-gray-200 font-medium leading-relaxed">
@@ -53,7 +53,7 @@ export function DeliveryShowcaseBanners() {
               <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Link
                   href="/rastreo"
-                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3.5 rounded-2xl font-black text-xs uppercase tracking-wider transition-all duration-300 shadow-xl active:scale-95 border border-amber-400/40"
+                  className="inline-flex items-center gap-2 bg-[#A507FA] hover:bg-[#7A00BD] text-white px-6 py-3.5 rounded-2xl font-black text-xs uppercase tracking-wider transition-all duration-300 shadow-xl active:scale-95 border border-white/40"
                 >
                   <span>Rastrear Pedido 📦</span>
                   <ArrowRight size={14} />
@@ -83,11 +83,11 @@ export function DeliveryShowcaseBanners() {
 
             {/* Badges Superiores */}
             <div className="relative z-10 flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 bg-amber-500/90 text-slate-950 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider backdrop-blur-md shadow-md font-bold">
-                <Sparkles size={13} className="text-slate-950" />
+              <span className="inline-flex items-center gap-1.5 bg-white text-[#A507FA] px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider backdrop-blur-md shadow-md font-bold">
+                <Sparkles size={13} className="text-[#A507FA]" />
                 <span>Garantía de Descanso</span>
               </span>
-              <span className="inline-flex items-center gap-1 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-blue-200">
+              <span className="inline-flex items-center gap-1 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-purple-200">
                 <ShieldCheck size={12} />
                 <span>Ortopédicos & Semi-Ortopédicos</span>
               </span>
@@ -96,10 +96,10 @@ export function DeliveryShowcaseBanners() {
             {/* Texto y Llamado a la Acción Inferior */}
             <div className="relative z-10 space-y-4 max-w-lg">
               <div className="space-y-2">
-                <span className="text-amber-400 text-xs font-black uppercase tracking-[0.2em] block">
+                <span className="text-purple-300 text-xs font-black uppercase tracking-[0.2em] block">
                   Asesoría Personalizada
                 </span>
-                <h3 className="font-serif font-black text-3xl sm:text-4xl leading-tight tracking-tight">
+                <h3 className="font-serif font-black text-3xl sm:text-4xl leading-tight tracking-tight text-white">
                   Encuentra el Nivel de Firmeza Perfecto
                 </h3>
                 <p className="text-sm text-gray-200 font-medium leading-relaxed">
