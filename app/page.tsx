@@ -125,13 +125,13 @@ export default async function Home() {
           {/* Botones de Acción */}
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a 
-              href="https://wa.me/13467392730"
+              href="https://wa.me/584141584360"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-xl shadow-blue-900/30 border border-amber-400/60 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
             >
               <PhoneCall size={16} className="text-amber-400 group-hover:rotate-12 transition-transform" />
-              <span>WhatsApp: +1 346 739 2730</span>
+              <span>WhatsApp: 0414-1584360</span>
             </a>
 
             <a 
@@ -245,7 +245,7 @@ export default async function Home() {
       />
 
       {/* Floating WhatsApp Button */}
-      <WhatsAppButton phoneNumber="13467392730" />
+      <WhatsAppButton phoneNumber="584141584360" />
 
       <Footer siteConfig={siteConfig} />
     </main>

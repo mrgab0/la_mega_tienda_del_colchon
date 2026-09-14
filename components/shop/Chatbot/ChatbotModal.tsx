@@ -102,7 +102,7 @@ export const ChatbotModal = () => {
       const errorMsg: Message = {
         id: (Date.now() + 1).toString(),
         role: 'model',
-        text: "🛏️ Hubo un pequeño inconveniente de conexión. Puedes escribirnos directo a nuestro WhatsApp [+1 346 739 2730](https://wa.me/13467392730) para asistirte de inmediato.",
+        text: "🛏️ Hubo un pequeño inconveniente de conexión. Puedes escribirnos directo a nuestro WhatsApp [0414-1584360](https://wa.me/584141584360) para asistirte de inmediato.",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
       setMessages(prev => [...prev, errorMsg]);
@@ -325,12 +325,12 @@ export const ChatbotModal = () => {
                 Potenciado por Gemini
               </span>
               <a
-                href="https://wa.me/13467392730"
+                href="https://wa.me/584141584360"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#25D366] hover:underline flex items-center gap-1 font-semibold"
               >
-                <PhoneCall size={11} /> WhatsApp: +1 346 739 2730
+                <PhoneCall size={11} /> WhatsApp: 0414-1584360
               </a>
             </div>
 

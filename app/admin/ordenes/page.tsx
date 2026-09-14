@@ -841,7 +841,7 @@ export default function AdminOrdenesPage() {
                   <h1 className="text-2xl font-serif font-extrabold text-[#1A1C1C] tracking-tight">La Mega Tienda del Colchón</h1>
                   <p className="text-[11px] font-bold uppercase tracking-wider text-blue-600">Especialistas en Descanso</p>
                   <p className="text-gray-500 text-[11px] mt-1">Avenida Sucre, Barinas, Venezuela (VE)</p>
-                  <p className="text-gray-500 text-[11px]">WhatsApp: +1 346 739 2730</p>
+                  <p className="text-gray-500 text-[11px]">WhatsApp: 0414-1584360 (+58 414 1584360)</p>
                 </div>
 
                 <div className="text-right space-y-1">

@@ -35,12 +35,12 @@ export default async function ConfirmacionPage({
 
         <div className="flex flex-col gap-4">
           <a 
-            href={`https://wa.me/13467392730?text=Hola!%20He%20finalizado%20mi%20pedido%20${orderId}%20en%20La%20Mega%20Tienda%20del%20Colchón.%20Quisiera%20confirmar%20los%20detalles.`}
+            href={`https://wa.me/584141584360?text=Hola!%20He%20finalizado%20mi%20pedido%20${orderId}%20en%20La%20Mega%20Tienda%20del%20Colchón.%20Quisiera%20confirmar%20los%20detalles.`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-green-600 transition-all shadow-md"
           >
-            <MessageCircle size={20} /> Confirmar por WhatsApp (+1 346 739 2730)
+            <MessageCircle size={20} /> Confirmar por WhatsApp (0414-1584360)
           </a>
           <Link 
             href="/"

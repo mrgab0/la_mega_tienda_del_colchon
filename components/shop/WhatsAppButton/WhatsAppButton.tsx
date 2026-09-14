@@ -9,7 +9,7 @@ interface WhatsAppButtonProps {
 }
 
 export const WhatsAppButton = ({
-  phoneNumber = "13467392730",
+  phoneNumber = "584141584360",
   message = "¡Hola! 🛏️ Me gustaría recibir asesoría para elegir un colchón en La Mega Tienda del Colchón en Barinas.",
 }: WhatsAppButtonProps) => {
   const cleanPhone = phoneNumber.replace(/[^\d]/g, "");

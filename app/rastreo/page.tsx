@@ -228,13 +228,13 @@ export default function RastreoPedidoPage() {
                 {/* Botón Directo a Soporte en WhatsApp */}
                 <div className="pt-2 text-center">
                   <a
-                    href={`https://wa.me/13467392730?text=${encodeURIComponent(`¡Hola! Quisiera consultar el estado actual de mi pedido ID: ${order.orderId || order._id} en La Mega Tienda del Colchón.`)}`}
+                    href={`https://wa.me/584141584360?text=${encodeURIComponent(`¡Hola! Quisiera consultar el estado actual de mi pedido ID: ${order.orderId || order._id} en La Mega Tienda del Colchón.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full text-xs font-bold transition-all shadow-md"
                   >
                     <MessageCircle size={16} />
-                    <span>Consultar Estado por WhatsApp (+1 346 739 2730)</span>
+                    <span>Consultar Estado por WhatsApp (0414-1584360)</span>
                   </a>
                 </div>
               </div>

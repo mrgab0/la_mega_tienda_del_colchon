@@ -10,7 +10,7 @@ interface InquiryModalProps {
 export const InquiryModal = ({ isOpen, onClose }: InquiryModalProps) => {
   if (!isOpen) return null;
 
-  const phone = "13467392730";
+  const phone = "584141584360";
   const defaultMessage = "¡Hola! 🛏️ Me gustaría recibir asesoría personalizada para elegir el colchón ideal en La Mega Tienda del Colchón. ¿Me podrían ayudar?";
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(defaultMessage)}`;
 
@@ -45,7 +45,7 @@ export const InquiryModal = ({ isOpen, onClose }: InquiryModalProps) => {
           onClick={onClose}
           className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3.5 rounded-full font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2"
         >
-          <span>Abrir WhatsApp (+1 346 739 2730)</span>
+          <span>Abrir WhatsApp (0414-1584360)</span>
           <ExternalLink size={14} />
         </a>
       </div>

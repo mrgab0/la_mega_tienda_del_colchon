@@ -43,7 +43,7 @@ export function ContactFormClient() {
     }
   };
 
-  const whatsappUrl = `https://wa.me/13467392730?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/584141584360?text=${encodeURIComponent(
     `¡Hola! 🛏️ Soy ${formData.name || "un cliente"}. ${formData.message || "Quisiera información y asesoría sobre sus colchones."}`
   )}`;
 
@@ -96,8 +96,8 @@ export function ContactFormClient() {
                     </div>
                     <div>
                       <strong className="block text-white text-xs uppercase tracking-wider font-bold">Atención Directa / WhatsApp</strong>
-                      <a href="https://wa.me/13467392730" target="_blank" rel="noreferrer" className="text-emerald-400 hover:underline font-bold">
-                        +1 (346) 739-2730
+                      <a href="https://wa.me/584141584360" target="_blank" rel="noreferrer" className="text-emerald-400 hover:underline font-bold">
+                        0414-1584360 (+58 414 1584360)
                       </a>
                     </div>
                   </div>
@@ -128,13 +128,13 @@ export function ContactFormClient() {
 
               <div className="pt-6 border-t border-slate-800">
                 <a
-                  href="https://wa.me/13467392730?text=¡Hola!%20🛏️%20Quisiera%20asesoría%20para%20un%20colchón."
+                  href="https://wa.me/584141584360?text=¡Hola!%20🛏️%20Quisiera%20asesoría%20para%20un%20colchón."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3.5 rounded-2xl font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2"
                 >
                   <MessageCircle size={18} />
-                  <span>Chatear por WhatsApp en Vivo</span>
+                  <span>Chatear por WhatsApp (0414-1584360)</span>
                 </a>
               </div>
             </div>
@@ -269,7 +269,7 @@ export function ContactFormClient() {
         </div>
       </main>
 
-      <WhatsAppButton phoneNumber="13467392730" />
+      <WhatsAppButton phoneNumber="584141584360" />
       <Footer />
     </div>
   );

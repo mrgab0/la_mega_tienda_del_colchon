@@ -349,7 +349,7 @@ export function CatalogClient({ initialProducts, initialAddons = [] }: CatalogCl
         </div>
       </main>
 
-      <WhatsAppButton phoneNumber="13467392730" />
+      <WhatsAppButton phoneNumber="584141584360" />
       <Footer />
     </div>
   );

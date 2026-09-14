@@ -4,7 +4,7 @@
 - **Nombre Comercial:** La Mega Tienda del Colchón
 - **Dominio:** `https://lamegatiendadelcolchon.com/`
 - **Ubicación:** Avenida Sucre, Barinas, Venezuela (VE)
-- **WhatsApp:** `+1 346 739 2730` (`https://wa.me/13467392730`)
+- **WhatsApp:** `0414-1584360` / `+58 414 1584360` (`https://wa.me/584141584360`)
 - **Instagram:** `@lamegatiendadelcolchon` (`https://www.instagram.com/lamegatiendadelcolchon/reels/`)
 - **Streaming de Radio Integrado:** Radio Colchón (`https://radiocolchon.com`)
 
