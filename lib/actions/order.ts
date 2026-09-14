@@ -106,7 +106,7 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
       console.error("Error enviando email SMTP: No se encontraron destinatarios válidos en ADMIN_EMAILS ni SMTP_USER.");
     } else {
       const transporter = getTransporter();
-      const sender = process.env.SMTP_USER ? `"Gabriela's Flowers" <${process.env.SMTP_USER}>` : '"Gabriela\'s Flowers"';
+      const sender = process.env.SMTP_USER ? `"La Mega Tienda del Colchón" <${process.env.SMTP_USER}>` : '"La Mega Tienda del Colchón"';
 
       // Destinatarios: Administradores y opcionalmente el cliente
       const recipients = [...adminEmails];
@@ -116,7 +116,7 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
       const toEmails = Array.from(new Set(recipients)).join(", ");
 
       const cleanPhoneDigits = (savedOrder.customerPhone || "").replace(/\D/g, "");
-      const waLink = cleanPhoneDigits ? `https://wa.me/${cleanPhoneDigits.length === 10 ? '1' + cleanPhoneDigits : cleanPhoneDigits}` : "https://wa.me/18323911835";
+      const waLink = cleanPhoneDigits ? `https://wa.me/${cleanPhoneDigits.length === 10 ? '1' + cleanPhoneDigits : cleanPhoneDigits}` : "https://wa.me/13467392730";
 
       const orderTotal = savedOrder.total || 0;
       const deliveryFee = savedOrder.deliveryFee || 0;
@@ -125,7 +125,7 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
 
       const itemsSubtotal = (savedOrder.items || []).reduce((acc: number, item: any) => acc + (item.price * item.quantity), 0);
 
-      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://flowersforyou.vercel.app";
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://lamegatiendadelcolchon.com";
       const fallbackLogoUrl = `${siteUrl.replace(/\/$/, "")}/logo.jpg`;
 
       // Comprobar archivo del logo en el servidor de forma local para adjuntarlo inline (CID)
@@ -135,22 +135,22 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
 
       const emailContent = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; background: #ffffff;">
-          <div style="background-color: #FF97A4; padding: 20px 25px; text-align: center;">
+          <div style="background-color: #1E40AF; padding: 20px 25px; text-align: center;">
             <table role="presentation" style="margin: 0 auto; border-collapse: collapse;">
               <tr>
                 <td style="vertical-align: middle; padding-right: 14px;">
-                  <img src="${logoSrc}" alt="Gabriela's Flowers Logo" style="width: 46px; height: 46px; border-radius: 50%; border: 2px solid #ffffff; display: block; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
+                  <img src="${logoSrc}" alt="Logo" style="width: 46px; height: 46px; border-radius: 50%; border: 2px solid #ffffff; display: block; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
                 </td>
                 <td style="vertical-align: middle; text-align: left;">
-                  <h1 style="color: #ffffff; margin: 0; font-family: Georgia, serif; font-size: 24px; font-weight: bold; line-height: 1.1;">Gabriela's Flowers LLC</h1>
-                  <p style="color: rgba(255,255,255,0.92); margin: 3px 0 0 0; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-family: Arial, sans-serif; font-weight: bold;">Boutique Digital & Alta Floristería</p>
+                  <h1 style="color: #ffffff; margin: 0; font-family: Georgia, serif; font-size: 22px; font-weight: bold; line-height: 1.1;">La Mega Tienda del Colchón</h1>
+                  <p style="color: rgba(255,255,255,0.92); margin: 3px 0 0 0; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-family: Arial, sans-serif; font-weight: bold;">Especialistas en Descanso • Barinas, Venezuela</p>
                 </td>
               </tr>
             </table>
           </div>
           
           <div style="padding: 25px;">
-            <h2 style="color: #1A1C1C;">¡Comprobante de Pedido / Receipt! 🌸</h2>
+            <h2 style="color: #0F172A;">¡Comprobante de Pedido / Receipt! 🛏️</h2>
 
             ${isConsolidatedWithin2Hours && originalOrder ? `
               <div style="margin-bottom: 20px; padding: 14px; background-color: #f3e8ff; border-left: 4px solid #9333ea; border-radius: 8px;">
@@ -252,8 +252,8 @@ export async function createOrder(orderData: any, existingOrderId?: string) {
             </div>
           </div>
           
-          <div style="background-color: #1A1C1C; color: white; padding: 15px; text-align: center; font-size: 12px;">
-            <p style="margin: 0;">Gabriela's Flowers LLC • Boutique Digital</p>
+          <div style="background-color: #0F172A; color: white; padding: 15px; text-align: center; font-size: 12px;">
+            <p style="margin: 0;">La Mega Tienda del Colchón • Especialistas en Descanso</p>
           </div>
         </div>
       `;

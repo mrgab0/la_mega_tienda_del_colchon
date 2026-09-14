@@ -60,14 +60,14 @@ export function Footer({ siteConfig }: FooterProps) {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-blue-400 shrink-0" />
-                <a href="tel:+584141584360" className="hover:text-amber-400 transition-colors">
-                  +58 414 1584360
+                <a href="tel:+13467392730" className="hover:text-amber-400 transition-colors">
+                  +1 346 739 2730
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a href="https://wa.me/584141584360" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
-                  WhatsApp: +58 414 1584360
+                <a href="https://wa.me/13467392730" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
+                  WhatsApp: +1 346 739 2730
                 </a>
               </li>
               <li className="flex items-center gap-2">

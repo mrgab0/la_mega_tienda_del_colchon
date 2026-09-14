@@ -1,8 +1,8 @@
 import { ContactFormClient } from "@/components/shop/ContactFormClient";
 
 export const metadata = {
-  title: "Contacto | Gabriela's Flowers LLC",
-  description: "Ponte en contacto con nuestro equipo de boutique floral para consultas o asesoría personalizada.",
+  title: "Contacto | La Mega Tienda del Colchón",
+  description: "Ponte en contacto con nuestros especialistas en descanso para consultas, fletes o asesoría en Barinas.",
 };
 
 export default function ContactoPage() {

@@ -195,24 +195,24 @@ export default function RastreoPedidoPage() {
                       ) : (
                         <MapPin size={15} className="text-[#FF97A4] flex-shrink-0 mt-0.5" />
                       )}
-                      <span>{isPickup ? "Boutique Gabriela's Flowers LLC • 4201 Fairmont Pkwy, Pasadena, TX 77504" : (order.address || "Dirección registrada")}</span>
+                      <span>{isPickup ? "Tienda Física • Avenida Sucre, Barinas, Venezuela (VE)" : (order.address || "Dirección registrada")}</span>
                     </p>
                   </div>
 
                   <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-2xl space-y-1.5 border border-gray-100 dark:border-gray-800">
                     <span className="text-[10px] font-bold uppercase text-gray-400 tracking-wider block">Modalidad & Horario:</span>
                     <p className="text-xs font-bold text-gray-800 dark:text-gray-200 flex items-start gap-1.5">
-                      <Truck size={15} className="text-purple-500 flex-shrink-0 mt-0.5" />
-                      <span>{order.deliveryMethod || "Envío Estándar a Domicilio"}</span>
+                      <Truck size={15} className="text-blue-500 flex-shrink-0 mt-0.5" />
+                      <span>{order.deliveryMethod || "Despacho / Flete"}</span>
                     </p>
                   </div>
                 </div>
 
-                {/* Arreglos Florales Solicitados */}
+                {/* Colchones y Productos Solicitados */}
                 {order.items && order.items.length > 0 && (
                   <div className="p-4 bg-gray-50/70 dark:bg-gray-900/60 rounded-2xl border border-gray-100 dark:border-gray-800 space-y-2">
                     <span className="text-[10px] font-bold uppercase text-gray-400 tracking-wider block flex items-center gap-1">
-                      <Gift size={13} className="text-[#FF97A4]" /> Arreglos e Ítems del Pedido:
+                      <Gift size={13} className="text-amber-500" /> Colchones y Productos del Pedido:
                     </span>
                     <div className="space-y-1 text-xs">
                       {order.items.map((it: any, i: number) => (
@@ -228,13 +228,13 @@ export default function RastreoPedidoPage() {
                 {/* Botón Directo a Soporte en WhatsApp */}
                 <div className="pt-2 text-center">
                   <a
-                    href={`https://wa.me/18323911835?text=${encodeURIComponent(`¡Hola! Quisiera consultar el estado actual de mi pedido ID: ${order.orderId || order._id}`)}`}
+                    href={`https://wa.me/13467392730?text=${encodeURIComponent(`¡Hola! Quisiera consultar el estado actual de mi pedido ID: ${order.orderId || order._id} en La Mega Tienda del Colchón.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full text-xs font-bold transition-all shadow-md"
                   >
                     <MessageCircle size={16} />
-                    <span>Consultar Estado Actual con un Florista por WhatsApp</span>
+                    <span>Consultar Estado por WhatsApp (+1 346 739 2730)</span>
                   </a>
                 </div>
               </div>

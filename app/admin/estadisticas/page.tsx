@@ -29,10 +29,10 @@ export default function AdminEstadisticasPage() {
     const itemsText = (cart.cartItems || [])
       .map((item: any) => `• ${item.name} ($${item.price})`)
       .join("\n");
-    const productName = cart.productName || (cart.cartItems && cart.cartItems[0] ? cart.cartItems[0].name : "tu arreglo floral");
+    const productName = cart.productName || (cart.cartItems && cart.cartItems[0] ? cart.cartItems[0].name : "tu colchón");
 
     const message = encodeURIComponent(
-      `¡Hola ${cart.customerName || ""}! 🌹 Notamos que estabas interesado en ${productName} en Gabriela's Flowers LLC.\n\n${itemsText ? `Tus items:\n${itemsText}\n\n` : ""}¿Te gustaría completar tu pedido hoy? Estamos listos para preparar tu entrega especial a domicilio. ✨`
+      `¡Hola ${cart.customerName || ""}! 🛏️ Notamos que estabas interesado en ${productName} en La Mega Tienda del Colchón.\n\n${itemsText ? `Tus productos:\n${itemsText}\n\n` : ""}¿Te gustaría completar tu pedido hoy? Estamos listos para coordinar tu despacho o retiro en tienda. ✨`
     );
 
     return phone ? `https://wa.me/${phone}?text=${message}` : `https://wa.me/?text=${message}`;

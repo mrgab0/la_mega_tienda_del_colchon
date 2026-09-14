@@ -9,9 +9,11 @@ import dbConnect from "@/lib/db";
 import { Product } from "@/lib/models/Product";
 import { getSiteConfig } from "@/lib/actions/siteConfig";
 import { getSliders } from "@/lib/actions/slider";
-import { PhoneCall, Sparkles, MapPin, Truck, Globe2 } from "lucide-react";
+import { PhoneCall, Sparkles, MapPin, Truck, ShieldCheck, Radio } from "lucide-react";
+import { WhatsAppButton } from "@/components/shop/WhatsAppButton/WhatsAppButton";
+import { RadioColchonPlayer } from "@/components/shop/RadioColchonPlayer";
 
-// Code splitting dinámico para componentes bajo el pliegue (Below the fold)
+// Code splitting dinámico para componentes bajo el pliegue
 const SocialAndReviewsSection = dynamic(
   () => import("@/components/shop/SocialAndReviewsSection").then((m) => m.SocialAndReviewsSection),
   { ssr: true }
@@ -20,10 +22,6 @@ const SocialAndReviewsSection = dynamic(
 const CustomIframeSection = dynamic(
   () => import("@/components/shop/CustomIframeSection").then((m) => m.CustomIframeSection),
   { ssr: true }
-);
-
-const AnimatedButterflies = dynamic(
-  () => import("@/components/shop/AnimatedButterflies").then((m) => m.AnimatedButterflies)
 );
 
 const DeliveryShowcaseBanners = dynamic(
@@ -36,7 +34,6 @@ const Footer = dynamic(
   { ssr: true }
 );
 
-// Incremental Static Revalidation (ISR) a 60 segundos para respuesta perimetral instantánea
 export const revalidate = 60;
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
@@ -58,99 +55,67 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const initialSlides = slidersRes?.data ? [...slidersRes.data].sort((a, b) => (a.order || 0) - (b.order || 0)) : [];
 
   const desktopCols = siteConfig?.productColumnsDesktop || 3;
-  let gridColsClass = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-  if (desktopCols === 4) {
-    gridColsClass = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6";
-  } else if (desktopCols === 5) {
-    gridColsClass = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6";
-  }
-
-  const firstBannerImage = initialSlides.length > 0 && initialSlides[0].type === 'banner' && !initialSlides[0].image?.match(/\.(mp4|webm|ogg)$/i)
-    ? initialSlides[0].image
-    : null;
-
-  const preloadBannerUrl = firstBannerImage
-    ? (firstBannerImage.includes("images.unsplash.com")
-        ? `${firstBannerImage.split("?")[0]}?w=600&q=75&auto=format`
-        : firstBannerImage.includes("ik.imagekit.io")
-        ? `${firstBannerImage.split("?")[0]}?tr=w-600,q-75,f-auto`
-        : firstBannerImage)
-    : null;
+  const gridClasses = {
+    2: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2",
+    3: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+    4: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+    5: "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5",
+    6: "grid-cols-2 sm:grid-cols-3 lg:grid-cols-6",
+  }[desktopCols] || "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
 
   return (
-    <main className="min-h-screen bg-[#fff8f7] dark:bg-[#0B0C10] text-[#221a19] dark:text-gray-100 transition-colors duration-300 relative overflow-x-hidden">
-      {preloadBannerUrl && (
-        <link
-          rel="preload"
-          as="image"
-          href={preloadBannerUrl}
-          fetchPriority="high"
-        />
-      )}
+    <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 relative selection:bg-blue-600 selection:text-white">
       
-      {/* Componente de Mariposas Animadas con Aleteo 3D (Ultra ligero 1.5KB) */}
-      <AnimatedButterflies />
-
-      {/* Header & Sticky Nav Bar con Mega-Menu integrado */}
+      {/* Header & Sticky Nav Bar */}
       <StickyNav siteConfig={siteConfig} />
 
-      {/* Hero Section Editorial (Estilo Botanical Romance & Gabriela's Flowers) */}
-      <section className="relative z-20 min-h-[480px] pt-8 pb-14 flex flex-col items-center justify-center bg-gradient-to-b from-transparent via-[#faeae9]/50 to-transparent dark:from-transparent dark:via-[#181922]/50 dark:to-transparent border-b border-[#D4AF37]/20 transition-colors duration-300">
+      {/* Hero Section Editorial de La Mega Tienda del Colchón */}
+      <section className="relative z-20 min-h-[440px] pt-10 pb-14 flex flex-col items-center justify-center bg-gradient-to-b from-blue-950/20 via-slate-900/10 to-transparent border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
         
         <div className="container mx-auto px-6 text-center z-20 flex flex-col items-center">
           
-          {/* Logo Oficial de Gabriela's Flowers */}
-          <div className="mb-5 relative group">
-            <div className="absolute -inset-1.5 bg-gradient-to-r from-[#D4AF37] via-[#8B0024] to-[#D4AF37] rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
-            <img
-              src="/logo.jpg"
-              alt="Gabriela's Flowers Logo"
-              width={96}
-              height={96}
-              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover shadow-xl border-2 border-[#D4AF37]/80 transform hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
           {/* Kicker Editorial */}
-          <div className="inline-flex items-center gap-2 bg-[#fff0ef] dark:bg-pink-950/60 text-[#8B0024] dark:text-pink-300 border border-[#D4AF37]/40 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] mb-4 shadow-sm">
-            <Sparkles size={13} className="text-[#D4AF37]" />
-            <span>Boutique Floral de Lujo</span>
+          <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-700/50 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-[0.18em] mb-4 shadow-sm">
+            <Sparkles size={13} className="text-amber-500" />
+            <span>Especialistas en Colchones & Descanso</span>
           </div>
 
-          {/* Título Principal en Playfair Display */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-[#2a0002] dark:text-white mb-4 tracking-tight leading-tight">
-            {(!siteConfig?.heroTitle || siteConfig.heroTitle.includes("Flowers For You")) ? "Gabriela's Flowers LLC" : siteConfig.heroTitle}
+          {/* Título Principal */}
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-black text-slate-950 dark:text-white mb-4 tracking-tight leading-tight">
+            {siteConfig?.heroTitle || "La Mega Tienda del Colchón"}
           </h1>
 
           {/* Eslogan e Información de Ubicación / Servicios */}
-          <div className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8 font-medium leading-relaxed space-y-2">
-            <p className="font-serif italic text-[#8B0024] dark:text-pink-300 text-lg sm:text-xl font-semibold">
-              {locale === 'en' ? t('Index.description') : '"Detalles que enamoran"'}
+          <div className="text-sm sm:text-base md:text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto mb-8 font-medium leading-relaxed space-y-2">
+            <p className="font-serif italic text-blue-700 dark:text-amber-400 text-lg sm:text-xl font-bold">
+              {siteConfig?.brandSlogan || "Especialistas en Descanso • Barinas, Venezuela"}
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-semibold pt-1">
-              <span className="flex items-center gap-1"><MapPin size={15} className="text-[#8B0024]" /> Houston, Texas</span>
+            <div className="flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-semibold pt-1">
+              <span className="flex items-center gap-1"><MapPin size={15} className="text-blue-600" /> Avenida Sucre, Barinas</span>
               <span>•</span>
-              <span className="flex items-center gap-1"><Truck size={15} className="text-[#8B0024]" /> Delivery Disponible</span>
+              <span className="flex items-center gap-1"><Truck size={15} className="text-blue-600" /> Flete y Despacho</span>
               <span>•</span>
-              <span className="flex items-center gap-1"><Globe2 size={15} className="text-[#8B0024]" /> Hablamos Español</span>
+              <span className="flex items-center gap-1"><ShieldCheck size={15} className="text-amber-500" /> Garantía de Fábrica</span>
             </div>
           </div>
 
           {/* Botones de Acción */}
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a 
-              href="tel:+18323911835"
-              className="w-full sm:w-auto bg-[#2a0002] hover:bg-[#8B0024] text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-xl shadow-pink-950/20 border border-[#D4AF37]/60 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
+              href="https://wa.me/13467392730"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-xl shadow-blue-900/30 border border-amber-400/60 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
             >
-              <PhoneCall size={16} className="text-[#D4AF37] group-hover:rotate-12 transition-transform" />
-              <span>Contáctanos: +1 832 391-1835</span>
+              <PhoneCall size={16} className="text-amber-400 group-hover:rotate-12 transition-transform" />
+              <span>WhatsApp: +1 346 739 2730</span>
             </a>
 
             <a 
               href="/productos" 
-              className="w-full sm:w-auto bg-white dark:bg-gray-900 text-[#2a0002] dark:text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-[#fff0ef] transition-all border border-gray-200 dark:border-gray-800 shadow-md hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-50 dark:hover:bg-slate-800 transition-all border border-slate-300 dark:border-slate-800 shadow-md hover:scale-105 active:scale-95"
             >
-              {locale === 'en' ? t('Index.exploreButton') : (siteConfig?.heroButtonText || "Explorar Colección")}
+              <span>{locale === 'en' ? t('Index.exploreButton') : "Explorar Catálogo"}</span>
             </a>
           </div>
 
@@ -158,76 +123,73 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* Slider Section */}
-      <div className="container mx-auto px-4 sm:px-6 -mt-8 sm:-mt-10 relative z-20">
-        <HeroSlider initialSlides={initialSlides} />
-      </div>
+      <HeroSlider initialSlides={initialSlides} />
 
-      {/* 2. NUEVO: Slider de Productos Destacados con Pestañas de Filtrado */}
-      <FeaturedProductsSlider products={products.slice(0, 8)} />
+      {/* 1. NUEVO: Slider de Productos Destacados en Tendencia */}
+      <FeaturedProductsSlider products={products.filter((p: any) => p.isFeatured)} />
 
-      {/* 4. NUEVO: Hub de Colección 2026 & Oferta Flash con Reloj en Vivo */}
+      {/* 2. NUEVO: Módulo Promocional Colecciones Flash & Diseños Exclusivos */}
       <FlashSaleCollectionsSection />
 
-      {/* Módulo iFrame Personalizado */}
-      {siteConfig?.enableCustomIframe && (
-        <CustomIframeSection
-          title={siteConfig.customIframeTitle}
-          iframeHtml={siteConfig.customIframeHtml}
-        />
-      )}
-
-      {/* Product Grid con Columnas Dinámicas (Catálogo Principal) */}
-      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 z-20 relative">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 pb-4 border-b border-[#D4AF37]/20 gap-4">
+      {/* Main Catalog Grid */}
+      <section className="container mx-auto px-4 sm:px-6 py-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">
           <div>
-            <span className="text-[#8B0024] dark:text-pink-400 text-xs font-bold uppercase tracking-[0.2em] block mb-1">
-              {t('Index.premiumSelection')}
+            <span className="text-xs font-bold text-blue-600 dark:text-amber-400 uppercase tracking-widest block mb-1">
+              Catálogo de Confort
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#2a0002] dark:text-white">
-              {t('Index.ourFlowers')}
+            <h2 className="text-3xl font-serif font-bold text-slate-900 dark:text-white">
+              Colchones y Sistemas de Descanso
             </h2>
           </div>
-          <a href="/productos" className="text-[#8B0024] dark:text-pink-400 font-bold text-sm border-b-2 border-[#D4AF37] pb-1 hover:text-[#2a0002] transition-all">
-            {t('Index.viewCatalog')} ↗
-          </a>
+          <p className="text-sm text-slate-500 mt-2 md:mt-0 font-medium">
+            Mostrando los modelos más recomendados para tu postura y sueño
+          </p>
         </div>
 
-        <div className={gridColsClass}>
+        <div className={`grid ${gridClasses} gap-6`}>
           {products.length > 0 ? (
             products.map((product: any) => (
-              <ProductCard 
-                key={product._id.toString()}
-                id={product._id.toString()}
-                name={product.name}
-                slug={product.slug}
-                price={product.price}
-                category={product.category}
-                badge={product.badge}
-                image={product.images && product.images.length > 0 ? product.images[0] : ""}
-                secondaryImage={product.images && product.images.length > 1 ? product.images[1] : undefined}
-              />
+              <ProductCard key={product._id || product.id} product={product} />
             ))
           ) : (
-            <p className="col-span-full text-center text-gray-500 py-8 font-medium">{t('Index.noProducts')}</p>
+            <p className="col-span-full text-center text-slate-500 py-8 font-medium">No hay productos disponibles por ahora.</p>
           )}
         </div>
       </section>
 
-      {/* 3. NUEVO: Banners Dobles de Demostración de Entregas & Diseños VIP */}
+      {/* Banners de Entrega & Despacho */}
       <DeliveryShowcaseBanners />
 
-      {/* Secciones Combinadas en 2 Columnas Paralelas (Instagram & Trustpilot) */}
+      {/* Módulo Social & Reviews */}
       <SocialAndReviewsSection
         enableReviews={siteConfig?.enableReviewsSection !== false}
-        reviewsTitle={locale === 'en' ? undefined : siteConfig?.reviewsTitle}
-        ratingScore={locale === 'en' ? undefined : siteConfig?.reviewsRatingScore}
-        countText={locale === 'en' ? undefined : siteConfig?.reviewsCountText}
+        reviewsTitle={siteConfig?.reviewsTitle}
+        ratingScore={siteConfig?.reviewsRatingScore}
+        countText={siteConfig?.reviewsCountText}
         trustpilotWidgetHtml={siteConfig?.trustpilotWidgetHtml}
         enableSocialFeed={siteConfig?.enableSocialFeed !== false}
-        socialTitle={siteConfig?.socialFeedTitle || "Síguenos en Instagram 📸"}
+        socialTitle={siteConfig?.socialFeedTitle || "Síguenos en Instagram @lamegatiendadelcolchon 💤"}
         embedHtml={siteConfig?.socialEmbedHtml}
-        instagramUrl={siteConfig?.instagramUrl || "https://instagram.com"}
+        instagramUrl={siteConfig?.instagramUrl || "https://www.instagram.com/lamegatiendadelcolchon/reels/"}
       />
+
+      {/* Iframe de Ubicación (Avenida Sucre, Barinas) */}
+      <CustomIframeSection
+        enableCustomIframe={siteConfig?.enableCustomIframe || false}
+        customIframeTitle={siteConfig?.customIframeTitle}
+        customIframeHtml={siteConfig?.customIframeHtml}
+      />
+
+      {/* Radio Colchón Floating Live Stream Player */}
+      <RadioColchonPlayer
+        streamUrl={siteConfig?.radioStreamUrl || "https://radiocolchon.com"}
+        title={siteConfig?.radioTitle || "Radio Colchón"}
+        description={siteConfig?.radioDescription || "Frecuencias y Música para Dormir"}
+      />
+
+      {/* Floating WhatsApp Button */}
+      <WhatsAppButton phoneNumber="13467392730" />
 
       <Footer siteConfig={siteConfig} />
     </main>

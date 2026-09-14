@@ -26,7 +26,7 @@ const DEFAULT_SITE_CONFIG = {
   facebookUrl: "https://facebook.com",
   instagramUrl: "https://www.instagram.com/lamegatiendadelcolchon/reels/",
   tiktokUrl: "https://tiktok.com",
-  whatsappUrl: "https://wa.me/584141584360",
+  whatsappUrl: "https://wa.me/13467392730",
   enableRadioStream: true,
   radioStreamUrl: "https://radiocolchon.com",
   radioTitle: "Radio Colchón - Música y Frecuencias para Dormir",

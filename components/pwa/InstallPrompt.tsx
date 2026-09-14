@@ -96,15 +96,15 @@ export function InstallPrompt() {
 
   return (
     <div className="fixed bottom-5 left-4 right-4 md:left-auto md:right-6 md:w-96 z-50 animate-in slide-in-from-bottom duration-500">
-      <div className="bg-white/95 dark:bg-[#181922]/95 backdrop-blur-md p-4.5 rounded-3xl border-2 border-pink-200 dark:border-pink-900/50 shadow-2xl shadow-pink-500/20 flex flex-col gap-3">
+      <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4.5 rounded-3xl border-2 border-blue-200 dark:border-blue-900/50 shadow-2xl shadow-blue-500/20 flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#FF97A4] to-[#be185d] p-0.5 shadow-md flex items-center justify-center flex-shrink-0">
-              <img src="/logo.jpg" alt="Gabriela's Flowers App" className="w-full h-full object-cover rounded-[14px]" />
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-slate-900 p-0.5 shadow-md flex items-center justify-center flex-shrink-0">
+              <img src="/logo.jpg" alt="La Mega Tienda del Colchón" className="w-full h-full object-cover rounded-[14px]" />
             </div>
             <div>
-              <h4 className="font-serif font-black text-sm text-[#1A1C1C] dark:text-white leading-snug flex items-center gap-1">
-                Gabriela's Flowers App <Sparkles size={13} className="text-[#FF97A4]" />
+              <h4 className="font-serif font-black text-sm text-slate-900 dark:text-white leading-snug flex items-center gap-1">
+                La Mega Tienda App <Sparkles size={13} className="text-amber-500" />
               </h4>
               <p className="text-[11px] text-gray-500 dark:text-gray-400 font-bold">
                 ¡Instala la App oficial en tu celular! 📱

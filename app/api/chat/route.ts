@@ -29,8 +29,8 @@ export async function POST(req: Request) {
       ? products.map((p: any) => `- ${p.name} ($${p.price} USD) [Medida: ${p.mattressSize || 'Estándar'}] [Firmeza: ${p.firmness || 'Media'}] [Enlace: /productos/${p.slug}]: ${p.description ? p.description.slice(0, 100) : ''}`).join('\n')
       : "No hay colchones listados actualmente en el catálogo online.";
 
-    const whatsappPhone = "+58 414 1584360";
-    const whatsappUrl = "https://wa.me/584141584360";
+    const whatsappPhone = "+1 346 739 2730";
+    const whatsappUrl = "https://wa.me/13467392730";
     const storeLocation = "Avenida Sucre, Barinas, Venezuela";
 
     // 2. Definir instrucciones de sistema precisas
@@ -114,7 +114,7 @@ Reglas de respuesta:
   } catch (error: any) {
     console.error("Error en Chatbot API:", error);
     return NextResponse.json({
-      text: "🛏️ Con mucho gusto te ayudamos. Puedes explorar nuestros colchones en el [Catálogo](/productos) o escribirnos directo a [📲 WhatsApp (+58 414 1584360)](https://wa.me/584141584360) para cotizar tu pedido."
+      text: "🛏️ Con mucho gusto te ayudamos. Puedes explorar nuestros colchones en el [Catálogo](/productos) o escribirnos directo a [📲 WhatsApp (+1 346 739 2730)](https://wa.me/13467392730) para cotizar tu pedido."
     }, { status: 200 });
   }
 }

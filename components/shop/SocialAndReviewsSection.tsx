@@ -44,7 +44,7 @@ export function SocialAndReviewsSection({
   countText,
   trustpilotWidgetHtml,
   enableSocialFeed = true,
-  socialTitle = "Instagram @GabrielasFlowers 📸",
+  socialTitle = "Síguenos en Instagram @lamegatiendadelcolchon 💤",
   embedHtml,
   instagramUrl = "https://instagram.com",
 }: SocialAndReviewsSectionProps) {
@@ -142,29 +142,29 @@ export function SocialAndReviewsSection({
   const instagramPosts = [
     {
       id: "post1",
-      image: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=800&auto=format&fit=crop&q=80",
-      caption: "El lujo de regalar rosas frescas rojas seleccionadas a mano. 🌹 #GabrielasFlowers #HoustonTx",
-      likes: 248,
-      comments: 18,
-    },
-    {
-      id: "post2",
-      image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=800&auto=format&fit=crop&q=80",
-      caption: "Girasoles y lirios que iluminan cualquier espacio. 🌻✨ #BoutiqueFloral #HoustonEvents",
-      likes: 194,
-      comments: 12,
-    },
-    {
-      id: "post3",
-      image: "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=800&auto=format&fit=crop&q=80",
-      caption: "Orquídeas blancas imperiales para expresar distinción y elegancia. 🤍 #Orquideas",
+      image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80",
+      caption: "El placer de un descanso reparador. Colchón King Ortopédico disponible en tienda. 🛏️ #LaMegaTiendaDelColchon #Barinas",
       likes: 312,
       comments: 24,
     },
     {
+      id: "post2",
+      image: "https://images.unsplash.com/photo-1540518614846-7ede433c4ef7?w=800&auto=format&fit=crop&q=80",
+      caption: "Estructura de resortes pocket y Pillow Top para un soporte ergonómico inigualable. 💤 #DescansoPerfecto",
+      likes: 240,
+      comments: 19,
+    },
+    {
+      id: "post3",
+      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&auto=format&fit=crop&q=80",
+      caption: "Visítanos en nuestra sede de Avenida Sucre, Barinas o cotiza tu flete directo por WhatsApp. ✨ #BarinasVE",
+      likes: 185,
+      comments: 15,
+    },
+    {
       id: "post4",
-      image: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=800&auto=format&fit=crop&q=80",
-      caption: "Caja Deluxe de rosas rosadas y hortensias. El detalle perfecto para enamorar. 💕",
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=80",
+      caption: "Almohadas de espuma viscoelástica para un soporte cervical perfecto. 🌙",
       likes: 410,
       comments: 31,
     },
@@ -274,7 +274,7 @@ export function SocialAndReviewsSection({
               {/* Pie con Nota de Confianza */}
               <div className="pt-2 text-center border-t border-gray-100 dark:border-gray-800">
                 <span className="text-xs font-bold text-gray-600 dark:text-gray-300">
-                  ⭐⭐⭐⭐⭐ Calificación promedio de 4.9 basada en clientes de Houston & alrededores.
+                  ⭐⭐⭐⭐⭐ Calificación promedio de 4.9 basada en clientes de Barinas y toda Venezuela.
                 </span>
               </div>
             </div>
@@ -295,7 +295,7 @@ export function SocialAndReviewsSection({
                         Instagram Live Feed
                         <Sparkles size={12} className="text-[#8B0024] dark:text-[#FF97A4]" />
                       </h4>
-                      <p className="text-[11px] text-gray-600 dark:text-gray-300 font-semibold">@GabrielasFlowers LLC</p>
+                      <p className="text-[11px] text-gray-600 dark:text-gray-300 font-semibold">@lamegatiendadelcolchon</p>
                     </div>
                   </div>
 

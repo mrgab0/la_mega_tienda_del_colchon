@@ -283,7 +283,7 @@ export default function AdminConfiguracionPage() {
               </div>
               <SingleImageUploader
                 currentImage={config.logoUrl || "/logo.jpg"}
-                label="Logo de Gabriela's Flowers (Boutique Floral)"
+                label="Logo de La Mega Tienda del Colchón"
               />
               <input type="hidden" name="logoUrl" value={config.logoUrl || "/logo.jpg"} />
             </div>
@@ -291,8 +291,8 @@ export default function AdminConfiguracionPage() {
             {/* Sección Lemas del Home & Footer */}
             <div className="bg-white dark:bg-[#12131A] p-6 md:p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-5">
               <div className="flex items-center gap-2.5 border-b pb-3 border-gray-100 dark:border-gray-800">
-                <Type size={20} className="text-[#FF97A4]" />
-                <h2 className="font-serif font-black text-lg text-[#1A1C1C] dark:text-white">Lemas y Encabezados de la Boutique</h2>
+                <Type size={20} className="text-blue-600" />
+                <h2 className="font-serif font-black text-lg text-[#1A1C1C] dark:text-white">Lemas y Encabezados de la Tienda</h2>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -300,8 +300,8 @@ export default function AdminConfiguracionPage() {
                   <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Título Principal en Portada</label>
                   <input
                     name="heroTitle"
-                    defaultValue={config.heroTitle || "Gabriela's Flowers LLC"}
-                    className="p-3.5 border rounded-2xl text-sm font-bold dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-[#FF97A4]"
+                    defaultValue={config.heroTitle || "La Mega Tienda del Colchón"}
+                    className="p-3.5 border rounded-2xl text-sm font-bold dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -310,8 +310,8 @@ export default function AdminConfiguracionPage() {
                   <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Lema Secundario de Cabecera</label>
                   <input
                     name="brandSlogan"
-                    defaultValue={config.brandSlogan || "Boutique Floral Digital • Houston, Texas"}
-                    className="p-3.5 border rounded-2xl text-sm font-medium dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-[#FF97A4]"
+                    defaultValue={config.brandSlogan || "Especialistas en Descanso • Barinas, Venezuela"}
+                    className="p-3.5 border rounded-2xl text-sm font-medium dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
@@ -320,8 +320,8 @@ export default function AdminConfiguracionPage() {
                 <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Eslogan del Home (Párrafo Hero)</label>
                 <textarea
                   name="heroSlogan"
-                  defaultValue={config.heroSlogan || "Arreglos florales exclusivos y detalles de lujo diseñados para sorprender a quien más amas."}
-                  className="p-3.5 border rounded-2xl text-xs h-20 dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-[#FF97A4]"
+                  defaultValue={config.heroSlogan || "Colchones ortopédicos, somieres y almohadas con garantía de fábrica y despacho en Barinas."}
+                  className="p-3.5 border rounded-2xl text-xs h-20 dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -331,8 +331,8 @@ export default function AdminConfiguracionPage() {
                   <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Texto del Botón Hero (CTA)</label>
                   <input
                     name="heroButtonText"
-                    defaultValue={config.heroButtonText || "Explorar Colección"}
-                    className="p-3.5 border rounded-2xl text-xs font-bold dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-[#FF97A4]"
+                    defaultValue={config.heroButtonText || "Explorar Catálogo"}
+                    className="p-3.5 border rounded-2xl text-xs font-bold dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -341,8 +341,8 @@ export default function AdminConfiguracionPage() {
                   <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Nombre en Pie de Página (Footer)</label>
                   <input
                     name="footerTitle"
-                    defaultValue={config.footerTitle || "Gabriela's Flowers LLC"}
-                    className="p-3.5 border rounded-2xl text-xs font-bold dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-[#FF97A4]"
+                    defaultValue={config.footerTitle || "La Mega Tienda del Colchón"}
+                    className="p-3.5 border rounded-2xl text-xs font-bold dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -352,8 +352,8 @@ export default function AdminConfiguracionPage() {
                 <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Lema del Footer</label>
                 <input
                   name="footerSlogan"
-                  defaultValue={config.footerSlogan || "Boutique Digital de Alta Floristería • Entregas a Domicilio"}
-                  className="p-3.5 border rounded-2xl text-xs font-medium dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-[#FF97A4]"
+                  defaultValue={config.footerSlogan || "Especialistas en Descanso • Avenida Sucre, Barinas"}
+                  className="p-3.5 border rounded-2xl text-xs font-medium dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -362,8 +362,8 @@ export default function AdminConfiguracionPage() {
                 <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Texto de Derechos Reservados (Copyright)</label>
                 <input
                   name="footerCopyright"
-                  defaultValue={config.footerCopyright || "© 2026 Gabriela's Flowers LLC. Todos los derechos reservados."}
-                  className="p-3.5 border rounded-2xl text-xs font-medium dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-[#FF97A4]"
+                  defaultValue={config.footerCopyright || "© 2026 La Mega Tienda del Colchón. Todos los derechos reservados."}
+                  className="p-3.5 border rounded-2xl text-xs font-medium dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -461,7 +461,7 @@ export default function AdminConfiguracionPage() {
                 <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Título del Bloque de Reseñas</label>
                 <input
                   name="reviewsTitle"
-                  defaultValue={config.reviewsTitle || "Lo que dicen nuestros clientes en Houston ⭐⭐⭐⭐⭐"}
+                  defaultValue={config.reviewsTitle || "La opinión de quienes descansan mejor en Barinas ⭐⭐⭐⭐⭐"}
                   className="p-3.5 border rounded-2xl text-xs font-bold dark:bg-gray-900 dark:text-white"
                 />
               </div>
@@ -573,8 +573,8 @@ export default function AdminConfiguracionPage() {
                   <label className="text-xs font-bold text-gray-700 dark:text-gray-300">WhatsApp Directo</label>
                   <input
                     name="whatsappUrl"
-                    defaultValue={config.whatsappUrl || "https://wa.me/18323911835"}
-                    placeholder="https://wa.me/18323911835"
+                    defaultValue={config.whatsappUrl || "https://wa.me/13467392730"}
+                    placeholder="https://wa.me/13467392730"
                     className="p-3 border rounded-xl text-xs font-medium dark:bg-gray-900 dark:text-white"
                   />
                 </div>
@@ -754,7 +754,7 @@ export default function AdminConfiguracionPage() {
                 <input
                   name="dialogflowProjectId"
                   defaultValue={config.dialogflowProjectId || ""}
-                  placeholder="ej. gabrielas-flowers-bot-12345"
+                  placeholder="ej. colchon-bot-12345"
                   className="p-3.5 border rounded-xl text-xs font-mono dark:bg-gray-900 dark:text-white"
                 />
               </div>
@@ -789,8 +789,8 @@ export default function AdminConfiguracionPage() {
                 </label>
                 <input
                   name="dialogflowChatTitle"
-                  defaultValue={config.dialogflowChatTitle || "Gabriela's Flowers Virtual Assistant 🌸"}
-                  placeholder="Gabriela's Flowers Virtual Assistant 🌸"
+                  defaultValue={config.dialogflowChatTitle || "Asesor de Descanso 🛏️"}
+                  placeholder="Asesor de Descanso 🛏️"
                   className="p-3.5 border rounded-xl text-xs font-bold dark:bg-gray-900 dark:text-white"
                 />
               </div>

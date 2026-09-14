@@ -1,17 +1,19 @@
-# Gabriela's Flowers LLC
-> Luxury Floral Boutique with Same-Day Delivery in Houston, Texas
+# La Mega Tienda del Colchón
+> Especialistas en Colchones, Somieres y Sistemas de Descanso en Barinas, Venezuela
 
-Gabriela's Flowers is an exclusive floral studio based in Houston, Texas, specializing in bespoke flower boxes, premium Ecuadorian long-stem roses, anniversary arrangements, sympathy florals, and celebration bouquets.
+La Mega Tienda del Colchón es una tienda líder en descanso y confort ubicada en la Avenida Sucre de Barinas, Venezuela. Especializada en colchones ortopédicos, semi-ortopédicos, resortes pocket ensacados, espuma viscoelástica (Memory Foam), somieres tapizados, bases cama y almohadas ergonómicas.
 
-## Core Services
-- Same-Day Flower Delivery: Covering Houston metropolitan area, Katy, Sugar Land, The Woodlands, Cypress, Pearland, and surrounding cities.
-- Custom Floral Design: Handcrafted velvet boxes, balloon bouquets, sweet flower sets, and luxury preserved roses.
-- Secure Online Ordering: Multilingual checkout (English & Spanish), real-time order tracking, and local pickup options.
+## Servicios Principales
+- Venta y Asesoría de Descanso: Medidas Individual, Matrimonial, Queen y King con distintos niveles de firmeza y garantía de fábrica.
+- Despacho y Fletes: Entrega local coordinada en Barinas y envíos a todo el territorio nacional de Venezuela (MRW, Tealca, Zoom).
+- Retiro en Tienda Física: Sede en Avenida Sucre, Barinas.
+- Transmisión en Vivo: Integración de Radio Colchón (radiocolchon.com) para frecuencias relajantes y música para dormir.
+- Métodos de Pago: Pago Móvil, Transferencias Bancarias, Zelle y Efectivo en Tienda.
 
-## Key Links & Resources
-- Home: https://gabrielas-flowers.vercel.app/
-- Catalog: https://gabrielas-flowers.vercel.app/productos
-- Order Tracking: https://gabrielas-flowers.vercel.app/rastreo
-- Contact: https://gabrielas-flowers.vercel.app/contacto
-- Instagram: https://instagram.com/gabrielas_flowers
-- WhatsApp Florist: +1 (832) 391-1835
+## Enlaces Clave
+- Tienda Online: https://lamegatiendadelcolchon.com/
+- Catálogo de Colchones: https://lamegatiendadelcolchon.com/productos
+- Rastrear Pedido: https://lamegatiendadelcolchon.com/rastreo
+- Contacto: https://lamegatiendadelcolchon.com/contacto
+- Instagram: https://www.instagram.com/lamegatiendadelcolchon/reels/
+- WhatsApp Oficial: +1 (346) 739-2730 (https://wa.me/13467392730)

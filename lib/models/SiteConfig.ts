@@ -114,7 +114,7 @@ const SiteConfigSchema: Schema = new Schema({
   facebookUrl: { type: String, default: "https://facebook.com" },
   instagramUrl: { type: String, default: "https://www.instagram.com/lamegatiendadelcolchon/reels/" },
   tiktokUrl: { type: String, default: "https://tiktok.com" },
-  whatsappUrl: { type: String, default: "https://wa.me/584141584360" },
+  whatsappUrl: { type: String, default: "https://wa.me/13467392730" },
 
   // Radio Colchón Live Streaming Integration
   enableRadioStream: { type: Boolean, default: true },

@@ -28,30 +28,30 @@ export async function sendContactEmail(formData: {
 }) {
   try {
     const transporter = getTransporter();
-    const sender = process.env.SMTP_FROM || process.env.SMTP_USER || "flowersforyou403@gmail.com";
-    const recipientEmails = (process.env.ADMIN_EMAIL || process.env.SMTP_USER || "flowersforyou403@gmail.com")
+    const sender = process.env.SMTP_FROM || process.env.SMTP_USER || "lamegatiendadelcolchon@gmail.com";
+    const recipientEmails = (process.env.ADMIN_EMAIL || process.env.SMTP_USER || "lamegatiendadelcolchon@gmail.com")
       .split(",")
       .map(e => e.trim())
       .filter(Boolean);
 
     const emailContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #eee; border-radius: 12px; overflow: hidden;">
-        <div style="background-color: #FF97A4; color: white; padding: 20px; text-align: center;">
-          <h1 style="margin: 0; font-size: 22px;">🌸 Nuevo Mensaje de Contacto</h1>
+        <div style="background-color: #1E40AF; color: white; padding: 20px; text-align: center;">
+          <h1 style="margin: 0; font-size: 22px;">🛏️ Nuevo Mensaje de Contacto</h1>
         </div>
         <div style="padding: 25px; background-color: #ffffff;">
-          <h3 style="color: #1A1C1C; margin-top: 0; border-bottom: 2px solid #FF97A4; padding-bottom: 5px;">Detalles del Cliente:</h3>
+          <h3 style="color: #0F172A; margin-top: 0; border-bottom: 2px solid #1E40AF; padding-bottom: 5px;">Detalles del Cliente:</h3>
           <p style="margin: 8px 0;"><strong>Nombre:</strong> ${formData.name}</p>
           <p style="margin: 8px 0;"><strong>Correo:</strong> ${formData.email}</p>
           <p style="margin: 8px 0;"><strong>Teléfono / WhatsApp:</strong> ${formData.phone || "No especificado"}</p>
           
-          <h3 style="color: #1A1C1C; margin-top: 20px; border-bottom: 2px solid #FF97A4; padding-bottom: 5px;">Mensaje / Consulta:</h3>
-          <div style="padding: 15px; background-color: #fdf2f7; border-left: 4px solid #FF97A4; border-radius: 4px; color: #333; line-height: 1.6;">
+          <h3 style="color: #0F172A; margin-top: 20px; border-bottom: 2px solid #1E40AF; padding-bottom: 5px;">Mensaje / Consulta:</h3>
+          <div style="padding: 15px; background-color: #eff6ff; border-left: 4px solid #1E40AF; border-radius: 4px; color: #333; line-height: 1.6;">
             ${formData.message.replace(/\n/g, '<br>')}
           </div>
         </div>
-        <div style="background-color: #1A1C1C; color: white; padding: 15px; text-align: center; font-size: 12px;">
-          <p style="margin: 0;">Gabriela's Flowers LLC - Boutique Digital</p>
+        <div style="background-color: #0F172A; color: white; padding: 15px; text-align: center; font-size: 12px;">
+          <p style="margin: 0;">La Mega Tienda del Colchón - Especialistas en Descanso</p>
         </div>
       </div>
     `;
@@ -60,7 +60,7 @@ export async function sendContactEmail(formData: {
       from: sender,
       to: recipientEmails.join(", "),
       replyTo: formData.email,
-      subject: `🌸 Consulta de Contacto: ${formData.name}`,
+      subject: `🛏️ Consulta de Contacto: ${formData.name}`,
       html: emailContent,
     });
 

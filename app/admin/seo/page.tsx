@@ -152,7 +152,7 @@ export default function AdminSeoPage() {
                     name="seoTitle"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    placeholder="Ej: Gabriela's Flowers LLC | Boutique Digital de Alta Floristería"
+                    placeholder="Ej: La Mega Tienda del Colchón | Especialistas en Descanso en Barinas"
                     className="p-3 border rounded-2xl text-xs font-bold text-[#1A1C1C] dark:text-white dark:bg-gray-900 border-gray-200 dark:border-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     required
                   />
@@ -287,13 +287,13 @@ export default function AdminSeoPage() {
                 <div className="p-4 bg-gray-50 dark:bg-gray-900/80 rounded-2xl border border-gray-200 dark:border-gray-800 space-y-1">
                   <div className="flex items-center gap-2 text-[11px] text-gray-600 dark:text-gray-400">
                     <span className="w-4 h-4 rounded-full bg-pink-100 text-[#FF97A4] flex items-center justify-center font-bold text-[9px]">F</span>
-                    <span>https://flowersforyou.com</span>
+                    <span>https://lamegatiendadelcolchon.com</span>
                   </div>
                   <h3 className="text-sm font-bold text-blue-700 dark:text-blue-400 hover:underline cursor-pointer leading-snug">
-                    {title || "Gabriela's Flowers LLC | Boutique Digital de Alta Floristería"}
+                    {title || "La Mega Tienda del Colchón | Colchones y Descanso en Barinas"}
                   </h3>
                   <p className="text-xs text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed">
-                    {description || "Floristería exclusiva con arreglos florales de lujo, rosas y detalles personalizados a domicilio con entrega express."}
+                    {description || "Especialistas en colchones ortopédicos, matrimoniales, king, somieres y almohadas en Barinas (Avenida Sucre). Fletes y envíos a toda Venezuela."}
                   </p>
                 </div>
               </div>

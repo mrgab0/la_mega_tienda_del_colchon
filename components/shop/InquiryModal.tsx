@@ -10,8 +10,8 @@ interface InquiryModalProps {
 export const InquiryModal = ({ isOpen, onClose }: InquiryModalProps) => {
   if (!isOpen) return null;
 
-  const phone = "18323911835";
-  const defaultMessage = "¡Hola! 🌸 Me gustaría recibir asesoría personalizada para elegir el arreglo floral ideal. ¿Me podrían ayudar?";
+  const phone = "13467392730";
+  const defaultMessage = "¡Hola! 🛏️ Me gustaría recibir asesoría personalizada para elegir el colchón ideal en La Mega Tienda del Colchón. ¿Me podrían ayudar?";
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(defaultMessage)}`;
 
   return (
@@ -22,7 +22,7 @@ export const InquiryModal = ({ isOpen, onClose }: InquiryModalProps) => {
         <div className="flex justify-between items-center border-b pb-3">
           <div className="flex items-center gap-2 text-[#25D366]">
             <MessageCircle size={20} fill="#25D366" className="text-white" />
-            <span className="font-bold text-sm text-[#1A1C1C]">Asesoría Floral VIP</span>
+            <span className="font-bold text-sm text-[#1A1C1C]">Asesoría de Descanso VIP</span>
           </div>
           <button 
             onClick={onClose}
@@ -34,7 +34,7 @@ export const InquiryModal = ({ isOpen, onClose }: InquiryModalProps) => {
 
         <div className="space-y-2 text-center py-2">
           <p className="text-xs text-gray-500 font-medium leading-relaxed">
-            ¿Buscas un arreglo a medida o ayuda para elegir las flores ideales? Chatea en vivo con nuestros diseñadores florales.
+            ¿Buscas un colchón a tu medida o asesoría según tu firmeza ideal? Chatea en vivo con nuestros especialistas en descanso.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export const InquiryModal = ({ isOpen, onClose }: InquiryModalProps) => {
           onClick={onClose}
           className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3.5 rounded-full font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2"
         >
-          <span>Abrir WhatsApp (+1 832 391 1835)</span>
+          <span>Abrir WhatsApp (+1 346 739 2730)</span>
           <ExternalLink size={14} />
         </a>
       </div>

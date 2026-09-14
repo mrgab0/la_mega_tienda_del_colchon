@@ -231,23 +231,23 @@ export async function sendEmergencyRescueOtpAction() {
     );
 
     const transporter = getTransporter();
-    const sender = process.env.SMTP_USER ? `"Gabriela's Flowers Security" <${process.env.SMTP_USER}>` : '"Gabriela\'s Flowers Security"';
+    const sender = process.env.SMTP_USER ? `"La Mega Tienda del Colchón Seguridad" <${process.env.SMTP_USER}>` : '"La Mega Tienda del Colchón Seguridad"';
 
     const emailContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; background: #ffffff;">
-        <div style="background-color: #1A1C1C; padding: 25px; text-align: center;">
-          <h1 style="color: #FF97A4; margin: 0; font-family: Georgia, serif; font-size: 24px;">Gabriela's Flowers LLC</h1>
+        <div style="background-color: #0F172A; padding: 25px; text-align: center;">
+          <h1 style="color: #F59E0B; margin: 0; font-family: Georgia, serif; font-size: 24px;">La Mega Tienda del Colchón</h1>
           <p style="color: #ffffff; margin: 5px 0 0 0; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">Recuperación de Emergencia del Panel Admin</p>
         </div>
         
         <div style="padding: 30px; text-align: center;">
-          <h2 style="color: #1A1C1C; margin-top: 0;">Código de Rescate de 2FA 🔑</h2>
+          <h2 style="color: #0F172A; margin-top: 0;">Código de Rescate de 2FA 🔑</h2>
           <p style="color: #666; font-size: 14px; line-height: 1.6;">
             Has solicitado un acceso de emergencia al Panel Administrador por problemas con tu contraseña o código 2FA. Usa el siguiente código único de verificación:
           </p>
           
-          <div style="background-color: #fdf2f7; border: 2px dashed #FF97A4; padding: 20px; border-radius: 12px; margin: 25px 0; display: inline-block;">
-            <span style="font-size: 36px; font-weight: 900; letter-spacing: 8px; color: #1A1C1C; font-family: monospace;">${rescueOtp}</span>
+          <div style="background-color: #eff6ff; border: 2px dashed #3b82f6; padding: 20px; border-radius: 12px; margin: 25px 0; display: inline-block;">
+            <span style="font-size: 36px; font-weight: 900; letter-spacing: 8px; color: #1e3a8a; font-family: monospace;">${rescueOtp}</span>
           </div>
 
           <p style="color: #888; font-size: 12px; margin-bottom: 0;">
@@ -256,8 +256,8 @@ export async function sendEmergencyRescueOtpAction() {
           </p>
         </div>
         
-        <div style="background-color: #f9f9f9; padding: 15px; text-align: center; border-top: 1px solid #eee; font-size: 11px; color: #aaa;">
-          Gabriela's Flowers Security System • Houston, TX
+        <div style="background-color: #f8fafc; padding: 15px; text-align: center; border-top: 1px solid #eee; font-size: 11px; color: #64748b;">
+          La Mega Tienda del Colchón Security System • Barinas, VE
         </div>
       </div>
     `;
@@ -265,7 +265,7 @@ export async function sendEmergencyRescueOtpAction() {
     await transporter.sendMail({
       from: sender,
       to: adminEmails.join(", "),
-      subject: `🔑 Código de Rescate 2FA: ${rescueOtp} - Gabriela's Flowers Admin`,
+      subject: `🔑 Código de Rescate 2FA: ${rescueOtp} - La Mega Tienda del Colchón Admin`,
       html: emailContent,
     });
 

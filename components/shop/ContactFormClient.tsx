@@ -43,8 +43,8 @@ export function ContactFormClient() {
     }
   };
 
-  const whatsappUrl = `https://wa.me/18323911835?text=${encodeURIComponent(
-    `¡Hola! 🌸 Soy ${formData.name || "un cliente"}. ${formData.message || "Quisiera información sobre sus arreglos florales."}`
+  const whatsappUrl = `https://wa.me/13467392730?text=${encodeURIComponent(
+    `¡Hola! 🛏️ Soy ${formData.name || "un cliente"}. ${formData.message || "Quisiera información y asesoría sobre sus colchones."}`
   )}`;
 
   return (
@@ -56,82 +56,82 @@ export function ContactFormClient() {
           
           {/* Header de la Página */}
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-[#FF97A4] text-xs font-extrabold uppercase tracking-[0.25em] bg-pink-50 px-4 py-1.5 rounded-full border border-pink-100 inline-block">
-              🌸 Atención & Asesoría Personalizada
+            <span className="text-blue-600 text-xs font-extrabold uppercase tracking-[0.25em] bg-blue-50 px-4 py-1.5 rounded-full border border-blue-100 inline-block">
+              🛏️ Atención & Asesoría Especializada
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-black text-[#1A1C1C] tracking-tight">
               Ponte en Contacto con Nosotros
             </h1>
             <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed">
-              ¿Tienes alguna consulta sobre tu pedido, un diseño floral personalizado o una fecha especial? Estamos para ayudarte.
+              ¿Tienes alguna consulta sobre tu colchón, medidas especiales, flete en Barinas o métodos de pago? Estamos para ayudarte a descansar mejor.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             {/* Tarjeta Izquierda: Información de Contacto Directo */}
-            <div className="bg-[#1A1C1C] text-white p-8 rounded-3xl shadow-xl space-y-8 flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF97A4]/10 rounded-full blur-2xl pointer-events-none" />
+            <div className="bg-[#0F172A] text-white p-8 rounded-3xl shadow-xl space-y-8 flex flex-col justify-between relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl pointer-events-none" />
               
               <div className="space-y-6">
                 <div>
-                  <span className="text-[#FF97A4] text-[10px] font-black uppercase tracking-widest block mb-1">Gabriela's Flowers LLC</span>
-                  <h2 className="text-2xl font-serif font-bold">Información Boutique</h2>
+                  <span className="text-amber-400 text-[10px] font-black uppercase tracking-widest block mb-1">La Mega Tienda del Colchón</span>
+                  <h2 className="text-2xl font-serif font-bold">Información de Tienda</h2>
                 </div>
 
                 <div className="space-y-5 text-sm">
                   <div className="flex items-start gap-3.5">
-                    <div className="p-2.5 bg-white/10 rounded-xl text-[#FF97A4]">
+                    <div className="p-2.5 bg-white/10 rounded-xl text-blue-400">
                       <MapPin size={20} />
                     </div>
                     <div>
-                      <strong className="block text-white text-xs uppercase tracking-wider font-bold">Dirección Boutique</strong>
-                      <span className="text-gray-300 font-medium">4201 Fairmont Pkwy, Pasadena, TX 77504</span>
+                      <strong className="block text-white text-xs uppercase tracking-wider font-bold">Dirección Física</strong>
+                      <span className="text-gray-300 font-medium">Avenida Sucre, Barinas, Venezuela (VE)</span>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="p-2.5 bg-white/10 rounded-xl text-[#FF97A4]">
+                    <div className="p-2.5 bg-white/10 rounded-xl text-emerald-400">
                       <Phone size={20} />
                     </div>
                     <div>
                       <strong className="block text-white text-xs uppercase tracking-wider font-bold">Atención Directa / WhatsApp</strong>
-                      <a href="https://wa.me/18323911835" target="_blank" rel="noreferrer" className="text-[#FF97A4] hover:underline font-bold">
-                        +1 (832) 391-1835
+                      <a href="https://wa.me/13467392730" target="_blank" rel="noreferrer" className="text-emerald-400 hover:underline font-bold">
+                        +1 (346) 739-2730
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="p-2.5 bg-white/10 rounded-xl text-[#FF97A4]">
+                    <div className="p-2.5 bg-white/10 rounded-xl text-amber-400">
                       <Mail size={20} />
                     </div>
                     <div>
-                      <strong className="block text-white text-xs uppercase tracking-wider font-bold">Correo Electrónico</strong>
-                      <a href="mailto:flowersforyou403@gmail.com" className="text-gray-300 hover:text-[#FF97A4] font-medium transition-colors">
-                        flowersforyou403@gmail.com
+                      <strong className="block text-white text-xs uppercase tracking-wider font-bold">Instagram Oficial</strong>
+                      <a href="https://www.instagram.com/lamegatiendadelcolchon/reels/" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-pink-400 font-medium transition-colors">
+                        @lamegatiendadelcolchon
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="p-2.5 bg-white/10 rounded-xl text-[#FF97A4]">
+                    <div className="p-2.5 bg-white/10 rounded-xl text-blue-400">
                       <Clock size={20} />
                     </div>
                     <div>
                       <strong className="block text-white text-xs uppercase tracking-wider font-bold">Horarios de Atención</strong>
-                      <span className="text-gray-300 font-medium">Lunes a Sábado: 8:00 AM - 7:00 PM</span>
+                      <span className="text-gray-300 font-medium">Lunes a Sábado: 8:00 AM - 6:00 PM</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-gray-800">
+              <div className="pt-6 border-t border-slate-800">
                 <a
-                  href="https://wa.me/18323911835?text=¡Hola!%20🌸%20Quisiera%20asesoría%20para%20un%20arreglo%20floral."
+                  href="https://wa.me/13467392730?text=¡Hola!%20🛏️%20Quisiera%20asesoría%20para%20un%20colchón."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-[#FF97A4] hover:bg-[#B0004A] text-white py-3.5 rounded-2xl font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2"
+                  className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3.5 rounded-2xl font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2"
                 >
                   <MessageCircle size={18} />
                   <span>Chatear por WhatsApp en Vivo</span>
@@ -269,7 +269,7 @@ export function ContactFormClient() {
         </div>
       </main>
 
-      <WhatsAppButton phoneNumber="18323911835" />
+      <WhatsAppButton phoneNumber="13467392730" />
       <Footer />
     </div>
   );

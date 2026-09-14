@@ -16,9 +16,9 @@ interface DeliveryMapPickerProps {
   }) => void;
 }
 
-// Coordenadas del punto de partida de la boutique matriz (4201 Fairmont Pkwy, Pasadena, TX 77504)
-const DEFAULT_STORE_LAT = 29.6521;
-const DEFAULT_STORE_LNG = -95.1706;
+// Coordenadas de La Mega Tienda del Colchón (Avenida Sucre, Barinas, Venezuela)
+const DEFAULT_STORE_LAT = 8.6226;
+const DEFAULT_STORE_LNG = -70.2075;
 
 // Cálculo de Distancia Haversine corregida por factor terrestre de carretera (x 1.25)
 function calculateHaversineMiles(lat1: number, lon1: number, lat2: number, lon2: number): number {
@@ -107,23 +107,17 @@ export function DeliveryMapPicker({
     // Preparar variaciones de búsqueda de más específica a más general
     const searchQueries: string[] = [];
 
-    // Variación 1: Dirección completa con Houston, TX
-    if (!cleanInput.toLowerCase().includes("houston")) {
-      searchQueries.push(`${cleanInput}, Houston, TX, USA`);
+    // Variación 1: Dirección completa con Barinas, Venezuela
+    if (!cleanInput.toLowerCase().includes("barinas")) {
+      searchQueries.push(`${cleanInput}, Barinas, Venezuela`);
     } else {
-      searchQueries.push(`${cleanInput}, USA`);
+      searchQueries.push(`${cleanInput}, Venezuela`);
     }
 
-    // Variación 2: Sin número de casa si el número no figura aún en OpenStreetMap (ej: "Kyler Oaks Pl, 77043, Houston, TX")
+    // Variación 2: Sin número de casa si el número no figura aún en OpenStreetMap
     const withoutHouseNum = cleanInput.replace(/^\d+\s+/, "");
     if (withoutHouseNum !== cleanInput) {
-      searchQueries.push(`${withoutHouseNum}, Houston, TX, USA`);
-    }
-
-    // Variación 3: Extraer Código Postal ZIP si está presente (ej: "77043, Houston, TX")
-    const zipMatch = cleanInput.match(/\b(77\d{3})\b/);
-    if (zipMatch) {
-      searchQueries.push(`${zipMatch[1]}, Houston, TX, USA`);
+      searchQueries.push(`${withoutHouseNum}, Barinas, Venezuela`);
     }
 
     try {
@@ -261,15 +255,15 @@ export function DeliveryMapPicker({
               setAddressInput(e.target.value);
             }}
             onBlur={() => geocodeAddress()}
-            placeholder="Ej: 10827 Kyler Oaks Pl, Houston, TX 77043"
-            className="w-full p-3.5 pr-24 border rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#FF97A4] dark:bg-gray-900 dark:text-white"
+            placeholder="Ej: Avenida Los Andes, Alto Barinas Norte, Barinas"
+            className="w-full p-3.5 pr-24 border rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:text-white"
             required
           />
           <button
             type="button"
             onClick={() => geocodeAddress()}
             disabled={searching}
-            className="absolute right-2 top-2 bottom-2 px-3 bg-[#1A1C1C] text-white rounded-xl text-xs font-bold hover:bg-black transition-colors flex items-center gap-1"
+            className="absolute right-2 top-2 bottom-2 px-3 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition-colors flex items-center gap-1"
           >
             <Search size={14} />
             {searching ? "Buscando..." : "Ubicar GPS"}
@@ -279,10 +273,10 @@ export function DeliveryMapPicker({
         {geocodedSuccess && (
           <div className="p-2.5 bg-emerald-50 dark:bg-emerald-950/40 rounded-xl border border-emerald-200 dark:border-emerald-900/50 text-[11px] font-bold text-emerald-800 dark:text-emerald-300 flex items-center justify-between">
             <span className="flex items-center gap-1">
-              <CheckCircle2 size={14} className="text-emerald-600" /> Dirección localizada en mapa de Houston
+              <CheckCircle2 size={14} className="text-emerald-600" /> Dirección localizada en mapa de Barinas
             </span>
             <span className="bg-emerald-600 text-white px-2.5 py-0.5 rounded-full text-[10px]">
-              📍 {distanceMiles} Millas desde Boutique
+              📍 {distanceMiles} Km / Millas desde Tienda
             </span>
           </div>
         )}

@@ -22,12 +22,12 @@ export function DialogflowChatbot({ siteConfig }: DialogflowChatbotProps) {
   const [messages, setMessages] = useState<Array<{ sender: "bot" | "user"; text: string; options?: Array<{ label: string; action: () => void }> }>>([
     {
       sender: "bot",
-      text: "¡Hola! 🌸 Bienvenido a Gabriela's Flowers. Soy tu asistente virtual. ¿Cómo puedo ayudarte hoy?",
+      text: "¡Hola! 🛏️ Bienvenido a La Mega Tienda del Colchón en Barinas. Soy tu asesor virtual de descanso. ¿Cómo podemos ayudarte hoy?",
       options: [
-        { label: "🌹 Ver Ramos Populares", action: () => handleSendOption("Quiero ver los ramos más vendidos") },
+        { label: "🛏️ Ver Colchones Ortopédicos", action: () => handleSendOption("Quiero ver los colchones ortopédicos") },
         { label: "📦 Rastrear un Pedido", action: () => handleSendOption("¿Cómo puedo rastrear mi pedido?") },
-        { label: "🚚 Zonas de Entrega & Horarios", action: () => handleSendOption("¿Cuáles son las zonas y tiempos de entrega?") },
-        { label: "💬 Hablar con una Florista", action: () => handleSendOption("Deseo atención personalizada con una florista") },
+        { label: "🚚 Fletes & Retiro en Tienda", action: () => handleSendOption("¿Cuáles son las opciones de entrega y flete?") },
+        { label: "💬 Hablar con un Asesor", action: () => handleSendOption("Deseo asesoría personalizada para elegir un colchón") },
       ]
     }
   ]);
@@ -40,8 +40,8 @@ export function DialogflowChatbot({ siteConfig }: DialogflowChatbotProps) {
   const projectId = siteConfig?.dialogflowProjectId;
   const location = siteConfig?.dialogflowLocation || "us-central1";
   const languageCode = siteConfig?.dialogflowLanguageCode || "es";
-  const chatTitle = siteConfig?.dialogflowChatTitle || "Gabriela's Flowers Bot 🌸";
-  const whatsappUrl = siteConfig?.whatsappUrl || "https://wa.me/18323911835";
+  const chatTitle = siteConfig?.dialogflowChatTitle || "Asesor de Descanso 🛏️";
+  const whatsappUrl = siteConfig?.whatsappUrl || "https://wa.me/13467392730";
 
   const isRealDialogflowConfigured = Boolean(agentId && projectId && agentId.trim() !== "" && projectId.trim() !== "");
 
@@ -158,8 +158,8 @@ export function DialogflowChatbot({ siteConfig }: DialogflowChatbotProps) {
                   </div>
                   <div>
                     <h4 className="font-serif font-black text-sm leading-tight flex items-center gap-1.5">
-                      <span>Gabriela's Assistant</span>
-                      <Sparkles size={13} className="text-[#D4AF37]" />
+                      <span>Asesor de Descanso</span>
+                      <Sparkles size={13} className="text-amber-400" />
                     </h4>
                     <span className="text-[10px] font-bold text-emerald-300 flex items-center gap-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -226,7 +226,7 @@ export function DialogflowChatbot({ siteConfig }: DialogflowChatbotProps) {
                     {msg.sender === "bot" && (
                       <div className="mt-2.5">
                         <a
-                          href={`${whatsappUrl}?text=${encodeURIComponent("¡Hola Gabriela's Flowers! 🌸 Vengo desde el Asistente Virtual y deseo una consulta floral personalizada.")}`}
+                          href={`${whatsappUrl}?text=${encodeURIComponent("¡Hola! 🛏️ Vengo desde el Asistente Virtual de La Mega Tienda del Colchón y deseo asesoría personalizada.")}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white px-3.5 py-2 rounded-xl text-[11px] font-black shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 border border-white/20"
@@ -295,27 +295,27 @@ export function DialogflowChatbot({ siteConfig }: DialogflowChatbotProps) {
                     <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 border border-white"></span>
                   </div>
                   <div className="leading-tight">
-                    <h5 className="font-serif font-black text-xs text-[#2B0002] dark:text-white flex items-center gap-1">
-                      <span>Gabriela's Assistant</span>
-                      <Sparkles size={11} className="text-[#D4AF37]" />
+                    <h5 className="font-serif font-black text-xs text-blue-900 dark:text-white flex items-center gap-1">
+                      <span>Asesor de Descanso</span>
+                      <Sparkles size={11} className="text-amber-500" />
                     </h5>
                     <span className="text-[9px] font-bold text-emerald-600 dark:text-emerald-400">
-                      En línea 24/7 🌸
+                      En línea • Barinas 🛏️
                     </span>
                   </div>
                 </div>
 
-                <div className="p-1.5 bg-[#80273B] text-white rounded-full group-hover:scale-110 transition-transform shadow-sm">
+                <div className="p-1.5 bg-blue-600 text-white rounded-full group-hover:scale-110 transition-transform shadow-sm">
                   <Maximize2 size={13} />
                 </div>
               </div>
 
               {/* Burbuja Preview del Mini-Chat */}
               <div className="py-2.5 text-slate-800 dark:text-gray-200">
-                <div className="p-2.5 rounded-2xl bg-pink-50/70 dark:bg-pink-950/30 border border-pink-100 dark:border-pink-900/40 text-[11px] leading-relaxed font-medium chatbot-mini-preview text-black dark:text-gray-100">
+                <div className="p-2.5 rounded-2xl bg-blue-50/70 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40 text-[11px] leading-relaxed font-medium chatbot-mini-preview text-slate-900 dark:text-gray-100">
                   {messages.length > 0 && messages[messages.length - 1].sender === "bot"
                     ? messages[messages.length - 1].text.slice(0, 75) + "..."
-                    : "¡Hola! 🌸 ¿Cómo puedo ayudarte hoy con tus flores?"}
+                    : "¡Hola! 🛏️ ¿En qué medida o firmeza de colchón estás interesado hoy?"}
                 </div>
               </div>
 

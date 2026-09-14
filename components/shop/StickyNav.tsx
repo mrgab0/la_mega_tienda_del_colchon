@@ -39,7 +39,7 @@ export function StickyNav({ siteConfig }: StickyNavProps) {
   const instagramUrl = siteConfig?.instagramUrl || "https://www.instagram.com/lamegatiendadelcolchon/reels/";
   const facebookUrl = siteConfig?.facebookUrl || "https://facebook.com";
   const tiktokUrl = siteConfig?.tiktokUrl || "https://tiktok.com";
-  const whatsappUrl = siteConfig?.whatsappUrl || "https://wa.me/584141584360";
+  const whatsappUrl = siteConfig?.whatsappUrl || "https://wa.me/13467392730";
 
   const navLinks = [
     { href: "/", label: t('home') },

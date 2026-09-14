@@ -66,7 +66,7 @@ export default function AdminOrdenesPage() {
     const trackUrl = `${siteUrl}/rastreo`;
     const statusText = order.status || "En Proceso";
 
-    const msg = `¡Hola ${order.customerName}! 🌹 Te notificamos de Gabriela's Flowers LLC que tu pedido *${order.orderId}* ha sido actualizado a estado: *${statusText}* ✨\n\nPuedes rastrear el avance en tiempo real aquí: ${trackUrl}`;
+    const msg = `¡Hola ${order.customerName}! 🛏️ Te notificamos de La Mega Tienda del Colchón que tu pedido *${order.orderId}* ha sido actualizado a estado: *${statusText}* ✨\n\nPuedes rastrear el avance en tiempo real aquí: ${trackUrl}`;
 
     return phone ? `https://wa.me/${phone}?text=${encodeURIComponent(msg)}` : `https://wa.me/?text=${encodeURIComponent(msg)}`;
   };
@@ -838,10 +838,10 @@ export default function AdminOrdenesPage() {
               {/* Encabezado Oficial Boutique */}
               <div className="flex justify-between items-start border-b-2 border-pink-200 pb-5">
                 <div>
-                  <h1 className="text-2xl font-serif font-extrabold text-[#1A1C1C] tracking-tight">Gabriela's Flowers LLC</h1>
-                  <p className="text-[11px] font-bold uppercase tracking-wider text-[#FF97A4]">High Floral Design Boutique</p>
-                  <p className="text-gray-500 text-[11px] mt-1">Houston, Texas & Metropolitan Areas</p>
-                  <p className="text-gray-500 text-[11px]">Tel / WhatsApp: +1 (832) 391-1835</p>
+                  <h1 className="text-2xl font-serif font-extrabold text-[#1A1C1C] tracking-tight">La Mega Tienda del Colchón</h1>
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-blue-600">Especialistas en Descanso</p>
+                  <p className="text-gray-500 text-[11px] mt-1">Avenida Sucre, Barinas, Venezuela (VE)</p>
+                  <p className="text-gray-500 text-[11px]">WhatsApp: +1 346 739 2730</p>
                 </div>
 
                 <div className="text-right space-y-1">
@@ -963,10 +963,10 @@ export default function AdminOrdenesPage() {
               <div className="border-t pt-4 text-center text-[10px] text-gray-400 space-y-1">
                 <p className="font-bold text-gray-600">
                   {invoiceLang === "es"
-                    ? "¡Gracias por elegir a Gabriela's Flowers LLC para regalar sonrisas!"
-                    : "Thank you for choosing Gabriela's Flowers LLC for your special moments!"}
+                    ? "¡Gracias por elegir a La Mega Tienda del Colchón para tu descanso!"
+                    : "Thank you for choosing La Mega Tienda del Colchón for your comfort!"}
                 </p>
-                <p>Gabriela's Flowers LLC • Houston, Texas • www.flowersforyou.app</p>
+                <p>La Mega Tienda del Colchón • Barinas, Venezuela • lamegatiendadelcolchon.com</p>
               </div>
             </div>
           </div>
